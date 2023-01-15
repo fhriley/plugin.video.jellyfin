@@ -1,61 +1,71 @@
 import logging
 import unittest
-from typing import Union
 
-from lib.api.jellyfin import Server
+from lib.scraper.base import get_name
 from lib.scraper.movies import MoviesScraper
+from lib.scraper.queries import seasons_by_series
 from lib.scraper.tvshows import TvShowsScraper
-from lib.source.log import LOG_FORMAT
-from test.common import get_user, load_episodes_jf_by_series, load_data, load_data_scraper, get_mock_server
+from lib.util.log import LOG_FORMAT
+from test.common import load_episodes_jf_by_series, load_data, get_mock_server
 
 logging.basicConfig(format=LOG_FORMAT, level=logging.INFO)
 
 
 class TestScraper(unittest.TestCase):
-    def _test_get_items(self, server: Server, scraper_class: Union[type(MoviesScraper), type(TvShowsScraper)],
-                        out_file: str):
-        scraper = scraper_class(server, debug_level=0)
-        user = get_user()
-        items = scraper.get_items(user)
-        # with open(out_file, 'w') as out:
-        #     json.dump(items, out, indent=4, sort_keys=True)
-        expected = load_data_scraper(out_file)
-        for item in items:
-            expected_item = expected.get(item['id'])
-            self.assertEqual(expected_item, item)
-
-    def test_movies_get_items(self):
+    def test_find(self):
         server = get_mock_server()
-        server.get_items.return_value = load_data('movies_jf.json')
-        self.maxDiff = None
-        self._test_get_items(server, MoviesScraper, 'movies_scraper.json')
+        scraper = MoviesScraper(server, debug_level=0)
+        in_data = load_data('movies_jf.json').get('Items') or []
+        movies = scraper.scrape_find(in_data)
+        expected = [{'id': movie['Id'], 'name': get_name(movie['Name'], movie['ProductionYear'])} for movie in in_data]
+        self.assertEqual(expected, movies)
 
-    def test_tvshows_get_items(self):
+    def test_artwork(self):
         server = get_mock_server()
-        server.get_items.return_value = load_data('tvshows_jf.json')
-        server.get_seasons.return_value = load_data('seasons_jf.json')
-        self._test_get_items(server, TvShowsScraper, 'tvshows_scraper.json')
+        scraper = MoviesScraper(server, debug_level=0)
+        in_data = load_data('artwork_jf.json')
+        artwork = scraper.scrape_artwork(in_data)
+        # with open('data/artwork_scraper.json', 'w') as out:
+        #     json.dump(artwork, out, indent=4, sort_keys=True)
+        expected = load_data('artwork_scraper.json')
+        self.assertEqual(expected, artwork)
 
-    def test_tvshows_get_episodes(self):
-        series_id = '7879d2c8a44a666d6846d4eea026ddd3'
-
-        in_items = load_episodes_jf_by_series()[series_id]
-        data = {
-            'Items': in_items,
-            'StartIndex': 0,
-            'TotalRecordCount': len(in_items),
-        }
-
+    def test_movies(self):
         server = get_mock_server()
-        server.get_episodes.return_value = data
+        scraper = MoviesScraper(server, debug_level=0)
+        movies = scraper.scrape_movies(load_data('movies_jf.json').get('Items') or [])
+        expected = load_data('movies_scraper.json')
+        self.assertEqual(expected, movies)
 
+    def test_tvshows(self):
+        server = get_mock_server()
         scraper = TvShowsScraper(server, debug_level=0)
-        user = get_user()
-        items = scraper.get_episodes(user, series_id)
+        jf_seasons = load_data('seasons_jf.json').get('Items') or []
+        seasons = scraper.scrape_seasons(jf_seasons)
+        # with open('data/seasons_scraper.json', 'w') as out:
+        #     json.dump(seasons, out, indent=4, sort_keys=True)
+        expected = load_data('seasons_scraper.json')
+        self.assertEqual(expected, seasons)
+
+    def test_tvshows_seasons(self):
+        server = get_mock_server()
+        scraper = TvShowsScraper(server, debug_level=0)
+        jf_shows = load_data('tvshows_jf.json').get('Items') or []
+        jf_seasons = load_data('seasons_jf.json').get('Items') or []
+        jf_seasons = seasons_by_series(jf_seasons)
+        shows = scraper.scrape_shows(jf_shows, jf_seasons)
+        # with open('tvshows_scraper.json', 'w') as out:
+        #     json.dump(shows, out, indent=4, sort_keys=True)
+        expected = load_data('tvshows_scraper.json')
+        self.assertEqual(expected, shows)
+
+    def test_tvshows_episodes(self):
+        series_id = '7879d2c8a44a666d6846d4eea026ddd3'
+        in_items = load_episodes_jf_by_series()[series_id]
+        server = get_mock_server()
+        scraper = TvShowsScraper(server, debug_level=0)
+        episodes = scraper.scrape_episodes(in_items)
         # with open('episodes_scraper.json', 'w') as out:
         #     json.dump(items, out, indent=4, sort_keys=True)
-
-        expected = load_data_scraper('episodes_scraper.json')
-        for item in items:
-            expected_item = expected.get(item['id'])
-            self.assertEqual(expected_item, item)
+        expected = load_data('episodes_scraper.json')
+        self.assertEqual(expected, episodes)

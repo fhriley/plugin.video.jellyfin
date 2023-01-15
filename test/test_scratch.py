@@ -4,6 +4,7 @@ import logging
 import pstats
 import time
 import unittest
+from pprint import pprint
 from pstats import SortKey
 from typing import Union
 
@@ -11,8 +12,9 @@ import requests
 
 from lib.api.jellyfin import Server
 from lib.scraper.movies import MoviesScraper
+from lib.scraper.queries import get_episodes, get_artwork
 from lib.scraper.tvshows import TvShowsScraper
-from lib.source.log import LOG_FORMAT
+from lib.util.log import LOG_FORMAT
 
 SERVER = 'https://jellyfin.riley-home.net'
 USER = 'frank'
@@ -59,16 +61,13 @@ def profile(func, num_times=1):
 
 @unittest.skip
 class TestScratch(unittest.TestCase):
-    def test_get_items_chunked(self):
+    def test_get_item(self):
         with requests.Session() as session:
             server = get_server(session, debug_level=0)
             user = server.authenticate_by_password(USER, PASS)
-            start = time.process_time_ns()
-            params = {'Recursive': 'true', 'IncludeItemTypes': 'Movie', 'userId': user.user}
-            items = server.get_items(user, chunk_size=100, params=params)
-            end = time.process_time_ns()
-            print((end - start) * 1e-9)
-            print(len(items['Items']))
+            params = {'fields': 'Path', 'enableUserData': 'true'}
+            item = server.get_item(user, '6ce12311f8993cf1a212881db0677f2a', params=params)
+            pprint(item)
 
     def _test_get_items(self, scraper_class: Union[type(MoviesScraper), type(TvShowsScraper)], out_file: str):
         with requests.Session() as session:
@@ -89,18 +88,32 @@ class TestScratch(unittest.TestCase):
     def test_get_movies(self):
         self._test_get_items(MoviesScraper, 'data/movies_scraper.json')
 
+    def test_get_items_chunked(self):
+        with requests.Session() as session:
+            server = get_server(session, debug_level=0)
+            user = server.authenticate_by_password(USER, PASS)
+            start = time.process_time_ns()
+            params = {'Recursive': 'true', 'IncludeItemTypes': 'Movie', 'userId': user.user}
+            items = server.get_items(user, chunk_size=100, params=params)
+            end = time.process_time_ns()
+            print((end - start) * 1e-9)
+            print(len(items['Items']))
+
     def test_get_episodes(self):
         with requests.Session() as session:
             server = get_server(session, debug_level=0)
             user = server.authenticate_by_password(USER, PASS)
-            fields = ('AirTime,CustomRating,DateCreated,ExternalUrls,Genres,OriginalTitle'
-                      ',Overview,Path,People,ProviderIds,Taglines,Tags'
-                      ',RemoteTrailers,ForcedSortName,Studios,MediaSources')
-            params = {'fields': fields, 'imageTypeLimit': 1, 'enableTotalRecordCount': 'true',
-                      'IncludePeople': 'true', 'IncludeMedia': 'true', 'IncludeGenres': 'true',
-                      'IncludeStudios': 'true', 'IncludeArtists': 'true',
-                      'enableUserData': 'true', 'enableImages': 'true', 'sortBy': 'PremiereDate', 'userId': user.uuid}
-            episodes = server.get_episodes(user, chunk_size=100, params=params)
+            episodes = get_episodes(server, user, chunk_size=100)
+            pprint(episodes['Items'][:10])
             # with open('data/episodes_jf.json', 'w') as out:
             #     import json
             #     json.dump(episodes, out, indent=4, sort_keys=True)
+
+    def test_get_artwork(self):
+        with requests.Session() as session:
+            server = get_server(session, debug_level=0)
+            user = server.authenticate_by_password(USER, PASS)
+            artwork = get_artwork(server, user, '6ce12311f8993cf1a212881db0677f2a')
+            # with open('data/artwork_jf.json', 'w') as out:
+            #     import json
+            #     json.dump(artwork, out, indent=4, sort_keys=True)

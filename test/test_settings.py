@@ -2,7 +2,7 @@ import os
 import tempfile
 import unittest
 
-from lib.source.settings import Settings, load_settings_file
+from lib.util.settings import Settings, load_settings_file
 
 
 class TestSettings(unittest.TestCase):

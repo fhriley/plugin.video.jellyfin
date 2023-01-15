@@ -43,13 +43,25 @@ def load_data(file_name):
         return json.load(in_file)
 
 
-def load_data_scraper(file_name) -> Dict[str, Any]:
-    return {item['id']: item for item in load_data(file_name)}
+def load_seasons_jf_by_series() -> Dict[str, Any]:
+    by_series = {}
+    for season in load_data('seasons_jf.json').get('Items') or []:
+        seasons = by_series.setdefault(season['SeriesId'], [])
+        seasons.append(season)
+    return by_series
 
 
 def load_episodes_jf_by_series() -> Dict[str, Any]:
     by_series = {}
     for episode in load_data('episodes_jf.json').get('Items') or []:
         episodes = by_series.setdefault(episode['SeriesId'], [])
+        episodes.append(episode)
+    return by_series
+
+
+def load_episodes_scraper_by_series() -> Dict[str, Any]:
+    by_series = {}
+    for episode in load_data('episodes_scraper.json'):
+        episodes = by_series.setdefault(episode['series_id'], [])
         episodes.append(episode)
     return by_series

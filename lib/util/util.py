@@ -1,18 +1,19 @@
 import logging
 from typing import Iterable, Optional
-from urllib.parse import urlparse, parse_qs, urlencode
+from urllib.parse import urlparse, parse_qs, urlencode, quote
 
 import xbmcaddon
 
 _log = logging.getLogger(__name__)
 
 
-def get_plugin_url(addon: xbmcaddon.Addon, **kwargs):
+def get_plugin_url(addon: xbmcaddon.Addon, *args, **kwargs):
+    path = '/'.join([quote(arg) for arg in args])
     if kwargs:
-        param_str = urlencode(kwargs)
+        param_str = f'?{urlencode(kwargs)}'
     else:
         param_str = ''
-    return f'plugin://{addon.getAddonInfo("id")}?{param_str}'
+    return f'plugin://{addon.getAddonInfo("id")}/{path}{param_str}'
 
 
 def get_params_from_url(msg: str, params: dict, keys: Optional[Iterable[str]]) -> dict:

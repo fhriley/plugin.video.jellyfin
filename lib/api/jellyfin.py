@@ -126,7 +126,7 @@ class Server:
 
         return {'Items': items, 'TotalRecordCount': len(items), 'StartIndex': 0}
 
-    def get_item(self, user: User, item_id: str, *args, **kwargs) -> List[Dict[str, Any]]:
+    def get_item(self, user: User, item_id: str, *args, **kwargs) -> Dict[str, Any]:
         with self.get(f'/Users/{user.uuid}/Items/{item_id}', *args, user=user, **kwargs) as resp:
             resp.raise_for_status()
             return resp.json()

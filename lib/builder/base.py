@@ -9,8 +9,8 @@ import xbmcaddon
 import xbmcgui
 import xbmcplugin
 
-import lib.source.util as util
-from lib.source.settings import Settings
+import lib.util.util as util
+from lib.util.settings import Settings
 
 _log = logging.getLogger(__name__)
 
@@ -22,11 +22,7 @@ def set_tag_if_have(info: dict, key: str, set_func: Callable):
 
 
 def set_common_tags(tags: xbmc.InfoTagVideo, info: dict, unique_id: Optional[str] = None):
-    # TODO
-    # setUserRating
-    # addVideoStream
-    # addAudioStream
-    # addSubtitleStream
+    # TODO: setUserRating, addSubtitleStream
 
     unique_ids = info.get('unique_ids') or {}
     if unique_id:
@@ -103,6 +99,18 @@ class Builder(ABC):
         self._handle = handle
         self._addon = addon
 
+    def build_find_directory(self, jf_items: List[Dict[str, Any]]):
+        items = []
+        is_folder = True
+
+        for jf_item in jf_items:
+            name = jf_item['name']
+            list_item = xbmcgui.ListItem(name)
+            url = util.get_plugin_url(self._addon, 'find', id=jf_item['id'], name=name)
+            items.append((url, list_item, is_folder))
+
+        xbmcplugin.addDirectoryItems(handle=self._handle, items=items)
+
     @abstractmethod
     def _build_directory_set_list_item(self, list_item: xbmcgui.ListItem, item_id: str, jf_item: dict):
         pass
@@ -131,8 +139,7 @@ class Builder(ABC):
                 self._build_directory_set_list_item(list_item, item_id, jf_item)
 
                 tags = list_item.getVideoInfoTag()
-                unique_id = util.get_plugin_url(self._addon, id=item_id)
-                set_common_tags(tags, info, unique_id)
+                set_common_tags(tags, info, item_id)
                 self._build_directory_set_tags(tags, item_id, info)
 
                 url = get_url(self._addon, media_type, item_id)
@@ -143,3 +150,10 @@ class Builder(ABC):
             succeeded = True
         finally:
             xbmcplugin.endOfDirectory(handle=self._handle, succeeded=succeeded)
+
+    def build_artwork(self, item_id: str, artwork: Dict[str, str]):
+        list_item = xbmcgui.ListItem(item_id, offscreen=True)
+        tags = list_item.getVideoInfoTag()
+        for image_type, image_url in artwork.items():
+            tags.addAvailableArtwork(image_url, image_type)
+        xbmcplugin.setResolvedUrl(handle=self._handle, succeeded=True, listitem=list_item)

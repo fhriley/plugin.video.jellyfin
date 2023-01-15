@@ -1,7 +1,6 @@
 import datetime
 import logging
 import time
-from abc import ABC, abstractmethod
 from math import ceil
 from typing import Optional, Dict, List, Tuple, Any
 from urllib.parse import urlparse, parse_qs
@@ -29,8 +28,17 @@ _artwork = {
     'Thumb': ['landscape'],
 }
 
+episode_artwork = {
+    'Art': ['clearart', 'tvshow.clearart'],
+    'Logo': ['clearlogo', 'tvshow.clearlogo'],
+    'Disc': ['discart'],
+    'Backdrop': ['fanart', 'fanart_image'],
+    'Thumb': ['landscape', 'tvshow.landscape'],
+    'Primary': ['thumb']
+}
 
-def _ticks_to_seconds(ticks: int) -> float:
+
+def ticks_to_seconds(ticks: int) -> float:
     return ticks * 100e-9
 
 
@@ -46,7 +54,7 @@ def get_artwork_from_item(server: Server, item: dict, artwork_map: Dict[str, Lis
     return artwork
 
 
-def _get_name(title: str, year: Optional[int] = None) -> str:
+def get_name(title: str, year: Optional[int] = None) -> str:
     if year:
         return f'{title} ({year})'
     return title
@@ -131,7 +139,7 @@ def get_media_streams(jf_item: dict) -> Tuple[List, List]:
     for source in jf_item.get('MediaSources') or []:
         run_time_ticks = source.get('RunTimeTicks')
         if run_time_ticks:
-            duration_s = _ticks_to_seconds(run_time_ticks)
+            duration_s = ticks_to_seconds(run_time_ticks)
         else:
             duration_s = None
         for stream in source.get('MediaStreams') or []:
@@ -213,60 +221,84 @@ def _get_unique_ids(obj: dict) -> Dict[str, str]:
 _user_cache: Optional[Dict[str, User]] = None
 
 
-class Scraper(ABC):
+def print_debug_info(msg: str, obj: Any):
+    from pprint import pformat
+    _log.debug(f'---------------- START {msg} ----------------')
+    _log.debug(pformat(obj))
+    _log.debug(f'---------------- END {msg} ----------------')
+
+
+def exception(obj: Any):
+    from pprint import pformat
+    _log.error(pformat(obj))
+
+
+class Scraper:
     def __init__(self, server: Server, debug_level: Optional[int] = 0):
         global _user_cache
         self._server = server
         self._debug_level = debug_level
 
-        if _user_cache is None:
-            _user_cache = {}
-            _log.debug('creating new user cache')
-        else:
-            _log.debug('reusing user_cache')
+    @property
+    def jf_item_type(self):
+        raise NotImplementedError()
 
     @property
-    def server(self):
-        return self._server
+    def kodi_media_type(self):
+        raise NotImplementedError()
 
-    @abstractmethod
-    def get_items(self, user: User) -> List[Dict[str, Any]]:
-        raise NotImplementedError
-
-    def _get_artwork_map(self) -> Dict[str, List[str]]:
-        return _artwork
-
-    def _get_items(self, user: User, item_type: str, media_type: str,
-                   artwork_map: Optional[Dict[str, List[str]]] = None) -> List[Dict[str, Any]]:
-        fields = ('AirTime,CustomRating,DateCreated,ExternalUrls,Genres,OriginalTitle'
-                  ',Overview,Path,People,ProviderIds,Taglines,Tags'
-                  ',RemoteTrailers,ForcedSortName,Studios,MediaSources')
-        params = {'recursive': 'true', 'fields': fields, 'imageTypeLimit': 1, 'enableTotalRecordCount': 'true',
-                  'IncludePeople': 'true', 'IncludeMedia': 'true', 'IncludeGenres': 'true',
-                  'IncludeStudios': 'true', 'IncludeArtists': 'true',
-                  'enableUserData': 'true', 'enableImages': 'true', 'IncludeItemTypes': item_type, 'sortBy': 'SortName'}
-        jf_items = self._server.get_items(user, params=params).get('Items') or []
+    def scrape_find(self, jf_items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         if self._debug_level > 1:
-            from pprint import pformat
-            _log.debug(f'---------------- START JF {media_type.upper()} ----------------')
-            _log.debug(pformat(jf_items))
-            _log.debug(f'---------------- END JF {media_type.upper()} ----------------')
+            print_debug_info('JF FIND', jf_items)
 
         try:
             items = []
-            for jf_item in jf_items:
-                info = self._get_info(jf_item, media_type, artwork_map)
-                items.append({'name': _get_name(info['title'], info.get('year')), 'id': jf_item['Id'], 'info': info})
+            for item in jf_items:
+                production_year = item.get('ProductionYear')
+                name = get_name(item['Name'], production_year)
+                items.append({'id': item['Id'], 'name': name})
 
             if self._debug_level > 1:
-                from pprint import pformat
-                _log.debug(f'---------------- START {media_type.upper()} ----------------')
-                _log.debug(pformat(items))
-                _log.debug(f'---------------- END {media_type.upper()} ----------------')
+                print_debug_info('FIND', items)
+
             return items
         except Exception:
-            from pprint import pformat
-            _log.error(pformat(jf_items))
+            exception(jf_items)
+            raise
+
+    def scrape_artwork(self, jf_artwork: Dict[str, Any]) -> Dict[str, str]:
+        if self._debug_level > 1:
+            print_debug_info('JF SCRAPE ARTWORK', jf_artwork)
+
+        try:
+            artwork_map = None
+            if jf_artwork.get('Type') == 'Episode':
+                artwork_map = episode_artwork
+            artwork = get_artwork_from_item(self._server, jf_artwork, artwork_map)
+
+            if self._debug_level > 1:
+                print_debug_info('SCRAPE ARTWORK', artwork)
+
+            return artwork
+        except Exception:
+            exception(jf_artwork)
+            raise
+
+    def _scrape_item(self, jf_item: Dict[str, Any], media_type: str,
+                     artwork_map: Optional[Dict[str, List[str]]] = None) -> Dict[str, Any]:
+        if self._debug_level > 1:
+            print_debug_info('JF SCRAPE ITEM', jf_item)
+
+        try:
+            info = self._get_info(jf_item, media_type, artwork_map)
+            item = {'name': get_name(info['title'], info.get('year')), 'id': jf_item['Id'], 'info': info}
+
+            if self._debug_level > 1:
+                print_debug_info('SCRAPE ITEM', item)
+
+            return item
+        except Exception:
+            exception(jf_item)
             raise
 
     def _get_info(self, jf_item: dict, media_type: str, artwork_map: Dict[str, List[str]]) -> dict:
@@ -286,7 +318,7 @@ class Scraper(ABC):
         runtime_ticks = jf_item.get('RunTimeTicks')
         duration_s = None
         if runtime_ticks is not None:
-            duration_s = _ticks_to_seconds(runtime_ticks)
+            duration_s = ticks_to_seconds(runtime_ticks)
             info['duration'] = int(ceil(duration_s))
 
         keys = {'title': 'Name', 'originaltitle': 'OriginalTitle', 'plot': 'Overview',
@@ -351,7 +383,7 @@ class Scraper(ABC):
                 info['lastplayed'] = last_played
             play_back_position_ticks = user_data.get('PlaybackPositionTicks')
             if play_back_position_ticks:
-                play_back_position_s = _ticks_to_seconds(play_back_position_ticks)
+                play_back_position_s = ticks_to_seconds(play_back_position_ticks)
                 info['resume_point'] = [play_back_position_s, duration_s]
 
         artwork = get_artwork_from_item(self._server, jf_item, artwork_map)

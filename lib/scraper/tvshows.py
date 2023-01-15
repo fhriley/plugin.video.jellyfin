@@ -1,9 +1,6 @@
-import logging
 from typing import Dict, List, Any
 
 import lib.scraper.base as base
-
-_log = logging.getLogger(__name__)
 
 
 class TvShowsScraper(base.Scraper):
@@ -17,7 +14,7 @@ class TvShowsScraper(base.Scraper):
 
     def scrape_show(self, jf_show: Dict[str, Any], jf_seasons: List[Dict[str, Any]]) -> Dict[str, Any]:
         if self._debug_level > 1:
-            base.print_debug_info('JF SCRAPE SHOW', jf_show)
+            base.print_debug_info(self._log, 'JF SCRAPE SHOW', jf_show)
 
         try:
             show = self._scrape_item(jf_show, 'tvshow')
@@ -33,11 +30,11 @@ class TvShowsScraper(base.Scraper):
                 info['seasons'] = seasons
 
             if self._debug_level > 1:
-                base.print_debug_info('SCRAPE SHOW', show)
+                base.print_debug_info(self._log, 'SCRAPE SHOW', show)
 
             return show
         except Exception:
-            base.exception(jf_show)
+            base.exception(self._log, jf_show)
             raise
 
     def scrape_shows(self, jf_shows: List[Dict[str, Any]], jf_seasons: Dict[str, List[Dict[str, Any]]]) -> List[
@@ -46,7 +43,7 @@ class TvShowsScraper(base.Scraper):
 
     def scrape_season(self, jf_season: Dict[str, Any]) -> Dict[str, Any]:
         if self._debug_level > 1:
-            base.print_debug_info('JF SCRAPE SEASON', jf_season)
+            base.print_debug_info(self._log, 'JF SCRAPE SEASON', jf_season)
 
         try:
             season = {'id': jf_season['Id'], 'name': jf_season['Name'], 'number': jf_season['IndexNumber'],
@@ -64,11 +61,11 @@ class TvShowsScraper(base.Scraper):
                 season['artwork'] = {'type': 'poster', 'url': url}
 
             if self._debug_level > 1:
-                base.print_debug_info('SCRAPE SEASON', season)
+                base.print_debug_info(self._log, 'SCRAPE SEASON', season)
 
             return season
         except Exception:
-            base.exception(jf_season)
+            base.exception(self._log, jf_season)
             raise
 
     def scrape_seasons(self, jf_seasons: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
@@ -76,7 +73,7 @@ class TvShowsScraper(base.Scraper):
 
     def scrape_episode(self, jf_episode: Dict[str, Any]) -> Dict[str, Any]:
         if self._debug_level > 1:
-            base.print_debug_info('SCRAPE JF EPISODE', jf_episode)
+            base.print_debug_info(self._log, 'SCRAPE JF EPISODE', jf_episode)
 
         try:
             episode = self._scrape_item(jf_episode, 'episode', base.episode_artwork)
@@ -121,11 +118,11 @@ class TvShowsScraper(base.Scraper):
                 episode['series_id'] = series_id
 
             if self._debug_level > 1:
-                base.print_debug_info('SCRAPE EPISODE', episode)
+                base.print_debug_info(self._log, 'SCRAPE EPISODE', episode)
 
             return episode
         except Exception:
-            base.exception(jf_episode)
+            base.exception(self._log, jf_episode)
             raise
 
     def scrape_episodes(self, jf_episodes: List[Dict[str, Any]]) -> List[Dict[str, Any]]:

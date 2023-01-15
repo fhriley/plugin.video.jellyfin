@@ -7,8 +7,6 @@ from urllib.parse import urlparse, parse_qs
 
 from lib.api.jellyfin import Server, User
 
-_log = logging.getLogger(__name__)
-
 
 class ProxyDatetime(datetime.datetime):
     @classmethod
@@ -60,7 +58,7 @@ def get_name(title: str, year: Optional[int] = None) -> str:
     return title
 
 
-def get_people(server: Server, jf_item: dict) -> Tuple[List, List, List]:
+def get_people(log: logging.Logger, server: Server, jf_item: dict) -> Tuple[List, List, List]:
     cast = []
     guest_stars = []
     directors = []
@@ -89,7 +87,7 @@ def get_people(server: Server, jf_item: dict) -> Tuple[List, List, List]:
         elif typ == 'Writer':
             writers.append(person['name'])
         elif typ != 'Producer':
-            _log.warning('unknown person type: %s', typ)
+            log.warning('unknown person type: %s', typ)
 
     cast.extend(guest_stars)
     # for ii, person in enumerate(cast):
@@ -133,7 +131,7 @@ def _get_studios(obj: dict) -> List[str]:
     return ret
 
 
-def get_media_streams(jf_item: dict) -> Tuple[List, List]:
+def get_media_streams(log: logging.Logger, jf_item: dict) -> Tuple[List, List]:
     video_streams = []
     audio_streams = []
     for source in jf_item.get('MediaSources') or []:
@@ -157,7 +155,7 @@ def get_media_streams(jf_item: dict) -> Tuple[List, List]:
                         else:
                             obj['aspect'] = float(aspect_ratio)
                     except Exception:
-                        _log.exception('failed to parse AspectRatio: "%s"', aspect_ratio)
+                        log.exception('failed to parse AspectRatio: "%s"', aspect_ratio)
                 video_range_type = stream.get('VideoRangeType')
                 if video_range_type:
                     obj['video_range_type'] = video_range_type
@@ -221,16 +219,16 @@ def _get_unique_ids(obj: dict) -> Dict[str, str]:
 _user_cache: Optional[Dict[str, User]] = None
 
 
-def print_debug_info(msg: str, obj: Any):
+def print_debug_info(log: logging.Logger, msg: str, obj: Any):
     from pprint import pformat
-    _log.debug(f'---------------- START {msg} ----------------')
-    _log.debug(pformat(obj))
-    _log.debug(f'---------------- END {msg} ----------------')
+    log.debug(f'---------------- START {msg} ----------------')
+    log.debug(pformat(obj))
+    log.debug(f'---------------- END {msg} ----------------')
 
 
-def exception(obj: Any):
+def exception(log: logging.Logger, obj: Any):
     from pprint import pformat
-    _log.error(pformat(obj))
+    log.error(pformat(obj))
 
 
 class Scraper:
@@ -238,6 +236,7 @@ class Scraper:
         global _user_cache
         self._server = server
         self._debug_level = debug_level
+        self._log = logging.getLogger(__name__)
 
     @property
     def jf_item_type(self):
@@ -249,7 +248,7 @@ class Scraper:
 
     def scrape_find(self, jf_items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         if self._debug_level > 1:
-            print_debug_info('JF FIND', jf_items)
+            print_debug_info(self._log, 'JF FIND', jf_items)
 
         try:
             items = []
@@ -259,16 +258,16 @@ class Scraper:
                 items.append({'id': item['Id'], 'name': name})
 
             if self._debug_level > 1:
-                print_debug_info('FIND', items)
+                print_debug_info(self._log, 'FIND', items)
 
             return items
         except Exception:
-            exception(jf_items)
+            exception(self._log, jf_items)
             raise
 
     def scrape_artwork(self, jf_artwork: Dict[str, Any]) -> Dict[str, str]:
         if self._debug_level > 1:
-            print_debug_info('JF SCRAPE ARTWORK', jf_artwork)
+            print_debug_info(self._log, 'JF SCRAPE ARTWORK', jf_artwork)
 
         try:
             artwork_map = None
@@ -277,34 +276,34 @@ class Scraper:
             artwork = get_artwork_from_item(self._server, jf_artwork, artwork_map)
 
             if self._debug_level > 1:
-                print_debug_info('SCRAPE ARTWORK', artwork)
+                print_debug_info(self._log, 'SCRAPE ARTWORK', artwork)
 
             return artwork
         except Exception:
-            exception(jf_artwork)
+            exception(self._log, jf_artwork)
             raise
 
     def _scrape_item(self, jf_item: Dict[str, Any], media_type: str,
                      artwork_map: Optional[Dict[str, List[str]]] = None) -> Dict[str, Any]:
         if self._debug_level > 1:
-            print_debug_info('JF SCRAPE ITEM', jf_item)
+            print_debug_info(self._log, 'JF SCRAPE ITEM', jf_item)
 
         try:
             info = self._get_info(jf_item, media_type, artwork_map)
             item = {'name': get_name(info['title'], info.get('year')), 'id': jf_item['Id'], 'info': info}
 
             if self._debug_level > 1:
-                print_debug_info('SCRAPE ITEM', item)
+                print_debug_info(self._log, 'SCRAPE ITEM', item)
 
             return item
         except Exception:
-            exception(jf_item)
+            exception(self._log, jf_item)
             raise
 
     def _get_info(self, jf_item: dict, media_type: str, artwork_map: Dict[str, List[str]]) -> dict:
         info = {'mediatype': media_type}
 
-        cast, directors, writers = get_people(self._server, jf_item)
+        cast, directors, writers = get_people(self._log, self._server, jf_item)
 
         if cast:
             info['cast'] = cast
@@ -398,7 +397,7 @@ class Scraper:
         # 'set'
         # 'setoverview'
 
-        video, audio = get_media_streams(jf_item)
+        video, audio = get_media_streams(self._log, jf_item)
         if video:
             info['video'] = video
         if audio:

@@ -1,4 +1,3 @@
-import logging
 from typing import List, Dict, Any
 
 import xbmc
@@ -8,8 +7,6 @@ import xbmcplugin
 from lib.builder.base import Builder, set_common_tags, set_tag_if_have, get_url
 from lib.util import util
 
-_log = logging.getLogger(__name__)
-
 
 def set_episode_tags(info, tags):
     set_tag_if_have(info, 'season', tags.setSeason)
@@ -17,6 +14,7 @@ def set_episode_tags(info, tags):
     set_tag_if_have(info, 'sortseason', tags.setSortSeason)
     set_tag_if_have(info, 'sortepisode', tags.setSortEpisode)
     set_tag_if_have(info, 'aired', tags.setFirstAired)
+
 
 class TvShowsBuilder(Builder):
     def _build_directory_set_list_item(self, list_item: xbmcgui.ListItem, item_id: str, jf_item: dict):
@@ -76,7 +74,7 @@ class TvShowsBuilder(Builder):
         return list_item
 
     def build_episodes_directory(self, episodes: List[Dict[str, Any]]):
-        _log.debug('create_episodes')
+        self._log.debug('create_episodes')
 
         items = []
         is_folder = False

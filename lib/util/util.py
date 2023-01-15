@@ -4,8 +4,6 @@ from urllib.parse import urlparse, parse_qs, urlencode, quote_plus
 
 import xbmcaddon
 
-_log = logging.getLogger(__name__)
-
 
 def get_plugin_url(addon: xbmcaddon.Addon, *args, **kwargs):
     path = '/'.join([quote_plus(arg) for arg in args])
@@ -16,7 +14,7 @@ def get_plugin_url(addon: xbmcaddon.Addon, *args, **kwargs):
     return f'plugin://{addon.getAddonInfo("id")}/{path}{param_str}'
 
 
-def get_args_from_params(msg: str, params: dict, keys: Optional[Iterable[str]]) -> dict:
+def get_args_from_params(log: logging.Logger, msg: str, params: dict, keys: Optional[Iterable[str]]) -> dict:
     url = params.get('url')
     if  url:
         parsed = urlparse(url)
@@ -27,7 +25,7 @@ def get_args_from_params(msg: str, params: dict, keys: Optional[Iterable[str]]) 
             raise Exception(f'{msg}: no url/id provided')
         qs = {'id': [url]}
 
-    _log.debug('get_args_from_params: qs=%s', qs)
+    log.debug('get_args_from_params: qs=%s', qs)
 
     ret = {'url': url}
 

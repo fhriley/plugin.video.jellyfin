@@ -4,8 +4,6 @@ from urllib.parse import urlencode
 
 import requests
 
-_log = logging.getLogger(__name__)
-
 
 class User:
     def __init__(self, user: str, uuid: Optional[str] = None, token: Optional[str] = None):
@@ -42,6 +40,7 @@ class Server:
         self._requests_api = requests_api
         self._timeout = timeout
         self._log_raw_resp = log_raw_resp
+        self._log = logging.getLogger(__name__)
 
     def _get_headers(self, user: Optional[User] = None, headers: Optional[Dict[str, str]] = None) -> Dict[str, str]:
         headers = headers or {}
@@ -64,7 +63,7 @@ class Server:
         response = self._requests_api.post(f'{self.server}{path}', *args, headers=headers, verify=self._verify_cert,
                                            timeout=timeout, **kwargs)
         if self._log_raw_resp:
-            _log.debug(repr(response.text))
+            self._log.debug(repr(response.text))
         return response
 
     def get(self, path: str, *args, user: Optional[User] = None, **kwargs) -> requests.Response:
@@ -73,7 +72,7 @@ class Server:
         response = self._requests_api.get(f'{self.server}{path}', *args, headers=headers, verify=self._verify_cert,
                                           timeout=timeout, **kwargs)
         if self._log_raw_resp:
-            _log.debug(repr(response.text))
+            self._log.debug(repr(response.text))
         return response
 
     def authenticate_by_password(self, user: str, password: str) -> User:

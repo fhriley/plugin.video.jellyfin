@@ -12,8 +12,6 @@ import xbmcplugin
 import lib.util.util as util
 from lib.util.settings import Settings
 
-_log = logging.getLogger(__name__)
-
 
 def set_tag_if_have(info: dict, key: str, set_func: Callable):
     val = info.get(key)
@@ -98,6 +96,7 @@ class Builder(ABC):
         self._settings = settings
         self._handle = handle
         self._addon = addon
+        self._log = logging.getLogger(__name__)
 
     def build_find_directory(self, jf_items: List[Dict[str, Any]]):
         items = []
@@ -127,7 +126,7 @@ class Builder(ABC):
     def _build_directory(self, jf_items: List[Dict[str, Any]], media_type: str):
         succeeded = False
         try:
-            _log.debug('_build_directory')
+            self._log.debug('_build_directory')
             items = []
             is_folder = True
 

@@ -2,7 +2,7 @@ import logging
 from abc import ABC, abstractmethod
 from math import ceil
 from typing import Callable, Optional, List, Dict, Any
-from urllib.parse import urlencode, quote
+from urllib.parse import urlencode, quote_plus
 
 import xbmc
 import xbmcaddon
@@ -85,7 +85,7 @@ def set_common_tags(tags: xbmc.InfoTagVideo, info: dict, unique_id: Optional[str
 
 
 def get_url(addon, media_type, *args, **kwargs):
-    path = '/'.join([quote(arg) for arg in args])
+    path = '/'.join([quote_plus(arg) for arg in args])
     if kwargs:
         param_str = f'?{urlencode(kwargs)}'
     else:
@@ -110,6 +110,7 @@ class Builder(ABC):
             items.append((url, list_item, is_folder))
 
         xbmcplugin.addDirectoryItems(handle=self._handle, items=items)
+        xbmcplugin.endOfDirectory(handle=self._handle, succeeded=True)
 
     @abstractmethod
     def _build_directory_set_list_item(self, list_item: xbmcgui.ListItem, item_id: str, jf_item: dict):

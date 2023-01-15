@@ -10,7 +10,7 @@ from typing import Union
 
 import requests
 
-from lib.api.jellyfin import Server
+from lib.api.jellyfin import Server, authenticate
 from lib.scraper.movies import MoviesScraper
 from lib.scraper.queries import get_episodes, get_artwork
 from lib.scraper.tvshows import TvShowsScraper
@@ -59,8 +59,8 @@ def profile(func, num_times=1):
         return results, sio.getvalue(), stats.total_tt / num_times
 
 
-@unittest.skip
 class TestScratch(unittest.TestCase):
+    @unittest.skip
     def test_get_item(self):
         with requests.Session() as session:
             server = get_server(session, debug_level=0)
@@ -69,6 +69,7 @@ class TestScratch(unittest.TestCase):
             item = server.get_item(user, '6ce12311f8993cf1a212881db0677f2a', params=params)
             pprint(item)
 
+    @unittest.skip
     def _test_get_items(self, scraper_class: Union[type(MoviesScraper), type(TvShowsScraper)], out_file: str):
         with requests.Session() as session:
             server = get_server(session, debug_level=0)
@@ -82,12 +83,15 @@ class TestScratch(unittest.TestCase):
             #     import json
             #     json.dump(items, out, indent=4, sort_keys=True)
 
+    @unittest.skip
     def test_get_tvshows(self):
         self._test_get_items(TvShowsScraper, 'data/tvshows_scraper.json')
 
+    @unittest.skip
     def test_get_movies(self):
         self._test_get_items(MoviesScraper, 'data/movies_scraper.json')
 
+    @unittest.skip
     def test_get_items_chunked(self):
         with requests.Session() as session:
             server = get_server(session, debug_level=0)
@@ -99,6 +103,7 @@ class TestScratch(unittest.TestCase):
             print((end - start) * 1e-9)
             print(len(items['Items']))
 
+    @unittest.skip
     def test_get_episodes(self):
         with requests.Session() as session:
             server = get_server(session, debug_level=0)
@@ -109,6 +114,7 @@ class TestScratch(unittest.TestCase):
             #     import json
             #     json.dump(episodes, out, indent=4, sort_keys=True)
 
+    @unittest.skip
     def test_get_artwork(self):
         with requests.Session() as session:
             server = get_server(session, debug_level=0)
@@ -117,3 +123,11 @@ class TestScratch(unittest.TestCase):
             # with open('data/artwork_jf.json', 'w') as out:
             #     import json
             #     json.dump(artwork, out, indent=4, sort_keys=True)
+
+    #@unittest.skip
+    def test_authenticate(self):
+        with requests.Session() as session:
+            cache = {}
+            server = get_server(session, debug_level=0)
+            user = authenticate(server, cache, USER, PASS)
+            pprint(user)

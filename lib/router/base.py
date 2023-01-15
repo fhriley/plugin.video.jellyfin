@@ -1,4 +1,6 @@
 import logging
+import os
+from pprint import pformat
 from typing import Optional
 
 import xbmcaddon
@@ -59,6 +61,8 @@ class Router:
             _log.debug('find: title="%s" year=%s', title, year)
             jf_items = find_by_title(self._server, user, scraper.jf_item_type, title, year).get('Items') or []
             items = scraper.scrape_find(jf_items)
+            if _log.isEnabledFor(logging.DEBUG):
+                _log.debug('find result:%s%s', os.linesep, pformat(items))
             builder.build_find_directory(items)
         except Exception:
             xbmcplugin.endOfDirectory(handle=self._handle, succeeded=False)

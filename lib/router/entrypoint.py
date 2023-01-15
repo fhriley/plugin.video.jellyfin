@@ -2,7 +2,7 @@ import logging
 import sys
 import traceback
 from typing import Type, Union, Optional
-from urllib.parse import parse_qsl
+from urllib.parse import parse_qsl, unquote_plus
 
 import requests
 import xbmc
@@ -27,7 +27,7 @@ def get_params() -> dict:
 
 
 def get_server(session: requests.Session, settings: Settings, addon: xbmcaddon.Addon) -> Server:
-    server_url = settings.get('serverurl')
+    server_url = unquote_plus(settings.get('serverurl'))
     device_name = xbmc.getInfoLabel('System.FriendlyName')
     version = addon.getAddonInfo('version')
     verify_cert = settings.get_bool('sslverify')

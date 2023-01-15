@@ -3,6 +3,7 @@ import tempfile
 import unittest
 from typing import Dict, Any
 from unittest.mock import patch, Mock, PropertyMock, call, MagicMock
+from urllib.parse import quote_plus
 
 import xbmc
 import xbmcaddon
@@ -183,6 +184,23 @@ class TestBuilder(unittest.TestCase):
     #         self._test_build_directory(mock_xbmcplugin, mock_xbmcgui, handle, builder.build_episodes_directory,
     #                                    'episodes_scraper.json',
     #                                    'tvshows', 'episodes', False, ('series_id', 'id'))
+
+    @patch('lib.builder.base.xbmcgui')
+    @patch('lib.builder.base.xbmcplugin')
+    def test_build_find_directory(self, mock_xbmcplugin, mock_xbmcgui):
+        handle = 1
+        with tempfile.TemporaryDirectory() as temp_dir:
+            mock_list_item = mock_xbmcgui.ListItem
+            mock_xbmcgui.ListItem.return_value = mock_list_item
+            addon = get_mock_addon()
+            builder = _create_builder(handle, temp_dir, TvShowsBuilder, addon)
+
+            input = [{'id': '43df71c52fff642be7e32c048322de8c', 'name': 'Breaking Bad (2008)'}]
+            builder.build_find_directory(input)
+            mock_xbmcgui.ListItem.assert_called_once_with(input[0]['name'])
+            expected_items = [(f'plugin://addon/find?id={input[0]["id"]}&name={quote_plus(input[0]["name"])}', mock_list_item, True)]
+            mock_xbmcplugin.addDirectoryItems.assert_called_once_with(handle=handle, items=expected_items)
+            mock_xbmcplugin.endOfDirectory.assert_called_once_with(handle=handle, succeeded=True)
 
     @patch('lib.builder.base.xbmcgui')
     @patch('lib.builder.base.xbmcplugin')

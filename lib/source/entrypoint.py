@@ -2,7 +2,7 @@ import logging
 import sys
 import traceback
 from typing import Optional, Dict, Any
-from urllib.parse import urlparse, unquote, parse_qsl
+from urllib.parse import urlparse, unquote_plus, parse_qsl
 
 import requests
 import xbmc
@@ -35,7 +35,7 @@ def get_params() -> dict:
 
 
 def get_server(session: requests.Session, settings: Settings, addon: xbmcaddon.Addon) -> Server:
-    server_url = settings.get('serverurl')
+    server_url = unquote_plus(settings.get('serverurl'))
     device_name = xbmc.getInfoLabel('System.FriendlyName')
     version = addon.getAddonInfo('version')
     verify_cert = settings.get_bool('sslverify')
@@ -128,8 +128,8 @@ def main(*args):
 
         if split_path[1] == 'tvshows':
             if len(split_path) == 4:
-                series_id = unquote(split_path[2])
-                episode_id = unquote(split_path[3])
+                series_id = unquote_plus(split_path[2])
+                episode_id = unquote_plus(split_path[3])
                 play_tvshow(log, handle, server, user, series_id, episode_id, parsed.path)
             else:
                 scraper = TvShowsScraper(server, debug_level=0)
@@ -141,13 +141,13 @@ def main(*args):
                     shows = [show for show in shows if show['info']['title'] == 'The Flight Attendant']
                     builder.build_directory(shows)
                 elif len(split_path) == 3:
-                    series_id = unquote(split_path[2])
+                    series_id = unquote_plus(split_path[2])
                     episodes = scraper.get_episodes(user, series_id)
                     builder.build_episodes(episodes)
 
         elif split_path[1] == 'movies':
             if len(split_path) == 3:
-                movie_id = unquote(split_path[2])
+                movie_id = unquote_plus(split_path[2])
                 play_movie(log, handle, server, user, movie_id)
             else:
                 scraper = MoviesScraper(server, debug_level=0)

@@ -1,6 +1,6 @@
 import logging
 from typing import Iterable, Optional
-from urllib.parse import urlparse, parse_qs, urlencode, quote
+from urllib.parse import urlparse, parse_qs, urlencode, quote_plus
 
 import xbmcaddon
 
@@ -8,7 +8,7 @@ _log = logging.getLogger(__name__)
 
 
 def get_plugin_url(addon: xbmcaddon.Addon, *args, **kwargs):
-    path = '/'.join([quote(arg) for arg in args])
+    path = '/'.join([quote_plus(arg) for arg in args])
     if kwargs:
         param_str = f'?{urlencode(kwargs)}'
     else:

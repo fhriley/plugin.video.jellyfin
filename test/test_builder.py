@@ -51,6 +51,13 @@ def check_artwork(tag: MagicMock, obj: Dict[str, Any]):
             tag.addAvailableArtwork.assert_has_calls(expected_calls, any_order=True)
 
 
+def do_checks(checks: list, info: dict):
+    for key, func in checks:
+        val = info.get(key)
+        if val is not None:
+            func.assert_called_once_with(val)
+
+
 def check_tag(test: unittest.TestCase, tag: MagicMock, obj: Dict[str, Any]):
     checks = [
         ('year', tag.setYear),
@@ -81,19 +88,16 @@ def check_tag(test: unittest.TestCase, tag: MagicMock, obj: Dict[str, Any]):
     ]
 
     info = obj['info']
+    do_checks(checks, info)
 
-    for key, func in checks:
-        if func.called:
-            func.assert_called_once_with(info[key])
+    resume_point = info.get('resume_point')
+    if resume_point:
+        test.assertAlmostEqual(resume_point[0], tag.setResumePoint.call_args.args[0])
+        test.assertAlmostEqual(resume_point[1], tag.setResumePoint.call_args.args[1])
 
-    if tag.setResumePoint.called:
-        test.assertAlmostEqual(info['resume_point'][0], tag.setResumePoint.call_args.args[0])
-        test.assertAlmostEqual(info['resume_point'][1], tag.setResumePoint.call_args.args[1])
-
-    if tag.setUniqueIDs.called:
-        unique_id = tag.setUniqueIDs.call_args[0][0]['jellyfin']
-        test.assertEqual(unique_id, obj['id'])
-        test.assertEqual(tag.setUniqueIDs.call_args[1], {'defaultuniqueid': 'jellyfin'})
+    unique_id = tag.setUniqueIDs.call_args[0][0]['jellyfin']
+    test.assertEqual(unique_id, obj['id'])
+    test.assertEqual(tag.setUniqueIDs.call_args[1], {'defaultuniqueid': 'jellyfin'})
 
     check_artwork(tag, obj)
 
@@ -107,11 +111,7 @@ def check_show_tag(tag: MagicMock, obj: Dict[str, Any]):
         ('aired', tag.setFirstAired),
     ]
     info = obj['info']
-    for key, func in checks:
-        if func.called:
-            func.assert_called_once_with(info[key])
-
-    check_artwork(tag, obj)
+    do_checks(checks, info)
 
 
 def check_episode_tag(tag: MagicMock, obj: Dict[str, Any]):
@@ -123,9 +123,7 @@ def check_episode_tag(tag: MagicMock, obj: Dict[str, Any]):
         ('aired', tag.setFirstAired),
     ]
     info = obj['info']
-    for key, func in checks:
-        if func.called:
-            func.assert_called_once_with(info[key])
+    do_checks(checks, info)
 
 
 def _create_builder(handle, temp_dir, builder_class, addon=None):

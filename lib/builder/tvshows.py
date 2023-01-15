@@ -11,6 +11,13 @@ from lib.util import util
 _log = logging.getLogger(__name__)
 
 
+def set_episode_tags(info, tags):
+    set_tag_if_have(info, 'season', tags.setSeason)
+    set_tag_if_have(info, 'episode', tags.setEpisode)
+    set_tag_if_have(info, 'sortseason', tags.setSortSeason)
+    set_tag_if_have(info, 'sortepisode', tags.setSortEpisode)
+    set_tag_if_have(info, 'aired', tags.setFirstAired)
+
 class TvShowsBuilder(Builder):
     def _build_directory_set_list_item(self, list_item: xbmcgui.ListItem, item_id: str, jf_item: dict):
         # list_item.setContentLookup(False)
@@ -53,34 +60,7 @@ class TvShowsBuilder(Builder):
 
         xbmcplugin.setResolvedUrl(handle=self._handle, succeeded=True, listitem=list_item)
 
-    def build_episodes_directory(self, episodes: List[Dict[str, Any]]):
-        _log.debug('create_episodes')
-
-        items = []
-        is_folder = False
-
-        for episode in episodes:
-            episode_id = episode['id']
-            info = episode['info']
-
-            list_item = xbmcgui.ListItem(episode['name'], offscreen=True)
-            tags = list_item.getVideoInfoTag()
-            set_common_tags(tags, info, episode_id)
-
-            set_tag_if_have(info, 'season', tags.setSeason)
-            set_tag_if_have(info, 'episode', tags.setEpisode)
-            set_tag_if_have(info, 'sortseason', tags.setSortSeason)
-            set_tag_if_have(info, 'sortepisode', tags.setSortEpisode)
-            set_tag_if_have(info, 'aired', tags.setFirstAired)
-
-            url = get_url(self._addon, 'tvshows', id=episode_id)
-            items.append((url, list_item, is_folder))
-
-        xbmcplugin.setContent(handle=self._handle, content='episodes')
-        xbmcplugin.addDirectoryItems(handle=self._handle, items=items)
-        xbmcplugin.endOfDirectory(handle=self._handle, succeeded=True)
-
-    def build_episode(self, episode: Dict[str, Any]):
+    def _build_episode(self, episode: Dict[str, Any]) -> xbmcgui.ListItem:
         list_item = xbmcgui.ListItem(episode['name'], offscreen=True)
         tags = list_item.getVideoInfoTag()
 
@@ -93,4 +73,23 @@ class TvShowsBuilder(Builder):
         set_tag_if_have(info, 'sortepisode', tags.setSortEpisode)
         set_tag_if_have(info, 'aired', tags.setFirstAired)
 
+        return list_item
+
+    def build_episodes_directory(self, episodes: List[Dict[str, Any]]):
+        _log.debug('create_episodes')
+
+        items = []
+        is_folder = False
+
+        for episode in episodes:
+            list_item = self._build_episode(episode)
+            url = get_url(self._addon, 'tvshows', id=episode['id'])
+            items.append((url, list_item, is_folder))
+
+        xbmcplugin.setContent(handle=self._handle, content='episodes')
+        xbmcplugin.addDirectoryItems(handle=self._handle, items=items)
+        xbmcplugin.endOfDirectory(handle=self._handle, succeeded=True)
+
+    def build_episode(self, episode: Dict[str, Any]):
+        list_item = self._build_episode(episode)
         xbmcplugin.setResolvedUrl(handle=self._handle, succeeded=True, listitem=list_item)

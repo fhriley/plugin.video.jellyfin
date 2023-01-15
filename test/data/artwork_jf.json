@@ -1,0 +1,40 @@
+{
+  "BackdropImageTags": [
+    "206b851f1d91c30de74a434419022808"
+  ],
+  "ChannelId": null,
+  "CommunityRating": 7.56,
+  "Container": "mkv,webm",
+  "CriticRating": 82,
+  "Id": "6ce12311f8993cf1a212881db0677f2a",
+  "ImageBlurHashes": {
+    "Backdrop": {
+      "206b851f1d91c30de74a434419022808": "WlEp+pTKS6xYROni_4R:M|s*V?oKrWNLD*s*oIoLw@R+IUoIn%eo"
+    },
+    "Logo": {
+      "937719ed93cd33dec98bb9fbd5e5a822": "HBI$KC_3%MtQIUtQIUR%0JtQM{InM{WBM{M{t7E1"
+    },
+    "Primary": {
+      "29e2da9274b069945388d7e7269ad8b9": "d97d:|.A4nD%XpkYnOoK57R,-pxa#PaIJBS5m+VqS0X7"
+    },
+    "Thumb": {
+      "4e0edd5fc44b23a2b5a43ba648975aa2": "NiD0+JIUMx%MITn~_4IURPx[M_of%NM{WBxuRjt7"
+    }
+  },
+  "ImageTags": {
+    "Logo": "937719ed93cd33dec98bb9fbd5e5a822",
+    "Primary": "29e2da9274b069945388d7e7269ad8b9",
+    "Thumb": "4e0edd5fc44b23a2b5a43ba648975aa2"
+  },
+  "IsFolder": false,
+  "LocationType": "FileSystem",
+  "MediaType": "Video",
+  "Name": "Avatar",
+  "OfficialRating": "PG-13",
+  "PremiereDate": "2009-12-15T00:00:00.0000000Z",
+  "ProductionYear": 2009,
+  "RunTimeTicks": 106894712832,
+  "ServerId": "038e607d91954c87868d5720d3311360",
+  "Type": "Movie",
+  "VideoType": "VideoFile"
+}

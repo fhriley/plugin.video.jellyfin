@@ -1,0 +1,4809 @@
+[
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/333671aab522a9a2100cdedede5c4d3f/Images/Primary?tag=36ed5e5f06a33a0b81bbc97d923ac344"
+    },
+    "id": "333671aab522a9a2100cdedede5c4d3f",
+    "name": "Season 2021",
+    "number": 2021,
+    "series_id": "97d1888c171a37a11c424a716bfbaf25",
+    "year": 2009
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/20ef2d270844289226f61d60ca0f99ea/Images/Primary?tag=258ff00d937a8ccf5c230c8dffa9337c"
+    },
+    "id": "20ef2d270844289226f61d60ca0f99ea",
+    "name": "Season 2022",
+    "number": 2022,
+    "series_id": "97d1888c171a37a11c424a716bfbaf25",
+    "year": 2009
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/ef25585eb9c743ec45149dcec90633d2/Images/Primary?tag=039b38d5f4c00b0427c9f766f48dd9ef"
+    },
+    "id": "ef25585eb9c743ec45149dcec90633d2",
+    "name": "Season 13",
+    "number": 13,
+    "series_id": "59dda25fa89550fe54264adf171d9ab1",
+    "year": 2010
+  },
+  {
+    "id": "b4a834f80defc70a440f75c8d2443510",
+    "name": "Season 8",
+    "number": 8,
+    "series_id": "08371b16c9b9a34421736cdd180ec4ca"
+  },
+  {
+    "id": "fa3f7cfb98b35ce5a570683cff18f951",
+    "name": "Season 9",
+    "number": 9,
+    "series_id": "08371b16c9b9a34421736cdd180ec4ca",
+    "year": 2013
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/f15c4b1b8fc5a7c57c0fc0a1026816fb/Images/Primary?tag=325addc186068f8d4e9c8c3ba5cd7298"
+    },
+    "id": "f15c4b1b8fc5a7c57c0fc0a1026816fb",
+    "name": "Season 2",
+    "number": 2,
+    "series_id": "7fcc591e5de555e0093622ea1491bc6f"
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/8f6c6a53cfee33da10e5fef3566881e8/Images/Primary?tag=1aeb2830684dba6af9a008b2d6052765"
+    },
+    "id": "8f6c6a53cfee33da10e5fef3566881e8",
+    "name": "Season 11",
+    "number": 11,
+    "series_id": "50b62eaa8ce5dbdd69f7573d8ce6cbe9",
+    "year": 1989
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/1ad12caf0de29cdaa27c53d4ea6ff9a6/Images/Primary?tag=dc1b0baa747a63e506780961c9f3ba43"
+    },
+    "id": "1ad12caf0de29cdaa27c53d4ea6ff9a6",
+    "name": "Season 12",
+    "number": 12,
+    "series_id": "50b62eaa8ce5dbdd69f7573d8ce6cbe9",
+    "year": 1989
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/79ac3974018b7a1ef536ae11b32ee98f/Images/Primary?tag=4e2833eb225a78f896a1513bb31c4b04"
+    },
+    "id": "79ac3974018b7a1ef536ae11b32ee98f",
+    "name": "Season 13",
+    "number": 13,
+    "series_id": "50b62eaa8ce5dbdd69f7573d8ce6cbe9",
+    "year": 1988
+  },
+  {
+    "id": "d56ddaf9676702ab539e7613050bbb57",
+    "name": "Season 2021",
+    "number": 2021,
+    "series_id": "db0ebf2e2eca603aa9ddd718b487bab6",
+    "year": 1983
+  },
+  {
+    "id": "11c57b47d11de61d021abb0c65b3589b",
+    "name": "Season 2022",
+    "number": 2022,
+    "series_id": "db0ebf2e2eca603aa9ddd718b487bab6",
+    "year": 1983
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/4d3c81d5aadea7224364f6d9ed76f743/Images/Primary?tag=aecb5b79ceede023e0f744db80db40ea"
+    },
+    "id": "4d3c81d5aadea7224364f6d9ed76f743",
+    "name": "Season 19",
+    "number": 19,
+    "series_id": "dcf0018aee6e69c7262450b1f60b38cf"
+  },
+  {
+    "id": "ed91ebb6dbdb977bcac017c00be922ef",
+    "name": "Season 3",
+    "number": 3,
+    "series_id": "417f1a256756dd45e8273c812b0cb606"
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/58ba692882c5dda626e64ab2baf2dfff/Images/Primary?tag=dfce39de4e87ba9853dbb084954484ad"
+    },
+    "id": "58ba692882c5dda626e64ab2baf2dfff",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "1952-10-26",
+    "series_id": "2873e8625fc61683d17db0f213da30c5",
+    "year": 1952
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/ef095773a612065627abe4942165c722/Images/Primary?tag=e20668e04fbf368300e0edaeb7d8bacb"
+    },
+    "id": "ef095773a612065627abe4942165c722",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "1989-02-05",
+    "series_id": "59edb96f447a6e1b55eaaeb246edb356",
+    "year": 1989
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/eac82f943b0108cc81956811968b203a/Images/Primary?tag=97c08fa36278e8b0c8282e0681ee9891"
+    },
+    "id": "eac82f943b0108cc81956811968b203a",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "1989-07-05",
+    "series_id": "ab433d4c6e0ea5f833d78ebba95a9084",
+    "year": 1989
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/ec365ca7e6f8ca97a93d3a4a3deecbce/Images/Primary?tag=e528f5b382c768c4dfed62fd69b0bdcd"
+    },
+    "id": "ec365ca7e6f8ca97a93d3a4a3deecbce",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "1991-01-23",
+    "series_id": "ab433d4c6e0ea5f833d78ebba95a9084",
+    "year": 1991
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/3e4d8dd214fea6bf7130320cf077fba6/Images/Primary?tag=68a2687314e36a8decf90cb1efbc4416"
+    },
+    "id": "3e4d8dd214fea6bf7130320cf077fba6",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "1991-09-18",
+    "series_id": "ab433d4c6e0ea5f833d78ebba95a9084",
+    "year": 1991
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/28594d0bcb871508a644303081ebe63b/Images/Primary?tag=1e98e4efa14542df7a16ecafd8bb933c"
+    },
+    "id": "28594d0bcb871508a644303081ebe63b",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "1992-08-12",
+    "series_id": "ab433d4c6e0ea5f833d78ebba95a9084",
+    "year": 1992
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/deab848a64063361be9786e097a979f8/Images/Primary?tag=93c2cdd5dee97c75a0421bc017948c9d"
+    },
+    "id": "deab848a64063361be9786e097a979f8",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "1993-09-16",
+    "series_id": "ab433d4c6e0ea5f833d78ebba95a9084",
+    "year": 1993
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/6e174ddb753996d9e9728dfeae6b708b/Images/Primary?tag=052d90e20fb62cfe7b3d3a9004e83921"
+    },
+    "id": "6e174ddb753996d9e9728dfeae6b708b",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "1994-05-08",
+    "series_id": "b1e9e6c446eace99b48182ce0779725e",
+    "year": 1994
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/4e3598f89b8bfa4e9ff0eb6417764203/Images/Primary?tag=85174a151901e332fddb7fdfef770d3c"
+    },
+    "id": "4e3598f89b8bfa4e9ff0eb6417764203",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "1994-09-22",
+    "series_id": "ab433d4c6e0ea5f833d78ebba95a9084",
+    "year": 1994
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/41927a2770aec878a36e08d997c87ba8/Images/Primary?tag=2330b7abddb3a8ea7437b9da87fd3fd3"
+    },
+    "id": "41927a2770aec878a36e08d997c87ba8",
+    "name": "Season 7",
+    "number": 7,
+    "premiered": "1995-09-21",
+    "series_id": "ab433d4c6e0ea5f833d78ebba95a9084",
+    "year": 1995
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/363d1cb6000e2eb8601435ecc16bd393/Images/Primary?tag=1d86c70f6457e98d4c4f7a7ed4fe177b"
+    },
+    "id": "363d1cb6000e2eb8601435ecc16bd393",
+    "name": "Season 8",
+    "number": 8,
+    "premiered": "1996-09-19",
+    "series_id": "ab433d4c6e0ea5f833d78ebba95a9084",
+    "year": 1996
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/22bfdbffa3841b7e9c70f1bb9be0b56e/Images/Primary?tag=06a2ae5418dd9b4c9caba8cf230a1bd1"
+    },
+    "id": "22bfdbffa3841b7e9c70f1bb9be0b56e",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "1997-08-13",
+    "series_id": "34ad77e9ef3a5f20037306b60b34a1fd",
+    "year": 1997
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/38c87298bdb6b0a0a94ed6dd32e9438f/Images/Primary?tag=7e5e079c219d1a908097e425d87f4502"
+    },
+    "id": "38c87298bdb6b0a0a94ed6dd32e9438f",
+    "name": "Season 9",
+    "number": 9,
+    "premiered": "1997-09-25",
+    "series_id": "ab433d4c6e0ea5f833d78ebba95a9084",
+    "year": 1997
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/96255e6e3b38b7a05007a3fbf56b3582/Images/Primary?tag=6ba3b6125f155db68162ae2ce7e231b1"
+    },
+    "id": "96255e6e3b38b7a05007a3fbf56b3582",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "1998-04-01",
+    "series_id": "34ad77e9ef3a5f20037306b60b34a1fd",
+    "year": 1998
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/615dbe22d467dc3d8d8e9331c28d47bf/Images/Primary?tag=5c6bf20d9b6e671088e67329c679c925"
+    },
+    "id": "615dbe22d467dc3d8d8e9331c28d47bf",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "1999-01-10",
+    "series_id": "652204742ff794371a7a8029724d5a49",
+    "year": 1999
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/507fa57a4af85a13eb1ee8291b121cba/Images/Primary?tag=15329cb1f1c38ef3d7953afbe46c78bf"
+    },
+    "id": "507fa57a4af85a13eb1ee8291b121cba",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "1999-01-31",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 1999
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/ddd0d97b6195eae4353b7a338d414fc8/Images/Primary?tag=f420ecad6cc1daae526017f5ad2e323b"
+    },
+    "id": "ddd0d97b6195eae4353b7a338d414fc8",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "1999-04-07",
+    "series_id": "34ad77e9ef3a5f20037306b60b34a1fd",
+    "year": 1999
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/44b2f04fdf4847f9a9d3bef9e368fc44/Images/Primary?tag=9eacab45d1cf7b4647d3e2bc3fe6e10a"
+    },
+    "id": "44b2f04fdf4847f9a9d3bef9e368fc44",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "1999-09-23",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 1999
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/0cb5941a1888d6146a06f76675520260/Images/Primary?tag=0a7822ea5dbe6f85811180b960459102"
+    },
+    "id": "0cb5941a1888d6146a06f76675520260",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2000-01-16",
+    "series_id": "652204742ff794371a7a8029724d5a49",
+    "year": 2000
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/b172df095399d9f39d1a362ad0006fd1/Images/Primary?tag=ecb355367795b125e1db7387ebd525b8"
+    },
+    "id": "b172df095399d9f39d1a362ad0006fd1",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2000-04-05",
+    "series_id": "34ad77e9ef3a5f20037306b60b34a1fd",
+    "year": 2000
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/88071ac168f9d5d0e409b160a1265a9e/Images/Primary?tag=30c2a2d320245a3620da4d485c4734ec"
+    },
+    "id": "88071ac168f9d5d0e409b160a1265a9e",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2001-02-14",
+    "series_id": "b0909eac01af27fa7f3b492592ac2a28",
+    "year": 2001
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/1538f5fc78b349c90aee4788f2f4c8c4/Images/Primary?tag=298f4ba80fba8886c97355d6568b1d4c"
+    },
+    "id": "1538f5fc78b349c90aee4788f2f4c8c4",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2001-03-04",
+    "series_id": "652204742ff794371a7a8029724d5a49",
+    "year": 2001
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/d3a9d88b17a38fa65ba4d1124956c357/Images/Primary?tag=2263ff5be1d1c5568271fd574c188580"
+    },
+    "id": "d3a9d88b17a38fa65ba4d1124956c357",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2001-06-20",
+    "series_id": "34ad77e9ef3a5f20037306b60b34a1fd",
+    "year": 2001
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/78f289fa85ba696bf2c532efd4069fd9/Images/Primary?tag=0ea64477bc9204de1be7ba4846c1bdd1"
+    },
+    "id": "78f289fa85ba696bf2c532efd4069fd9",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2001-07-11",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 2001
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/3394cb8fda441f9e5b3234b8be38fc38/Images/Primary?tag=05c46a031450947fdb70237c1b712c9b"
+    },
+    "id": "3394cb8fda441f9e5b3234b8be38fc38",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2001-09-09",
+    "series_id": "77635317657b339945b9dfd0324ffa5f",
+    "year": 2001
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/72a1e600c8425ac1411dc6554ba956e7/Images/Primary?tag=03c4caebbc99d985c9de3223c0d08004"
+    },
+    "id": "72a1e600c8425ac1411dc6554ba956e7",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2002-03-12",
+    "series_id": "ed2a1379a841a2eb981c34b04b961bb7",
+    "year": 2002
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/972502e0d3996faac1e3bffbb2a62beb/Images/Primary?tag=204e39363762dcc558508fc35dc6b263"
+    },
+    "id": "972502e0d3996faac1e3bffbb2a62beb",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2002-06-02",
+    "series_id": "591d85dae53e52419028e7a00148de53",
+    "year": 2002
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/42371fa1551389ea9df680b4e3c9fd33/Images/Primary?tag=5c7848d816cdff0a5f1aeeafc253b0f5"
+    },
+    "id": "42371fa1551389ea9df680b4e3c9fd33",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2002-09-15",
+    "series_id": "652204742ff794371a7a8029724d5a49",
+    "year": 2002
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/57e24a29baf0ec181b5e23ab8abba4b3/Images/Primary?tag=9fac66be193cacea0ee90cc697a761e8"
+    },
+    "id": "57e24a29baf0ec181b5e23ab8abba4b3",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2003-01-07",
+    "series_id": "ed2a1379a841a2eb981c34b04b961bb7",
+    "year": 2003
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/cd35adf5f6cdf219c20b56f71e085524/Images/Primary?tag=50604ddfc6835fe417748bfb02536143"
+    },
+    "id": "cd35adf5f6cdf219c20b56f71e085524",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2003-06-01",
+    "series_id": "591d85dae53e52419028e7a00148de53",
+    "year": 2003
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/b29ef618bf2977088c88063e9901b9c8/Images/Primary?tag=7b15a0917f6e6d1438c877448e43e6d0"
+    },
+    "id": "b29ef618bf2977088c88063e9901b9c8",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2003-09-22",
+    "series_id": "64bfcc7c704c3498b347aab2e5233752",
+    "year": 2003
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/748e3670f5b4c1e029be879f100734a3/Images/Primary?tag=777f9bda55b33a0ba1ecaa22aa73fa1d"
+    },
+    "id": "748e3670f5b4c1e029be879f100734a3",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2004-03-07",
+    "series_id": "652204742ff794371a7a8029724d5a49",
+    "year": 2004
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/36cc4e35a688aeb8d9ba4f6f6b322091/Images/Primary?tag=a3bcf2209653fbb52ade71f97a32423d"
+    },
+    "id": "36cc4e35a688aeb8d9ba4f6f6b322091",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2004-03-09",
+    "series_id": "ed2a1379a841a2eb981c34b04b961bb7",
+    "year": 2004
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/fe0b94d5dda312eddc2129911be80999/Images/Primary?tag=35b7217f917c485b428e083fe0447d33"
+    },
+    "id": "fe0b94d5dda312eddc2129911be80999",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2004-09-19",
+    "series_id": "591d85dae53e52419028e7a00148de53",
+    "year": 2004
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/c2a675584764d85c149fd5303acb2248/Images/Primary?tag=c541aca56ffff380f8b10832ccef2a8f"
+    },
+    "id": "c2a675584764d85c149fd5303acb2248",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2004-09-20",
+    "series_id": "64bfcc7c704c3498b347aab2e5233752",
+    "year": 2004
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/e81c56fcf62836988b79e0cbf9c6e8aa/Images/Primary?tag=a7e4ee489445ea567aa4257e14a4b4be"
+    },
+    "id": "e81c56fcf62836988b79e0cbf9c6e8aa",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2005-03-15",
+    "series_id": "ed2a1379a841a2eb981c34b04b961bb7",
+    "year": 2005
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/7e77c3bc32fda3944166b301e1f4ab04/Images/Primary?tag=58f1661ed33e42e67abb82ae14ba067d"
+    },
+    "id": "7e77c3bc32fda3944166b301e1f4ab04",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2005-03-24",
+    "series_id": "7879d2c8a44a666d6846d4eea026ddd3",
+    "year": 2005
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/6888ef7eddb959f5b26435c23e416ff6/Images/Primary?tag=1a198021679d4ff3d649d4bd45b6fd42"
+    },
+    "id": "6888ef7eddb959f5b26435c23e416ff6",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2005-05-01",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 2005
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/8accca8ecbfc65dc928325fa086bcc7d/Images/Primary?tag=3bc190d95bf5f5ae8f1d0596053b9ae8"
+    },
+    "id": "8accca8ecbfc65dc928325fa086bcc7d",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2005-09-19",
+    "series_id": "64bfcc7c704c3498b347aab2e5233752",
+    "year": 2005
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/c433c3825da60fb41813f125d336b5bc/Images/Primary?tag=869e190f332eb05d3aa8b204f97f6162"
+    },
+    "id": "c433c3825da60fb41813f125d336b5bc",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2005-09-20",
+    "series_id": "7879d2c8a44a666d6846d4eea026ddd3",
+    "year": 2005
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/292b4b4f5e4e284a356536bf3fcef672/Images/Primary?tag=18915c977d03b08c4cbecf4c149bd44c"
+    },
+    "id": "292b4b4f5e4e284a356536bf3fcef672",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2006-01-10",
+    "series_id": "ed2a1379a841a2eb981c34b04b961bb7",
+    "year": 2006
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/aac7f0ef6ee4d3e5fb863a04376e3be2/Images/Primary?tag=e66c62d4c9951139b9259ecf561cd71f"
+    },
+    "id": "aac7f0ef6ee4d3e5fb863a04376e3be2",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2006-03-12",
+    "series_id": "652204742ff794371a7a8029724d5a49",
+    "year": 2006
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/25bbd7ad6db22457cf5fcc62aeb715dd/Images/Primary?tag=29b37d839c0cd6e58a931c81b1d0ced2"
+    },
+    "id": "25bbd7ad6db22457cf5fcc62aeb715dd",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2006-09-10",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 2006
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/189bae7a59bbdc4bef4b1371b44f8cae/Images/Primary?tag=0fafadfed66934c982950d70ca04f0c9"
+    },
+    "id": "189bae7a59bbdc4bef4b1371b44f8cae",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2006-09-10",
+    "series_id": "591d85dae53e52419028e7a00148de53",
+    "year": 2006
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/4fda70e237e6983c4c669a13ba43958d/Images/Primary?tag=3e2decfed8d8eeecfab2d6c9d72ee59a"
+    },
+    "id": "4fda70e237e6983c4c669a13ba43958d",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2006-09-18",
+    "series_id": "64bfcc7c704c3498b347aab2e5233752",
+    "year": 2006
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/9e2629ac02699dd8ab47267c828f3429/Images/Primary?tag=b9b01fe7546db20ba40e49ee19e0b292"
+    },
+    "id": "9e2629ac02699dd8ab47267c828f3429",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2006-09-21",
+    "series_id": "7879d2c8a44a666d6846d4eea026ddd3",
+    "year": 2006
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/c6fa2f6dd3145d16c36aed7bf9766b18/Images/Primary?tag=e2b0d1e37912a2993b1849746a8fad24"
+    },
+    "id": "c6fa2f6dd3145d16c36aed7bf9766b18",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2007-04-03",
+    "series_id": "ed2a1379a841a2eb981c34b04b961bb7",
+    "year": 2007
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/8ff98565fcd85aee417c0f45e9384529/Images/Primary?tag=778457c290c83af114b2b84afd98e29f"
+    },
+    "id": "8ff98565fcd85aee417c0f45e9384529",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2007-09-23",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 2007
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/67349ea94a81c3b82a2a394f5daf5382/Images/Primary?tag=ba1b60a4125f5a6b0f7d67ead8119fa6"
+    },
+    "id": "67349ea94a81c3b82a2a394f5daf5382",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2007-09-24",
+    "series_id": "64bfcc7c704c3498b347aab2e5233752",
+    "year": 2007
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/37e609cd0698c12bf41abceaf6312715/Images/Primary?tag=42f7162688f60afca7ec89477a1f3272"
+    },
+    "id": "37e609cd0698c12bf41abceaf6312715",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2007-09-27",
+    "series_id": "7879d2c8a44a666d6846d4eea026ddd3",
+    "year": 2007
+  },
+  {
+    "id": "b684651d92ed3a54e7bae1a9a5fcd7a6",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2007-10-12",
+    "series_id": "7cd7a87a06d3fc327d56ff378b1f6f6b",
+    "year": 2007
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/7bf7277e36007825b6a680b507f48632/Images/Primary?tag=33efddc33e082d5ed5d3c40c4f346676"
+    },
+    "id": "7bf7277e36007825b6a680b507f48632",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2008-01-06",
+    "series_id": "591d85dae53e52419028e7a00148de53",
+    "year": 2008
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/d60c64e5cf417b19c95ac36e18ff4bc3/Images/Primary?tag=3190a12117685afe7fc8ac82493447e3"
+    },
+    "id": "d60c64e5cf417b19c95ac36e18ff4bc3",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2008-01-20",
+    "series_id": "43df71c52fff642be7e32c048322de8c",
+    "year": 2008
+  },
+  {
+    "id": "790f3fc6bf7c31a01a2c881376a41021",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2008-07-15",
+    "series_id": "7cd7a87a06d3fc327d56ff378b1f6f6b",
+    "year": 2008
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/dc022eab048b035b3fb708dc9875a5a4/Images/Primary?tag=31eae611457f5bd74d9a6c61111c1290"
+    },
+    "id": "dc022eab048b035b3fb708dc9875a5a4",
+    "name": "Season 7",
+    "number": 7,
+    "premiered": "2008-09-02",
+    "series_id": "ed2a1379a841a2eb981c34b04b961bb7",
+    "year": 2008
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/0002fff1c961271e38a1024d5dc1298f/Images/Primary?tag=e197cf3950c59f27947facee6644c4b9"
+    },
+    "id": "0002fff1c961271e38a1024d5dc1298f",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2008-09-22",
+    "series_id": "64bfcc7c704c3498b347aab2e5233752",
+    "year": 2008
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/a2146b05ea1e7e5546a165a50807f85c/Images/Primary?tag=f1dabeb08099fde88389d5deb5a1ad33"
+    },
+    "id": "a2146b05ea1e7e5546a165a50807f85c",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2008-09-25",
+    "series_id": "7879d2c8a44a666d6846d4eea026ddd3",
+    "year": 2008
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/88be06bbd87be88888b2e43ac875e1fa/Images/Primary?tag=74d1f1a2a74a8eee51a75244ae2f6aed"
+    },
+    "id": "88be06bbd87be88888b2e43ac875e1fa",
+    "name": "Season 7",
+    "number": 7,
+    "premiered": "2008-09-28",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 2008
+  },
+  {
+    "id": "152fc2f1cc8963811b3cbedfe49350d4",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2009-03-06",
+    "series_id": "7cd7a87a06d3fc327d56ff378b1f6f6b",
+    "year": 2009
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/17756eb9245b0d841d5c4931bd1e140b/Images/Primary?tag=e263563c48d9bf0556c7706bd2c45d3f"
+    },
+    "id": "17756eb9245b0d841d5c4931bd1e140b",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2009-03-08",
+    "series_id": "43df71c52fff642be7e32c048322de8c",
+    "year": 2009
+  },
+  {
+    "id": "7e5561d059f046b064c4263f8481e38d",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2009-09-11",
+    "series_id": "7cd7a87a06d3fc327d56ff378b1f6f6b",
+    "year": 2009
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/3e965d747ea8f8424da334355fd3ce5c/Images/Primary?tag=48370b745e90b38713d5f2f1fbb5025d"
+    },
+    "id": "3e965d747ea8f8424da334355fd3ce5c",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2009-09-17",
+    "series_id": "7879d2c8a44a666d6846d4eea026ddd3",
+    "year": 2009
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/dcb861ca2204a009a03e108fcae9d504/Images/Primary?tag=acaa2a5affac224fd48a93b758aeba5a"
+    },
+    "id": "dcb861ca2204a009a03e108fcae9d504",
+    "name": "Season 7",
+    "number": 7,
+    "premiered": "2009-09-21",
+    "series_id": "64bfcc7c704c3498b347aab2e5233752",
+    "year": 2009
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/b7967d21c8b55b60311ca4a948d15ffc/Images/Primary?tag=a1c1b473756a7775b1ceb5e169fdf5a0"
+    },
+    "id": "b7967d21c8b55b60311ca4a948d15ffc",
+    "name": "Season 8",
+    "number": 8,
+    "premiered": "2009-09-27",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 2009
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/c206ea0137aa89dae2215ad660047866/Images/Primary?tag=4ff0aad4796587f125711b2e35d53af3"
+    },
+    "id": "c206ea0137aa89dae2215ad660047866",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2010-03-21",
+    "series_id": "43df71c52fff642be7e32c048322de8c",
+    "year": 2010
+  },
+  {
+    "id": "8e7b0620b8c0fbde2d6d1eb8f6e5c236",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2010-04-23",
+    "series_id": "7cd7a87a06d3fc327d56ff378b1f6f6b",
+    "year": 2010
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/f88217a1625b08482da6b9bfceb5d980/Images/Primary?tag=8d33f31bcc453aef4e7cf6dbc1928800"
+    },
+    "id": "f88217a1625b08482da6b9bfceb5d980",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2010-05-05",
+    "series_id": "c5d22a663dceac15f86cbffca02a7192",
+    "year": 2010
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/b402eb0ae238b872e0305eee5a1b554b/Images/Primary?tag=3d02c96f2c0623727ab0afd1ae111443"
+    },
+    "id": "b402eb0ae238b872e0305eee5a1b554b",
+    "name": "Season 8",
+    "number": 8,
+    "premiered": "2010-09-20",
+    "series_id": "64bfcc7c704c3498b347aab2e5233752",
+    "year": 2010
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/cc124a56a87078a711941a57f4f63ea4/Images/Primary?tag=58d950b081e9d2aa58d137dbe3b4c0c0"
+    },
+    "id": "cc124a56a87078a711941a57f4f63ea4",
+    "name": "Season 7",
+    "number": 7,
+    "premiered": "2010-09-23",
+    "series_id": "7879d2c8a44a666d6846d4eea026ddd3",
+    "year": 2010
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/536c7674ae5f7d5a8277dc5cd4b7cf08/Images/Primary?tag=3e7affdbec9c86f44372ebf3d1561e63"
+    },
+    "id": "536c7674ae5f7d5a8277dc5cd4b7cf08",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2010-09-26",
+    "series_id": "858dd45ac332c7b943a251e32cd88cb7",
+    "year": 2010
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/c82b5412ad9aa275a7394632d646c501/Images/Primary?tag=43c771e9aa7f5dbaadd1bfdbe05c28ee"
+    },
+    "id": "c82b5412ad9aa275a7394632d646c501",
+    "name": "Season 9",
+    "number": 9,
+    "premiered": "2010-09-26",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 2010
+  },
+  {
+    "id": "58ef34266b6e511ba8de42c5de6da826",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2011-01-07",
+    "series_id": "7cd7a87a06d3fc327d56ff378b1f6f6b",
+    "year": 2011
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/eab6d40788335ae551a1ccab05d7694e/Images/Primary?tag=47dea868baf18166699aecc92f0a8750"
+    },
+    "id": "eab6d40788335ae551a1ccab05d7694e",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2011-03-13",
+    "series_id": "858dd45ac332c7b943a251e32cd88cb7",
+    "year": 2011
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/04ed336e4ace2ea9377be627f21512e2/Images/Primary?tag=fca8ba47f49662e4a68d2d40ca8034fb"
+    },
+    "id": "04ed336e4ace2ea9377be627f21512e2",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2011-04-17",
+    "series_id": "5fa11d606a3313820c9529912e986f93",
+    "year": 2011
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/37d1f662e72a78e75b3b35c5f4b8fbae/Images/Primary?tag=8f7de83fffedbb2e744c26f3ec9a345b"
+    },
+    "id": "37d1f662e72a78e75b3b35c5f4b8fbae",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2011-07-17",
+    "series_id": "43df71c52fff642be7e32c048322de8c",
+    "year": 2011
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/239d24e3dd374086638005836c2378d9/Images/Primary?tag=eaf55f663a34bcf0cf314c2ef7e96e1d"
+    },
+    "id": "239d24e3dd374086638005836c2378d9",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2011-07-20",
+    "series_id": "5eac15cfca7a15814d0b51af928663d5",
+    "year": 2011
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/fcc5b2734f62c67ad97cc81fa40a41b7/Images/Primary?tag=77ce2f0212ecbef482906e99bc8480a8"
+    },
+    "id": "fcc5b2734f62c67ad97cc81fa40a41b7",
+    "name": "Season 8",
+    "number": 8,
+    "premiered": "2011-09-22",
+    "series_id": "7879d2c8a44a666d6846d4eea026ddd3",
+    "year": 2011
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/4113e897708d2e1d855146ed2fe849e2/Images/Primary?tag=cc1e8ce3271850c694eb256033e9477b"
+    },
+    "id": "4113e897708d2e1d855146ed2fe849e2",
+    "name": "Season 10",
+    "number": 10,
+    "premiered": "2011-09-25",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 2011
+  },
+  {
+    "id": "ee6f81daab733afc968a3c2eef9798d3",
+    "name": "Season 7",
+    "number": 7,
+    "premiered": "2011-10-07",
+    "series_id": "7cd7a87a06d3fc327d56ff378b1f6f6b",
+    "year": 2011
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/39ec6cc71b42e286a1aafdbbcab54281/Images/Primary?tag=097e5e0875930f773ed38199ef7927b4"
+    },
+    "id": "39ec6cc71b42e286a1aafdbbcab54281",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2012-04-01",
+    "series_id": "5fa11d606a3313820c9529912e986f93",
+    "year": 2012
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/80a9b74bd862c937f130eb695adc48ee/Images/Primary?tag=9f8b94ec9eb3627e002d0db5f225a733"
+    },
+    "id": "80a9b74bd862c937f130eb695adc48ee",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2012-05-13",
+    "series_id": "858dd45ac332c7b943a251e32cd88cb7",
+    "year": 2012
+  },
+  {
+    "id": "b474ddc762a981fc4333d65c0ed8078e",
+    "name": "Season 8",
+    "number": 8,
+    "premiered": "2012-06-15",
+    "series_id": "7cd7a87a06d3fc327d56ff378b1f6f6b",
+    "year": 2012
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/84a9f8ebc8c27b8bcbf33151ec16b602/Images/Primary?tag=6ef38e8c0c2a046f56a6632030f0a5e4"
+    },
+    "id": "84a9f8ebc8c27b8bcbf33151ec16b602",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2012-07-15",
+    "series_id": "43df71c52fff642be7e32c048322de8c",
+    "year": 2012
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/473fb7c50bce9fa087bded8289b1f131/Images/Primary?tag=c9708e588f22f3401041420387f83a29"
+    },
+    "id": "473fb7c50bce9fa087bded8289b1f131",
+    "name": "Season 9",
+    "number": 9,
+    "premiered": "2012-09-20",
+    "series_id": "7879d2c8a44a666d6846d4eea026ddd3",
+    "year": 2012
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/300297742af64c08b2b37d1d5bf9abd0/Images/Primary?tag=0abe06dc8f59e6d32dd1c89df8864878"
+    },
+    "id": "300297742af64c08b2b37d1d5bf9abd0",
+    "name": "Season 11",
+    "number": 11,
+    "premiered": "2012-09-30",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 2012
+  },
+  {
+    "id": "491dc6c4cf9b99627b35b80e8c11b62e",
+    "name": "Season 9",
+    "number": 9,
+    "premiered": "2012-12-28",
+    "series_id": "7cd7a87a06d3fc327d56ff378b1f6f6b",
+    "year": 2012
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/25dd3d33e29aab6b178f5953381d527c/Images/Primary?tag=0974cd5201bcec2d8dbf684f6fa07d99"
+    },
+    "id": "25dd3d33e29aab6b178f5953381d527c",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2013-01-11",
+    "series_id": "05070ecabd27ea32e494be72ca63ce96",
+    "year": 2013
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/2adf65ec5fc765d3329130b8be2d7e80/Images/Primary?tag=d1ae7239984a5a813e2d85e848058c8b"
+    },
+    "id": "2adf65ec5fc765d3329130b8be2d7e80",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2013-03-31",
+    "series_id": "5fa11d606a3313820c9529912e986f93",
+    "year": 2013
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/585ea5847dabb54a166af696ca459121/Images/Primary?tag=29b29c51b1b6680353bef4ca192ccf72"
+    },
+    "id": "585ea5847dabb54a166af696ca459121",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2013-06-30",
+    "series_id": "cb66d1c03aaba8385c9acb5487ca16f8",
+    "year": 2013
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/84e8402ba338f77e6c27690826f5a71e/Images/Primary?tag=66440d20f223a4ecdfe77de9c6c2ccd4"
+    },
+    "id": "84e8402ba338f77e6c27690826f5a71e",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2013-07-21",
+    "series_id": "858dd45ac332c7b943a251e32cd88cb7",
+    "year": 2013
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/df282404d39627a2849f998b1f098b2b/Images/Primary?tag=622f0ed669e0666331631971455ba300"
+    },
+    "id": "df282404d39627a2849f998b1f098b2b",
+    "name": "Season 12",
+    "number": 12,
+    "premiered": "2013-09-29",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 2013
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/0597c370ab167d31b3d5f1c1aa108ad8/Images/Primary?tag=0a3a4dcdec753bcf8b4856a52a6c164d"
+    },
+    "id": "0597c370ab167d31b3d5f1c1aa108ad8",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2014-04-06",
+    "series_id": "5fa11d606a3313820c9529912e986f93",
+    "year": 2014
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/705028e8d12d41f9603f3c005c982d59/Images/Primary?tag=345303d6d1248a1cc6a73f283a66af0e"
+    },
+    "id": "705028e8d12d41f9603f3c005c982d59",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2014-04-15",
+    "series_id": "c76e5f1fa8e2b79c6bcf4316e57064aa",
+    "year": 2014
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/121082fb386986f327e0ed0c20fbf34d/Images/Primary?tag=12103d87fa4f17f45f31d8db766cdbd3"
+    },
+    "id": "121082fb386986f327e0ed0c20fbf34d",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2014-06-08",
+    "series_id": "858dd45ac332c7b943a251e32cd88cb7",
+    "year": 2014
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/d609c9cf6b65c12156d1569ad37e4ca3/Images/Primary?tag=78940b9db83c6f66d8459b67b165afdd"
+    },
+    "id": "d609c9cf6b65c12156d1569ad37e4ca3",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2014-07-13",
+    "series_id": "cb66d1c03aaba8385c9acb5487ca16f8",
+    "year": 2014
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/8c07574cd997312ff3f52a84df5b28d8/Images/Primary?tag=eda5b2bf8f12e0b333b2d0631ffd0f20"
+    },
+    "id": "8c07574cd997312ff3f52a84df5b28d8",
+    "name": "Season 13",
+    "number": 13,
+    "premiered": "2014-09-28",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 2014
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/6c56645769d4173352970a6f1d846c97/Images/Primary?tag=c764f78fde46e80c8b2a6b86ff565442"
+    },
+    "id": "6c56645769d4173352970a6f1d846c97",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2014-10-05",
+    "series_id": "07c1e4e7242e62b3753ce405a6353340",
+    "year": 2014
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/60bd942e03d9df3ab3ec17d5da765b10/Images/Primary?tag=b78247801bcc3511faeeb9accf86d05a"
+    },
+    "id": "60bd942e03d9df3ab3ec17d5da765b10",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2014-10-05",
+    "series_id": "4bdb838e91c7811c87778f8f197d8cf9",
+    "year": 2014
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/4e11c6fb00a2f8bc3c9653046fedc85c/Images/Primary?tag=2b9a1d65a4054805dad8cf3fa8af2bb2"
+    },
+    "id": "4e11c6fb00a2f8bc3c9653046fedc85c",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2014-10-12",
+    "series_id": "04232f591a85411f4b7592ae8a9fcbb2",
+    "year": 2014
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/20f8ad638e1e33c15ca3b550ac91a3c3/Images/Primary?tag=0292f9d6ca57a91470cb2b2f921b3961"
+    },
+    "id": "20f8ad638e1e33c15ca3b550ac91a3c3",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2015-01-08",
+    "series_id": "86224c80cc710c4a300370333218f9b1",
+    "year": 2015
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/a634dfb1ec7023bbfa12bfbb16f824a8/Images/Primary?tag=8d11abff8a5de3535deb90d1895b4c02"
+    },
+    "id": "a634dfb1ec7023bbfa12bfbb16f824a8",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2015-02-08",
+    "series_id": "954248d58b213248671d6c39301c6967",
+    "year": 2015
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/ed2ff3aeb969ab88bb79112c5afbff8c/Images/Primary?tag=96bdfda10249d0cb7f23e7b85e5c314e"
+    },
+    "id": "ed2ff3aeb969ab88bb79112c5afbff8c",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2015-02-19",
+    "series_id": "4b34e9c9708f85e0f84f4996bba99238",
+    "year": 2015
+  },
+  {
+    "id": "c79ce973ea68157bd0a98d471025d00d",
+    "name": "Season 13",
+    "number": 13,
+    "premiered": "2015-03-06",
+    "series_id": "7cd7a87a06d3fc327d56ff378b1f6f6b",
+    "year": 2015
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/b48e1c2309fe4c7906a9f0d77cf8a885/Images/Primary?tag=d6f1a53e9f28f37aea3a419a37dcba6d"
+    },
+    "id": "b48e1c2309fe4c7906a9f0d77cf8a885",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2015-04-12",
+    "series_id": "5fa11d606a3313820c9529912e986f93",
+    "year": 2015
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/53bd8db9343f1065c964507574d8b5c9/Images/Primary?tag=ce22189ba0be43a6db6db0f89d664d2c"
+    },
+    "id": "53bd8db9343f1065c964507574d8b5c9",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2015-06-21",
+    "series_id": "ab5afdf3e521849b6ec7f60d1e4f41d8",
+    "year": 2015
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/f685903ca281da3b87c639c554d5b11c/Images/Primary?tag=c285c5539a4e8f10c696e5e85be6aed6"
+    },
+    "id": "f685903ca281da3b87c639c554d5b11c",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2015-07-23",
+    "series_id": "ece3fa74548d015a7d28a389f7dbdded",
+    "year": 2015
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/c74d0193a31cfeae2f18df4e4e13ac6c/Images/Primary?tag=8ae78dfb5dbd31dd65e55953f34d8388"
+    },
+    "id": "c74d0193a31cfeae2f18df4e4e13ac6c",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2015-08-20",
+    "series_id": "2c8428ae5ff238c7b48b650c004ecf06",
+    "year": 2015
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/23dabb625308a0ef7bb07a60ca47ad54/Images/Primary?tag=4dd2e7717d90b3dddf78777b4408fe2d"
+    },
+    "id": "23dabb625308a0ef7bb07a60ca47ad54",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2015-09-13",
+    "series_id": "858dd45ac332c7b943a251e32cd88cb7",
+    "year": 2015
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/4a7f342c5cd77c113b5a8e2c7e4332fb/Images/Primary?tag=e3ab81418c26172a115cd0b993547982"
+    },
+    "id": "4a7f342c5cd77c113b5a8e2c7e4332fb",
+    "name": "Season 14",
+    "number": 14,
+    "premiered": "2015-09-27",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 2015
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/f4d731cfb01bd543a448efb2dee3cd2f/Images/Primary?tag=f549979dd8098d8cec847cd62accd4da"
+    },
+    "id": "f4d731cfb01bd543a448efb2dee3cd2f",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2015-09-30",
+    "series_id": "4bdb838e91c7811c87778f8f197d8cf9",
+    "year": 2015
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/68ce567378da94f7d31ce3fbc81c890c/Images/Primary?tag=6032f50da66b97733398e60d0486d803"
+    },
+    "id": "68ce567378da94f7d31ce3fbc81c890c",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2015-10-12",
+    "series_id": "c76e5f1fa8e2b79c6bcf4316e57064aa",
+    "year": 2015
+  },
+  {
+    "id": "8beada94fb8dc2091537d54f32b9f680",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2015-10-14",
+    "series_id": "b80ecb7f298638bfa8ea76e6b0cb4d59",
+    "year": 2015
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/5c66c5a18a707a7bbec943c9e9004284/Images/Primary?tag=e951f2484a1ae0f5b9983a7af620ca35"
+    },
+    "id": "5c66c5a18a707a7bbec943c9e9004284",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2015-11-15",
+    "series_id": "79f0e1e0e8556a6d45f8a0a96c0b4869",
+    "year": 2015
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/61ae1ee9aa02d2e2c27063cd51b5acfc/Images/Primary?tag=b9366facfd348d74c157ac8d89cd0499"
+    },
+    "id": "61ae1ee9aa02d2e2c27063cd51b5acfc",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2016-01-17",
+    "series_id": "63a335744d176ded4f10279a05db65e3",
+    "year": 2016
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/6be0e9039956b4ff3552949d8a52903b/Images/Primary?tag=8fa57fae838deb7621e34fba25baaa0e"
+    },
+    "id": "6be0e9039956b4ff3552949d8a52903b",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2016-01-25",
+    "series_id": "d7d66f2761c7f27fd7b43f2c87fe3e82",
+    "year": 2016
+  },
+  {
+    "id": "b38863b1a673c2f0624f1b1197b7b429",
+    "name": "Season 14",
+    "number": 14,
+    "premiered": "2016-03-04",
+    "series_id": "7cd7a87a06d3fc327d56ff378b1f6f6b",
+    "year": 2016
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/14c6f938d12086578d21b6a54c5a66b9/Images/Primary?tag=f61d526e4fb676815e88fd98e87d2f83"
+    },
+    "id": "14c6f938d12086578d21b6a54c5a66b9",
+    "name": "Season 9",
+    "number": 9,
+    "premiered": "2016-04-05",
+    "series_id": "5eac15cfca7a15814d0b51af928663d5",
+    "year": 2016
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/5edf897581ab540f20cca7f53e49d016/Images/Primary?tag=e8a9877185477b4e87ce53bd609f9c08"
+    },
+    "id": "5edf897581ab540f20cca7f53e49d016",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2016-04-20",
+    "series_id": "ece3fa74548d015a7d28a389f7dbdded",
+    "year": 2016
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/bbaa1e2a23b6c566d71b71dbeb2e71d0/Images/Primary?tag=fcf7ddb9c68f49de9ce1eff5e63c1f1f"
+    },
+    "id": "bbaa1e2a23b6c566d71b71dbeb2e71d0",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2016-04-24",
+    "series_id": "5fa11d606a3313820c9529912e986f93",
+    "year": 2016
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/8f383b42871e3a62ff350b32d5711614/Images/Primary?tag=47d6af24ad9bbf223f28f76953451b3f"
+    },
+    "id": "8f383b42871e3a62ff350b32d5711614",
+    "name": "Season 7",
+    "number": 7,
+    "premiered": "2016-05-08",
+    "series_id": "858dd45ac332c7b943a251e32cd88cb7",
+    "year": 2016
+  },
+  {
+    "id": "143c921736e07b44a9139d6a2fa17939",
+    "name": "Season 10",
+    "number": 10,
+    "premiered": "2016-05-08",
+    "series_id": "858dd45ac332c7b943a251e32cd88cb7",
+    "year": 2016
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/0b00c974d0a205de545ee103fd174e28/Images/Primary?tag=83c42a34b1bdd217bed8655cc3c4f459"
+    },
+    "id": "0b00c974d0a205de545ee103fd174e28",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2016-05-10",
+    "series_id": "ab5afdf3e521849b6ec7f60d1e4f41d8",
+    "year": 2016
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/1a967ee3f7a28f072691a0f838344727/Images/Primary?tag=28e3c714e971514b50acdba93520b238"
+    },
+    "id": "1a967ee3f7a28f072691a0f838344727",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2016-06-14",
+    "series_id": "342c8049df4fd4367bb218f3969505f7",
+    "year": 2016
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/893443b8d040d53f040a3e39b20ca91f/Images/Primary?tag=6967bb02c4d4aa4765516b591dec6bbc"
+    },
+    "id": "893443b8d040d53f040a3e39b20ca91f",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2016-07-21",
+    "series_id": "5b8023f2c43de5862a49590f3d8cf9cf",
+    "year": 2016
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/82ecd868712b22381919ad056cfc2938/Images/Primary?tag=2d1a05f00d4e6f6cdc869e04ee6855c3"
+    },
+    "id": "82ecd868712b22381919ad056cfc2938",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2016-09-06",
+    "series_id": "03c265597eb7fb67e85c6533d9899255",
+    "year": 2016
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/b77215b22918b28c786d2e75d8db3b92/Images/Primary?tag=4efc56f8c057bd1381bcf64ca0eb49ae"
+    },
+    "id": "b77215b22918b28c786d2e75d8db3b92",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2016-09-14",
+    "series_id": "2c8428ae5ff238c7b48b650c004ecf06",
+    "year": 2016
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/2f962488297a203620dbcf2fdbf4da45/Images/Primary?tag=54c3ba69a2e4774a4ffaee26adb673fb"
+    },
+    "id": "2f962488297a203620dbcf2fdbf4da45",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2016-09-19",
+    "series_id": "d7d66f2761c7f27fd7b43f2c87fe3e82",
+    "year": 2016
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/88d2c3dadae2f30ac9ac94d4f6c1377f/Images/Primary?tag=569b8e7eb57e1ac4338c01edc92ec768"
+    },
+    "id": "88d2c3dadae2f30ac9ac94d4f6c1377f",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2016-09-23",
+    "series_id": "402652f6298c68d9c43f7c33d6e5f8b1",
+    "year": 2016
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/4bcacfcdfd4bc8ea5c03bfd472d9b92f/Images/Primary?tag=4d6562e0b537cdadd247cf8ab815de79"
+    },
+    "id": "4bcacfcdfd4bc8ea5c03bfd472d9b92f",
+    "name": "Season 15",
+    "number": 15,
+    "premiered": "2016-09-25",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 2016
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/d212cc1f61d52de1f747c7bbca13d51e/Images/Primary?tag=8b9b1f46483c9506cc306396f8a47b84"
+    },
+    "id": "d212cc1f61d52de1f747c7bbca13d51e",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2016-10-02",
+    "series_id": "0c5cda91becb0471bccd43ebc0dc66e2",
+    "year": 2016
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/c990a2a823b8454cf44ac7dbd36b3448/Images/Primary?tag=c7ef408ea90922b6f0c1ab0239d44bea"
+    },
+    "id": "c990a2a823b8454cf44ac7dbd36b3448",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2016-11-04",
+    "series_id": "cd5502b53618b0e6007428f771edac08",
+    "year": 2016
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/13aeec32d6867162d37eddcfd8e08293/Images/Primary?tag=4fbc087335b265c0c44daa74635cd8c2"
+    },
+    "id": "13aeec32d6867162d37eddcfd8e08293",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2016-11-06",
+    "series_id": "ccdb724b285db61c427aa3eb3499dd03",
+    "year": 2016
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/d564fcda88bab517a71389949579403a/Images/Primary?tag=abdd3964996d33ed458955f2fe96bcf7"
+    },
+    "id": "d564fcda88bab517a71389949579403a",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2016-11-13",
+    "series_id": "4bdb838e91c7811c87778f8f197d8cf9",
+    "year": 2016
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/d2becbd4fd5158dae98c5b6a9dba7b65/Images/Primary?tag=42fb96abba0edd8f1bfa805d9b74ac54"
+    },
+    "id": "d2becbd4fd5158dae98c5b6a9dba7b65",
+    "name": "Season 8",
+    "number": 8,
+    "premiered": "2016-11-27",
+    "series_id": "858dd45ac332c7b943a251e32cd88cb7",
+    "year": 2016
+  },
+  {
+    "id": "80e33d62269d016c0bada59d0b8e5dc2",
+    "name": "Season 11",
+    "number": 11,
+    "premiered": "2016-11-27",
+    "series_id": "858dd45ac332c7b943a251e32cd88cb7",
+    "year": 2016
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/ce3ca4541e8deea3bd8ac1b5a3b256de/Images/Primary?tag=23da0bb111032ef25569109d3db052cc"
+    },
+    "id": "ce3ca4541e8deea3bd8ac1b5a3b256de",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2016-12-08",
+    "series_id": "ece3fa74548d015a7d28a389f7dbdded",
+    "year": 2016
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/da1b400aca4b98c387c960acbb2fff91/Images/Primary?tag=9295ad5b3aadb6e1a02303ec89de3259"
+    },
+    "id": "da1b400aca4b98c387c960acbb2fff91",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2017-02-19",
+    "series_id": "63a335744d176ded4f10279a05db65e3",
+    "year": 2017
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/5a21f71c36e6358bc59ca05c1b38daa1/Images/Primary?tag=1f7899f09f05363387d3895631e25e5d"
+    },
+    "id": "5a21f71c36e6358bc59ca05c1b38daa1",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2017-02-19",
+    "series_id": "f37ea375a8efb019acc72ba196e45f39",
+    "year": 2017
+  },
+  {
+    "id": "1a89af34443f973fb16bd6c1946a6e8e",
+    "name": "Season 15",
+    "number": 15,
+    "premiered": "2017-03-04",
+    "series_id": "7cd7a87a06d3fc327d56ff378b1f6f6b",
+    "year": 2017
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/60bb6f91ec71d9bf033b6657b9b418e1/Images/Primary?tag=b9d60720400065828bd8f605ca21b3d0"
+    },
+    "id": "60bb6f91ec71d9bf033b6657b9b418e1",
+    "name": "Season 8",
+    "number": 8,
+    "premiered": "2017-04-05",
+    "series_id": "86224c80cc710c4a300370333218f9b1",
+    "year": 2017
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/bd5eb356e2beed011713f6e3e1b825bf/Images/Primary?tag=31d1fc813933713621721c194afc56ec"
+    },
+    "id": "bd5eb356e2beed011713f6e3e1b825bf",
+    "name": "Season 10",
+    "number": 10,
+    "premiered": "2017-04-12",
+    "series_id": "5eac15cfca7a15814d0b51af928663d5",
+    "year": 2017
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/4ed140e7fc3549c47e2da500961a2d18/Images/Primary?tag=b08aef32745ba970fdf4d6f3a7192ce3"
+    },
+    "id": "4ed140e7fc3549c47e2da500961a2d18",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2017-04-19",
+    "series_id": "c76e5f1fa8e2b79c6bcf4316e57064aa",
+    "year": 2017
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/d25bf77ff9121944f4a5a6007af02d53/Images/Primary?tag=8fcdfc7ca5dd3c0bc4c4296634e1e95e"
+    },
+    "id": "d25bf77ff9121944f4a5a6007af02d53",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2017-04-25",
+    "series_id": "72656c8474727fe023b901cae791ae5c",
+    "year": 2017
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/e7c0d6ae72ce9014ed665706b5e1b3b7/Images/Primary?tag=c2ca18c571a7c8a43d9fb854f33cc01d"
+    },
+    "id": "e7c0d6ae72ce9014ed665706b5e1b3b7",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2017-05-30",
+    "series_id": "342c8049df4fd4367bb218f3969505f7",
+    "year": 2017
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/8a7fa1df6ba0cda3ab4af0b421d92798/Images/Primary?tag=a7a8cbe3d363d6f9653be72ddf215250"
+    },
+    "id": "8a7fa1df6ba0cda3ab4af0b421d92798",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2017-06-15",
+    "series_id": "ece3fa74548d015a7d28a389f7dbdded",
+    "year": 2017
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/f218a830e98f7568b3bd4f6ee909d234/Images/Primary?tag=a0fd5209fe869eb93dbbe51024aab3d3"
+    },
+    "id": "f218a830e98f7568b3bd4f6ee909d234",
+    "name": "Season 7",
+    "number": 7,
+    "premiered": "2017-07-16",
+    "series_id": "5fa11d606a3313820c9529912e986f93",
+    "year": 2017
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/aefbabd8b9a6c88d4fb85ca7ff5cb8e8/Images/Primary?tag=63b103c3d8a43af4ed7946e102752612"
+    },
+    "id": "aefbabd8b9a6c88d4fb85ca7ff5cb8e8",
+    "name": "Season 7",
+    "number": 7,
+    "premiered": "2017-09-05",
+    "series_id": "021820a023c28a7e273a9ea935ffcdd9",
+    "year": 2017
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/d4c32811bad77550bf5350ebd28f27e8/Images/Primary?tag=26b9536e7bfa15fa330fbeb6826ded3d"
+    },
+    "id": "d4c32811bad77550bf5350ebd28f27e8",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2017-09-13",
+    "series_id": "72656c8474727fe023b901cae791ae5c",
+    "year": 2017
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/abe41092f0a107ec23eedee1365d3bbc/Images/Primary?tag=216fa5b73285ebb9f62ed7106663f776"
+    },
+    "id": "abe41092f0a107ec23eedee1365d3bbc",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2017-10-01",
+    "series_id": "4bdb838e91c7811c87778f8f197d8cf9",
+    "year": 2017
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/dc3a0bf961335e35e8dcaf6645e33683/Images/Primary?tag=32090b489c08b6b59624804995f7252d"
+    },
+    "id": "dc3a0bf961335e35e8dcaf6645e33683",
+    "name": "Season 16",
+    "number": 16,
+    "premiered": "2017-10-01",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 2017
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/7cc1ffd3295edc2d3829c2d2ed0437c2/Images/Primary?tag=36d7e3047cf49a3073fdfecfdcb74497"
+    },
+    "id": "7cc1ffd3295edc2d3829c2d2ed0437c2",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2017-10-02",
+    "series_id": "d7d66f2761c7f27fd7b43f2c87fe3e82",
+    "year": 2017
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/e8af209713a5119aa10dabfc78a7f1b0/Images/Primary?tag=b9de89424fef196681781a539f3d3303"
+    },
+    "id": "e8af209713a5119aa10dabfc78a7f1b0",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2017-10-05",
+    "series_id": "402652f6298c68d9c43f7c33d6e5f8b1",
+    "year": 2017
+  },
+  {
+    "id": "898cc4cc45efc6bf12c277becbd5ee95",
+    "name": "Season 16",
+    "number": 16,
+    "premiered": "2018-01-06",
+    "series_id": "7cd7a87a06d3fc327d56ff378b1f6f6b",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/e3404759de1959c7c682fa54802fc42e/Images/Primary?tag=ce76ad69bee27c7f1dfa181a224b4651"
+    },
+    "id": "e3404759de1959c7c682fa54802fc42e",
+    "name": "Season 9",
+    "number": 9,
+    "premiered": "2018-01-07",
+    "series_id": "858dd45ac332c7b943a251e32cd88cb7",
+    "year": 2018
+  },
+  {
+    "id": "ba22d33dd059f4f687216f89ba871dd2",
+    "name": "Season 12",
+    "number": 12,
+    "premiered": "2018-01-07",
+    "series_id": "858dd45ac332c7b943a251e32cd88cb7",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/31663241f5d95149df902c2902e6116d/Images/Primary?tag=394fd5e1fe2b841abcea6b7e4255bdf6"
+    },
+    "id": "31663241f5d95149df902c2902e6116d",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2018-01-17",
+    "series_id": "61b432d7708dd0f4ac9a5a7845d1210a",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/214a62df3f93ae3d1983acd04198392d/Images/Primary?tag=9ed14e88aebad697f44090ff1593bd27"
+    },
+    "id": "214a62df3f93ae3d1983acd04198392d",
+    "name": "Season 12",
+    "number": 12,
+    "premiered": "2018-02-26",
+    "series_id": "7ad27ac27b02e882361147e6895e1974",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/1c280b5da121c1a6d2f41670b5da7603/Images/Primary?tag=e2c2932f7348bd13c1de4de1c0df9513"
+    },
+    "id": "1c280b5da121c1a6d2f41670b5da7603",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2018-03-01",
+    "series_id": "03c265597eb7fb67e85c6533d9899255",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/22eb602812d2d8fd897fe229d0f1c211/Images/Primary?tag=769366d8486a53c995aba257c539b836"
+    },
+    "id": "22eb602812d2d8fd897fe229d0f1c211",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2018-03-25",
+    "series_id": "e68d27d9bc381fdfb3fe4bd21edae155",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/9a3e1e22354ef940757acb2a60e8b663/Images/Primary?tag=e4a2c9cad954429681fea72d59a759fe"
+    },
+    "id": "9a3e1e22354ef940757acb2a60e8b663",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2018-03-26",
+    "series_id": "9f91d08a5e9dd54756cb49d5a30b3433",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/01f934d0fba252c37e8d1105677e574b/Images/Primary?tag=40b5b7f92630fd6932acfff210676c39"
+    },
+    "id": "01f934d0fba252c37e8d1105677e574b",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2018-04-22",
+    "series_id": "0c5cda91becb0471bccd43ebc0dc66e2",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/47d3fc9c4595aed9f25d6af93058a5c2/Images/Primary?tag=1cf8eae08814ec0ad5788a5f92b27508"
+    },
+    "id": "47d3fc9c4595aed9f25d6af93058a5c2",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2018-05-02",
+    "series_id": "72656c8474727fe023b901cae791ae5c",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/2e2336e41a32ddef36dcfafd2526f056/Images/Primary?tag=2c1fdc77d94d73b28df4b3b59edb4fdf"
+    },
+    "id": "2e2336e41a32ddef36dcfafd2526f056",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2018-05-11",
+    "series_id": "ab5afdf3e521849b6ec7f60d1e4f41d8",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/7cbfec32ab901a3a54ee5f7678e965c0/Images/Primary?tag=b7bf2f9dea98137eab183a73970ab70f"
+    },
+    "id": "7cbfec32ab901a3a54ee5f7678e965c0",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2018-05-29",
+    "series_id": "342c8049df4fd4367bb218f3969505f7",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/38a1777b940857fd6b1fb82041f0e408/Images/Primary?tag=97eadef3f266674c9399d79f57d71cd1"
+    },
+    "id": "38a1777b940857fd6b1fb82041f0e408",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2018-06-14",
+    "series_id": "ece3fa74548d015a7d28a389f7dbdded",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/e067862a4a058104f2c65cad1f4226f9/Images/Primary?tag=d48339e6655957e12ea4f285e16d1bbf"
+    },
+    "id": "e067862a4a058104f2c65cad1f4226f9",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2018-06-19",
+    "series_id": "284069757e54c1c2393ee311c9e264c8",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/298ff36af877f3ad73db2afe6a3e13ae/Images/Primary?tag=d8ba2197dbf885b28d2e4ee02565505d"
+    },
+    "id": "298ff36af877f3ad73db2afe6a3e13ae",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2018-08-26",
+    "series_id": "63ac58a70424ef6e1552cdbfae3c31d4",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/d263393a79fc4af4a26c47e15f41b2c7/Images/Primary?tag=461fe3aee189b1e321fba0a554901752"
+    },
+    "id": "d263393a79fc4af4a26c47e15f41b2c7",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2018-08-30",
+    "series_id": "7d0f205a82d0d7a7266d754f51d89436",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/be56a075b580654893d0ce71de973990/Images/Primary?tag=d8677b3ba3fe87b011401d89f7676f69"
+    },
+    "id": "be56a075b580654893d0ce71de973990",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2018-09-04",
+    "series_id": "91060c6afe3762741f911151c38593f5",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/fd0bf15ed087b279dea562876d60aae6/Images/Primary?tag=14100b667c9af8aff47d317afe047396"
+    },
+    "id": "fd0bf15ed087b279dea562876d60aae6",
+    "name": "Season 7",
+    "number": 7,
+    "premiered": "2018-09-05",
+    "series_id": "72656c8474727fe023b901cae791ae5c",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/64d61f6237a8bab4cb7b9ca8cc0be43b/Images/Primary?tag=d4a44e8a573de8293c379a83a7cf3b74"
+    },
+    "id": "64d61f6237a8bab4cb7b9ca8cc0be43b",
+    "name": "Season 8",
+    "number": 8,
+    "premiered": "2018-09-12",
+    "series_id": "021820a023c28a7e273a9ea935ffcdd9",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/095f1a114d4075112cf08ae9829aac41/Images/Primary?tag=c59f1b634be127130e2eb602eb9ed62a"
+    },
+    "id": "095f1a114d4075112cf08ae9829aac41",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2018-09-28",
+    "series_id": "826e5cbcb9785587ba9ff593a870143f",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/41d621e1b90f8efdd64b446c4741958f/Images/Primary?tag=090bb7ef636378167ba04f4896d31f75"
+    },
+    "id": "41d621e1b90f8efdd64b446c4741958f",
+    "name": "Season 17",
+    "number": 17,
+    "premiered": "2018-09-30",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/9b2c2331de3ce10776cb801490a6849e/Images/Primary?tag=94a3f61e3ade806b7ef78b13edb2e4c5"
+    },
+    "id": "9b2c2331de3ce10776cb801490a6849e",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2018-10-05",
+    "series_id": "402652f6298c68d9c43f7c33d6e5f8b1",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/2a36d1bb48ff010e9945b3226658d190/Images/Primary?tag=06c01c0783388a2ebae8d78b044d03c5"
+    },
+    "id": "2a36d1bb48ff010e9945b3226658d190",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2018-10-07",
+    "series_id": "4bdb838e91c7811c87778f8f197d8cf9",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/960d7c109ae4752de5dec21b3821f7da/Images/Primary?tag=0d1455bd8935d289c34b8c8fe53e5222"
+    },
+    "id": "960d7c109ae4752de5dec21b3821f7da",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2018-10-12",
+    "series_id": "7fcc591e5de555e0093622ea1491bc6f",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/f04487ffe1e64e6ffaf0af98d4f70114/Images/Primary?tag=0b3cec942fdf23f33c135d10230d20aa"
+    },
+    "id": "f04487ffe1e64e6ffaf0af98d4f70114",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2018-10-28",
+    "series_id": "cb66d1c03aaba8385c9acb5487ca16f8",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/805b22a377fb016fb5c0e42ff10ab46b/Images/Primary?tag=515022778c8b98fcd0576c5fbe8268ae"
+    },
+    "id": "805b22a377fb016fb5c0e42ff10ab46b",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2018-11-01",
+    "series_id": "5fd927787acbfd9cf75ff99948afd170",
+    "year": 2018
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/9afe6e4938b1279aaba07927d481b172/Images/Primary?tag=c6c946f18174ec766e27d27803510057"
+    },
+    "id": "9afe6e4938b1279aaba07927d481b172",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2018-12-12",
+    "series_id": "4b34e9c9708f85e0f84f4996bba99238",
+    "year": 2018
+  },
+  {
+    "id": "fff9fbf66b617b5ba81c01790f440c11",
+    "name": "Season 17",
+    "number": 17,
+    "premiered": "2019-01-05",
+    "series_id": "7cd7a87a06d3fc327d56ff378b1f6f6b",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/e22af00392c87b4b56d83c057b841b39/Images/Primary?tag=7a112bfd98d4bdbfb6afebf845f52b60"
+    },
+    "id": "e22af00392c87b4b56d83c057b841b39",
+    "name": "Season 13",
+    "number": 13,
+    "premiered": "2019-01-20",
+    "series_id": "858dd45ac332c7b943a251e32cd88cb7",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/95695b841674909c3f3c3f715b766ad6/Images/Primary?tag=b4aa754f6afb76256334c8cc0812b56f"
+    },
+    "id": "95695b841674909c3f3c3f715b766ad6",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2019-02-01",
+    "series_id": "8df815d2c7019a7ea18139b49739d027",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/7784d25083e37f5e7db0ba27850b5ef7/Images/Primary?tag=9fe41dfc64854b7e9e145f2fbe939f49"
+    },
+    "id": "7784d25083e37f5e7db0ba27850b5ef7",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2019-02-20",
+    "series_id": "2c8428ae5ff238c7b48b650c004ecf06",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/6945ec1d6d3cde3febc2ada1aa85c2e2/Images/Primary?tag=b9ff47b6b04c7db02943cc58cef1a010"
+    },
+    "id": "6945ec1d6d3cde3febc2ada1aa85c2e2",
+    "name": "Season 32",
+    "number": 32,
+    "premiered": "2019-02-24",
+    "series_id": "bc415f2cafa4cb7375c9238f08f99474",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/48a6542750273bc5e8a6dfa3f59f9108/Images/Primary?tag=fc1597d1b2ac88d5cdad6dff3d377224"
+    },
+    "id": "48a6542750273bc5e8a6dfa3f59f9108",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2019-03-04",
+    "series_id": "5b8023f2c43de5862a49590f3d8cf9cf",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/9a500b083389af337d552817f2c39ff0/Images/Primary?tag=3f8bb8f4d46a384ab457ee7d29f84985"
+    },
+    "id": "9a500b083389af337d552817f2c39ff0",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2019-03-10",
+    "series_id": "a10655149b0836f73f54fdb1beb158bd",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/f8938406f8e2b1aaede725703ccd32ce/Images/Primary?tag=d240def00ad624d69a2a3914ff7483d9"
+    },
+    "id": "f8938406f8e2b1aaede725703ccd32ce",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2019-03-31",
+    "series_id": "e68d27d9bc381fdfb3fe4bd21edae155",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/00e3c8725dd3a69205dd3dd2113fa8e7/Images/Primary?tag=4928e4084e8ac7fdf44e13b58d6978ca"
+    },
+    "id": "00e3c8725dd3a69205dd3dd2113fa8e7",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2019-04-01",
+    "series_id": "f4c500d67d17f57bac5de6360ae6feff",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/722fa138feb1154dbf004351948fb7df/Images/Primary?tag=65f3e3cb711c75493eb68fbf02c9d465"
+    },
+    "id": "722fa138feb1154dbf004351948fb7df",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2019-04-05",
+    "series_id": "dc43a00fda413bee82fbb9a3ac098fec",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/32d04c3b44586e7d1ded3056961fea06/Images/Primary?tag=dccb19247b27317b5dbdca55614c9f10"
+    },
+    "id": "32d04c3b44586e7d1ded3056961fea06",
+    "name": "Season 8",
+    "number": 8,
+    "premiered": "2019-04-14",
+    "series_id": "5fa11d606a3313820c9529912e986f93",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/b3138c0127b21355e0512225d88ce82e/Images/Primary?tag=fff9c1b41ecaf3495d021b030b3e216d"
+    },
+    "id": "b3138c0127b21355e0512225d88ce82e",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2019-05-01",
+    "series_id": "be2e33a158ceb6c50b74789758f63fef",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/a68e7469f46b050d5a38133702123700/Images/Primary?tag=f4dcbe094f3ef33a9ab6ac1df9899f73"
+    },
+    "id": "a68e7469f46b050d5a38133702123700",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2019-05-05",
+    "series_id": "2c8986b0cb56549197eeb901a4e50bb5",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/cbd22d6da06055c88daa4801d0eadc51/Images/Primary?tag=11561a045bf628e22a810270213e13a7"
+    },
+    "id": "cbd22d6da06055c88daa4801d0eadc51",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2019-05-08",
+    "series_id": "d7d66f2761c7f27fd7b43f2c87fe3e82",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/400e5783202d87caa174279fa60c0e1d/Images/Primary?tag=dac1fa5d306925cf4ff2668fe98f615c"
+    },
+    "id": "400e5783202d87caa174279fa60c0e1d",
+    "name": "Season 8",
+    "number": 8,
+    "premiered": "2019-05-08",
+    "series_id": "72656c8474727fe023b901cae791ae5c",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/c70db33c7de55402e53c4d1dda725975/Images/Primary?tag=02550287d18be1274541d3649a10d46b"
+    },
+    "id": "c70db33c7de55402e53c4d1dda725975",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2019-05-28",
+    "series_id": "342c8049df4fd4367bb218f3969505f7",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/7644fd4ba28e813923b0971675379666/Images/Primary?tag=d4779e2d94e82be148328531ae88567a"
+    },
+    "id": "7644fd4ba28e813923b0971675379666",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2019-06-06",
+    "series_id": "ece3fa74548d015a7d28a389f7dbdded",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/59d2a9feaa7d6fc05f03b4b06ec3cf37/Images/Primary?tag=68e09b70f177602d87cb4107c12b6ce4"
+    },
+    "id": "59d2a9feaa7d6fc05f03b4b06ec3cf37",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2019-06-07",
+    "series_id": "ab5afdf3e521849b6ec7f60d1e4f41d8",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/df7be5db501e8badbe029d79f33a280d/Images/Primary?tag=87fd4863cf02dd13f29e98a1ac69192b"
+    },
+    "id": "df7be5db501e8badbe029d79f33a280d",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2019-06-09",
+    "series_id": "f37ea375a8efb019acc72ba196e45f39",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/8451452df8c6e1aba8d350e38e121382/Images/Primary?tag=e89961c7f640781f049314b5b2bbff68"
+    },
+    "id": "8451452df8c6e1aba8d350e38e121382",
+    "name": "Season 9",
+    "number": 9,
+    "premiered": "2019-06-12",
+    "series_id": "4e70530a0606ef365ed768d956255a3c",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/672abe7b9e1171e754581eacc0736391/Images/Primary?tag=1221c0090a6afb6bff0097d9abf0eef1"
+    },
+    "id": "672abe7b9e1171e754581eacc0736391",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2019-06-16",
+    "series_id": "b8bcfd0bf7b25bfadc4e02ca8a19eae1",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/1ca9c43948f17b06aab5729449080266/Images/Primary?tag=5f0d757f37065c689769a9e9347988a0"
+    },
+    "id": "1ca9c43948f17b06aab5729449080266",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2019-06-18",
+    "series_id": "284069757e54c1c2393ee311c9e264c8",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/18ead7d051d4efbcb27ad1fcb9826a8d/Images/Primary?tag=ebc8d22e1cd42cfc9e80b1fabd74224c"
+    },
+    "id": "18ead7d051d4efbcb27ad1fcb9826a8d",
+    "name": "Season 18",
+    "number": 18,
+    "premiered": "2019-07-20",
+    "series_id": "7cd7a87a06d3fc327d56ff378b1f6f6b",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/69f84435702fabff092fce9fd26026d1/Images/Primary?tag=dd4cbb03c704319c64d6cc88fac49512"
+    },
+    "id": "69f84435702fabff092fce9fd26026d1",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2019-08-12",
+    "series_id": "9f91d08a5e9dd54756cb49d5a30b3433",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/9c3e99fc650a80a259498520cd693013/Images/Primary?tag=ce35de2e355ffeedee715f6fceb68b3a"
+    },
+    "id": "9c3e99fc650a80a259498520cd693013",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2019-09-03",
+    "series_id": "91060c6afe3762741f911151c38593f5",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/b39766b82a8aeb86859a19c9e9bd47b8/Images/Primary?tag=7e62580033765fb309287a69ba19acc2"
+    },
+    "id": "b39766b82a8aeb86859a19c9e9bd47b8",
+    "name": "Season 9",
+    "number": 9,
+    "premiered": "2019-09-04",
+    "series_id": "72656c8474727fe023b901cae791ae5c",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/b302ed61a15783e55a649440e3ecd4bb/Images/Primary?tag=1a347bec7102ed3b30d647b8201b7e49"
+    },
+    "id": "b302ed61a15783e55a649440e3ecd4bb",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2019-09-10",
+    "series_id": "c554ac62b73379b015a8642027786a58",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/f1157b03776b009341bc9e4ac0fc6732/Images/Primary?tag=53be2b680481f8073461eb518061bd29"
+    },
+    "id": "f1157b03776b009341bc9e4ac0fc6732",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2019-09-12",
+    "series_id": "4d54ef0140e45517a9b5ab5fe998fa05",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/8959c2e694f55610ad37709d2d3a91df/Images/Primary?tag=516d21c3e3f631216cf7d94f67b59422"
+    },
+    "id": "8959c2e694f55610ad37709d2d3a91df",
+    "name": "Season 9",
+    "number": 9,
+    "premiered": "2019-09-18",
+    "series_id": "021820a023c28a7e273a9ea935ffcdd9",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/cb5bbb5385d8f9631030c089b2c2344c/Images/Primary?tag=145195c4540b59525502e38e32fc8518"
+    },
+    "id": "cb5bbb5385d8f9631030c089b2c2344c",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2019-09-27",
+    "series_id": "402652f6298c68d9c43f7c33d6e5f8b1",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/b84cc16f994f701bd45f361973af14a2/Images/Primary?tag=ef3d76928be9d3dc8fdbd3f70fc92283"
+    },
+    "id": "b84cc16f994f701bd45f361973af14a2",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2019-10-06",
+    "series_id": "4bdb838e91c7811c87778f8f197d8cf9",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/c7efa5048144ffba6849afd5b8802c35/Images/Primary?tag=2d9352e81f57f78cfef88cc3e87ff195"
+    },
+    "id": "c7efa5048144ffba6849afd5b8802c35",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2019-10-06",
+    "series_id": "41f92658f1aeecba5df13843369b5ae4",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/94da3782257b0a4d95e867db18b1a3ba/Images/Primary?tag=3ebb1448dea2cf69498f2baa1bc5fb2d"
+    },
+    "id": "94da3782257b0a4d95e867db18b1a3ba",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2019-10-20",
+    "series_id": "89a366a07809af6f0e974e1a0e461052",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/6c2780d8e5db21f85b750e4b30a53899/Images/Primary?tag=7222dbf4c5ad5c2c14358052d78787c1"
+    },
+    "id": "6c2780d8e5db21f85b750e4b30a53899",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2019-10-31",
+    "series_id": "7d0f205a82d0d7a7266d754f51d89436",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/f578de97629603dcc6efa788ccfe5665/Images/Primary?tag=f7b20529a0df2eb5d4b01e3b7fcc9897"
+    },
+    "id": "f578de97629603dcc6efa788ccfe5665",
+    "name": "Season 18",
+    "number": 18,
+    "premiered": "2019-11-03",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/7c18960a8fe636f17a338ecda9e4cbda/Images/Primary?tag=dc0f3c6a54cb5743f6e7503ccb9f5f34"
+    },
+    "id": "7c18960a8fe636f17a338ecda9e4cbda",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2019-11-12",
+    "series_id": "09b6c329e908303dba982cbd1fc3a319",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/c9e36452964d6dfe65c9e0585e0377bb/Images/Primary?tag=f69ac17bf485fec78af3db12770c076e"
+    },
+    "id": "c9e36452964d6dfe65c9e0585e0377bb",
+    "name": "Season 7",
+    "number": 7,
+    "premiered": "2019-11-17",
+    "series_id": "cb66d1c03aaba8385c9acb5487ca16f8",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/cb60a380476eb9c6a3c2ec8bc086535f/Images/Primary?tag=e96458de6771d1fb54b6f7e769deddde"
+    },
+    "id": "cb60a380476eb9c6a3c2ec8bc086535f",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2019-11-28",
+    "series_id": "5355ccf29d03c52e7c84312c28c9f723",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/c18aeb2a221ece318cb8dbdb0726cf9e/Images/Primary?tag=eb24e9bc6fa189cdf4c5c4f3fbaa1071"
+    },
+    "id": "c18aeb2a221ece318cb8dbdb0726cf9e",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2019-12-04",
+    "series_id": "4b34e9c9708f85e0f84f4996bba99238",
+    "year": 2019
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/8f3965c0eb15e3724a9c2fecd68f6820/Images/Primary?tag=835477742fd5dfc2fa4e8ec86e09b1e6"
+    },
+    "id": "8f3965c0eb15e3724a9c2fecd68f6820",
+    "name": "Season 14",
+    "number": 14,
+    "premiered": "2020-01-05",
+    "series_id": "858dd45ac332c7b943a251e32cd88cb7",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/5c6b4944fd8688f60f448eda9076fdfe/Images/Primary?tag=9d52206296997fd554961ee7cf611c4b"
+    },
+    "id": "5c6b4944fd8688f60f448eda9076fdfe",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2020-01-12",
+    "series_id": "d5f5d701f0da90307261c24e1de6d640",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/790962eb0b6a328c4c0944f17a72780e/Images/Primary?tag=be6c62750b1cfe88f4242f0785775a3c"
+    },
+    "id": "790962eb0b6a328c4c0944f17a72780e",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2020-02-26",
+    "series_id": "5d49289a86f59621f57a0063564c9158",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/a4889b6c55ceaddcc91cd2726eac8d4b/Images/Primary?tag=97f55cff4e1940df1b2a471905ec97ad"
+    },
+    "id": "a4889b6c55ceaddcc91cd2726eac8d4b",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2020-03-15",
+    "series_id": "0c5cda91becb0471bccd43ebc0dc66e2",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/3f8ba259161f620a95c7862c62dcef71/Images/Primary?tag=3b2163842e71d90cbde71ff338b568df"
+    },
+    "id": "3f8ba259161f620a95c7862c62dcef71",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2020-03-31",
+    "series_id": "be2e33a158ceb6c50b74789758f63fef",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/909ceb828c8de7fc9c32960226746c4e/Images/Primary?tag=1048d9534f0e37668692f5351ecfe73b"
+    },
+    "id": "909ceb828c8de7fc9c32960226746c4e",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2020-04-19",
+    "series_id": "2c8986b0cb56549197eeb901a4e50bb5",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/7d518237212bde22b1d31ce47ef65678/Images/Primary?tag=7fa817d4d26f11e199b73e017645d75d"
+    },
+    "id": "7d518237212bde22b1d31ce47ef65678",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2020-04-30",
+    "series_id": "a842adbb554b369002b36af5ca544007",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/1ed9b738ebf51d3df8a502ed0889bb9c/Images/Primary?tag=d2546296f41a85c0dee7d9a4d7aa9a5c"
+    },
+    "id": "1ed9b738ebf51d3df8a502ed0889bb9c",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2020-05-03",
+    "series_id": "63a335744d176ded4f10279a05db65e3",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/bb191369199d9a43141d0bb7e5bebaf2/Images/Primary?tag=c54ca5202e061aaa3a34053eebc2cdff"
+    },
+    "id": "bb191369199d9a43141d0bb7e5bebaf2",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2020-05-22",
+    "series_id": "5fd927787acbfd9cf75ff99948afd170",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/72ffefe16b8f88dba80c79f21bcc9519/Images/Primary?tag=71ca17860faba4ba43d64fdd28c464ff"
+    },
+    "id": "72ffefe16b8f88dba80c79f21bcc9519",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2020-05-29",
+    "series_id": "6364ba59430f1b52503870efd84bbf78",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/354fe5793a2f60d5205330929beae278/Images/Primary?tag=1eb30e4b0f5b06d885c6e2b10c42e30f"
+    },
+    "id": "354fe5793a2f60d5205330929beae278",
+    "name": "Season 7",
+    "number": 7,
+    "premiered": "2020-06-11",
+    "series_id": "ece3fa74548d015a7d28a389f7dbdded",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/075b4c43ab3000f373d2c48f05f64cb6/Images/Primary?tag=b06513292c9dba94e2971ff8a82d3272"
+    },
+    "id": "075b4c43ab3000f373d2c48f05f64cb6",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2020-06-20",
+    "series_id": "284069757e54c1c2393ee311c9e264c8",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/15263ebfb84c8aa116bd2bbc1e9a8097/Images/Primary?tag=6b59801019b2b6349694294cb72dc237"
+    },
+    "id": "15263ebfb84c8aa116bd2bbc1e9a8097",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2020-07-10",
+    "series_id": "417f1a256756dd45e8273c812b0cb606",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/dbc7b9b371f49690907712f260513b19/Images/Primary?tag=8aeb8c7026fc407d917824e7cd369d18"
+    },
+    "id": "dbc7b9b371f49690907712f260513b19",
+    "name": "Season 19",
+    "number": 19,
+    "premiered": "2020-07-12",
+    "series_id": "7cd7a87a06d3fc327d56ff378b1f6f6b",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/fd387e2c788c03f1f1cc3bed556e571b/Images/Primary?tag=c81d489dea40a2aaf76ffe98569b4935"
+    },
+    "id": "fd387e2c788c03f1f1cc3bed556e571b",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2020-07-17",
+    "series_id": "bb539c4ef0d13fdef7aa82216008438b",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/1340562d0decb169fed99b4c2d055545/Images/Primary?tag=3e644c60521f9ce6d57db7b23b49c5d4"
+    },
+    "id": "1340562d0decb169fed99b4c2d055545",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2020-07-19",
+    "series_id": "b01d6807ca3c0fea6f5c48d21977942b",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/4095881c3ca90545670869f79811bb17/Images/Primary?tag=f703979d029a826df7f3e035ba3df8be"
+    },
+    "id": "4095881c3ca90545670869f79811bb17",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2020-08-21",
+    "series_id": "d7d66f2761c7f27fd7b43f2c87fe3e82",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/62f1d4b161b90ef28111cf85e76dc34f/Images/Primary?tag=b1109274f22689be9b5d87321265c243"
+    },
+    "id": "62f1d4b161b90ef28111cf85e76dc34f",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2020-09-03",
+    "series_id": "2ef3a58a9b04c12f261c7f4850f7fb37",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/489d30ce81e576dbd9895c5160ecaf8c/Images/Primary?tag=0d84f8a16b133378b05872a1549c693e"
+    },
+    "id": "489d30ce81e576dbd9895c5160ecaf8c",
+    "name": "Season 11",
+    "number": 11,
+    "premiered": "2020-09-16",
+    "series_id": "86224c80cc710c4a300370333218f9b1",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/6e4d7cc8de9e33be3eda1d1c22b94c80/Images/Primary?tag=b9e41a1bddfab0b1c78cd07ee8ee657e"
+    },
+    "id": "6e4d7cc8de9e33be3eda1d1c22b94c80",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2020-09-27",
+    "series_id": "c76e5f1fa8e2b79c6bcf4316e57064aa",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/518d9a04e60be4acbc54fe0dd1fd4208/Images/Primary?tag=0e1045bafbfb289a4e2547bbc71aa444"
+    },
+    "id": "518d9a04e60be4acbc54fe0dd1fd4208",
+    "name": "Season 19",
+    "number": 19,
+    "premiered": "2020-09-27",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/b9b1f7763b312015c66466270a55a44e/Images/Primary?tag=5921fe1d193dd6e23639437d190684a9"
+    },
+    "id": "b9b1f7763b312015c66466270a55a44e",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2020-10-04",
+    "series_id": "ed6853c0e18a1b6038ce4495fc60eae1",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/648f040d5a9d9e519002b1660c9805de/Images/Primary?tag=ed20a0364023341609a1ed01e5b84541"
+    },
+    "id": "648f040d5a9d9e519002b1660c9805de",
+    "name": "Season 10",
+    "number": 10,
+    "premiered": "2020-10-15",
+    "series_id": "72656c8474727fe023b901cae791ae5c",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/681e9e752dcfccf0cf479e94da37241a/Images/Primary?tag=98cad900131913e3f5b6b7c96a0bce0c"
+    },
+    "id": "681e9e752dcfccf0cf479e94da37241a",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2020-10-23",
+    "series_id": "cb0ae693e1b9964634446a40a0163576",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/9d0114448f4de09780108250b5621b63/Images/Primary?tag=a0f008a7b5f20a0068488731c04ead1f"
+    },
+    "id": "9d0114448f4de09780108250b5621b63",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2020-10-30",
+    "series_id": "09b6c329e908303dba982cbd1fc3a319",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/2e389a0783387fe347fd32609fdafa9d/Images/Primary?tag=0025636a5cc4fe17c21557a2d418e454"
+    },
+    "id": "2e389a0783387fe347fd32609fdafa9d",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2020-11-09",
+    "series_id": "a86156ae5398a95ece9b0d5d52bf86cb",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/c5cc0caa30f648705716f785cb906bbe/Images/Primary?tag=32e410796cba2efe0326f677f29f7f83"
+    },
+    "id": "c5cc0caa30f648705716f785cb906bbe",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2020-11-26",
+    "series_id": "d78e5ddead5926fba1643090b4d3a1a5",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/b01f50fb88f5594b7d7838848fa7cfbc/Images/Primary?tag=37a563292ed16f9494eddc4669643a44"
+    },
+    "id": "b01f50fb88f5594b7d7838848fa7cfbc",
+    "name": "Season 7",
+    "number": 7,
+    "premiered": "2020-11-29",
+    "series_id": "4bdb838e91c7811c87778f8f197d8cf9",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/d93a7f1d20e6a4900affe2996e64496b/Images/Primary?tag=b8fd13c28fcfacf468347b83077ecde1"
+    },
+    "id": "d93a7f1d20e6a4900affe2996e64496b",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2020-12-03",
+    "series_id": "ab5afdf3e521849b6ec7f60d1e4f41d8",
+    "year": 2020
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/358aa59b9c16b3905516fbceabc6ac4b/Images/Primary?tag=286f3c95fa680596ed962b65dbc0ce6e"
+    },
+    "id": "358aa59b9c16b3905516fbceabc6ac4b",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2021-01-04",
+    "series_id": "2f69c384e176caca3aa376d9a8b6cab7",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/54e320ef5c74c58f986ad125632ed9c6/Images/Primary?tag=3a20f2e4cab2ef893d66b7bf9c318993"
+    },
+    "id": "54e320ef5c74c58f986ad125632ed9c6",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2021-01-10",
+    "series_id": "a10655149b0836f73f54fdb1beb158bd",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/d3957540cb4eacdc9bc70abba0dce754/Images/Primary?tag=50e94ac18649cf80a9c038d323d4c146"
+    },
+    "id": "d3957540cb4eacdc9bc70abba0dce754",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2021-01-15",
+    "series_id": "5355ccf29d03c52e7c84312c28c9f723",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/6c4ddcd9ca9c273f59f635d75ac0f3f6/Images/Primary?tag=32e721fa405b0085c808cedad6a5afbd"
+    },
+    "id": "6c4ddcd9ca9c273f59f635d75ac0f3f6",
+    "name": "Season 19",
+    "number": 19,
+    "premiered": "2021-01-15",
+    "series_id": "3b4c51a607e3f759db0dbd8b4804dc87",
+    "year": 2021
+  },
+  {
+    "id": "b9fbcb4b340ba6d1bf380f255f0dd763",
+    "name": "Season 15",
+    "number": 15,
+    "premiered": "2021-02-14",
+    "series_id": "858dd45ac332c7b943a251e32cd88cb7",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/19362358f6d2a0a67881a7c0c0f9fc68/Images/Primary?tag=eaa105c925bc631a4fc315fa5d4893b7"
+    },
+    "id": "19362358f6d2a0a67881a7c0c0f9fc68",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2021-03-16",
+    "series_id": "91060c6afe3762741f911151c38593f5",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/5bb395d63044e3e3e515504ada0a5e4f/Images/Primary?tag=f974030ee4d04c5f150bccfe020c3160"
+    },
+    "id": "5bb395d63044e3e3e515504ada0a5e4f",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2021-03-21",
+    "series_id": "814281dfea9d254a1b19268b81a5a83f",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/e75b26cc9bbaa9b0b728e78cee1263dc/Images/Primary?tag=ffed312f80f9ca5641fe41a291465f66"
+    },
+    "id": "e75b26cc9bbaa9b0b728e78cee1263dc",
+    "name": "Season 11",
+    "number": 11,
+    "premiered": "2021-04-01",
+    "series_id": "72656c8474727fe023b901cae791ae5c",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/17f0b8b323b73b8d1d7b2f7338aa9310/Images/Primary?tag=db822b8108cad6db74a442ce40d4e471"
+    },
+    "id": "17f0b8b323b73b8d1d7b2f7338aa9310",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2021-04-11",
+    "series_id": "58d59b1e5a50f452a39bb55f5943d062",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/4e2373f49941917e5b8424c99abd5b53/Images/Primary?tag=038baf59b08dd22c11b8cc7e106eb5c9"
+    },
+    "id": "4e2373f49941917e5b8424c99abd5b53",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2021-04-16",
+    "series_id": "402652f6298c68d9c43f7c33d6e5f8b1",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/73c4bdf51c35854a65e36a843f5f2658/Images/Primary?tag=6e9ae730aa39661793bd70eb259959da"
+    },
+    "id": "73c4bdf51c35854a65e36a843f5f2658",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2021-04-18",
+    "series_id": "250295d92722c40243a641d1211f3640",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/c821f4697c7b9a033cba770a0e6e1d5d/Images/Primary?tag=1c1bcfd14931e40b36ec678d06973186"
+    },
+    "id": "c821f4697c7b9a033cba770a0e6e1d5d",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2021-04-19",
+    "series_id": "2c8986b0cb56549197eeb901a4e50bb5",
+    "year": 2021
+  },
+  {
+    "id": "0a2e47fbc7017ac70d17e52a545c2e35",
+    "name": "Season 13",
+    "number": 13,
+    "premiered": "2021-04-20",
+    "series_id": "5eac15cfca7a15814d0b51af928663d5",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/d027b65337a2781a8dc713d6a30033ad/Images/Primary?tag=642fa9226d71377ad243a815437a0d17"
+    },
+    "id": "d027b65337a2781a8dc713d6a30033ad",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2021-04-20",
+    "series_id": "361456ea42adc4d675cdd5d90dfaf9e2",
+    "year": 2021
+  },
+  {
+    "id": "0080ce30aa6f5fd74131793f015e9b52",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2021-04-29",
+    "series_id": "9dcd2b8679f02a52ed2bb8733b5580ca",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/434321e56dce84f34ea168679592dd6d/Images/Primary?tag=0d616ce067a15c30699dfeba7ba549ff"
+    },
+    "id": "434321e56dce84f34ea168679592dd6d",
+    "name": "Season 8",
+    "number": 8,
+    "premiered": "2021-05-02",
+    "series_id": "07c1e4e7242e62b3753ce405a6353340",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/bdcd29df0b56a07c93e2e39bf363ffe6/Images/Primary?tag=2489b093fd7e2a457f46d4f907153b2f"
+    },
+    "id": "bdcd29df0b56a07c93e2e39bf363ffe6",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2021-05-06",
+    "series_id": "be2e33a158ceb6c50b74789758f63fef",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/b9fe68d1c012454393f72a0be3e75fa2/Images/Primary?tag=bd0eee1200b9ce3a22023da1490d69ab"
+    },
+    "id": "b9fe68d1c012454393f72a0be3e75fa2",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2021-05-07",
+    "series_id": "93e8761c28030cf11f46210341d65146",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/e80a97fd79d57b9b9739929f376696a5/Images/Primary?tag=fb4d57c69270d5501249304007736d1d"
+    },
+    "id": "e80a97fd79d57b9b9739929f376696a5",
+    "name": "Season 20",
+    "number": 20,
+    "premiered": "2021-05-31",
+    "series_id": "f10db7173dea7ee2d5d8106ba406ab63",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/aa767174dfb64b894c53a9630f77a8c5/Images/Primary?tag=356c0057db6e480a96eae298ab095b4a"
+    },
+    "id": "aa767174dfb64b894c53a9630f77a8c5",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2021-06-01",
+    "series_id": "5d49289a86f59621f57a0063564c9158",
+    "year": 2021
+  },
+  {
+    "id": "511a4b247157ebc4cedd973890fd4e1b",
+    "name": "Season 29",
+    "number": 29,
+    "premiered": "2021-06-01",
+    "series_id": "37b33f6339bcceaebedc3493a217fc5d",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/e905eeee183499c27bfb11d03c01af93/Images/Primary?tag=86372f8751f14d4b7e2271b732d26b14"
+    },
+    "id": "e905eeee183499c27bfb11d03c01af93",
+    "name": "Season 8",
+    "number": 8,
+    "premiered": "2021-06-03",
+    "series_id": "ece3fa74548d015a7d28a389f7dbdded",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/3337497a420bb63dc2c2687ee980807e/Images/Primary?tag=572d43fe179bcfbdda181ec7576ae6c1"
+    },
+    "id": "3337497a420bb63dc2c2687ee980807e",
+    "name": "Season 15",
+    "number": 15,
+    "premiered": "2021-06-27",
+    "series_id": "7ad27ac27b02e882361147e6895e1974",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/8643c583d20f2f632fd8760cb4dcf868/Images/Primary?tag=21bc9cc4d029d1d6678480652a7073df"
+    },
+    "id": "8643c583d20f2f632fd8760cb4dcf868",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2021-07-11",
+    "series_id": "342c8049df4fd4367bb218f3969505f7",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/377c0a870da7a12d3d406af751c6767d/Images/Primary?tag=ca8161cb3e9f4efd3463d9942cc8855a"
+    },
+    "id": "377c0a870da7a12d3d406af751c6767d",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2021-07-11",
+    "series_id": "f38a43fa672ea8724e321a304ee783b3",
+    "year": 2021
+  },
+  {
+    "id": "19a24249106c7827d4411bad3ddcfc64",
+    "name": "Season 20",
+    "number": 20,
+    "premiered": "2021-07-17",
+    "series_id": "7cd7a87a06d3fc327d56ff378b1f6f6b",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/ee6404b0f7facd9971ec2a44f4480867/Images/Primary?tag=2b67c1709771fb891420a6003057e0eb"
+    },
+    "id": "ee6404b0f7facd9971ec2a44f4480867",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2021-08-09",
+    "series_id": "7c9720059bd674190fb6f6e3ad881bd0",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/2d48af81c6f4ce58178936cdc0403c59/Images/Primary?tag=3f0c900f066caacf773a118a8f47e92b"
+    },
+    "id": "2d48af81c6f4ce58178936cdc0403c59",
+    "name": "Season 11",
+    "number": 11,
+    "premiered": "2021-08-22",
+    "series_id": "04232f591a85411f4b7592ae8a9fcbb2",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/616d2250e5b88041f5b1b5af1ad32578/Images/Primary?tag=3b78dbfa6b590422827b8623748b0f3c"
+    },
+    "id": "616d2250e5b88041f5b1b5af1ad32578",
+    "name": "Season 12",
+    "number": 12,
+    "premiered": "2021-08-25",
+    "series_id": "86224c80cc710c4a300370333218f9b1",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/bcacdd1295279703f3058490506b903e/Images/Primary?tag=d5fb0279fd38fa3c24ff99f434c11e5c"
+    },
+    "id": "bcacdd1295279703f3058490506b903e",
+    "name": "Season 10",
+    "number": 10,
+    "premiered": "2021-08-25",
+    "series_id": "021820a023c28a7e273a9ea935ffcdd9",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/b220bfb63d6715cb4b50d3655a658bcf/Images/Primary?tag=45478acc2cc5bc1ee64159a595762a17"
+    },
+    "id": "b220bfb63d6715cb4b50d3655a658bcf",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2021-09-07",
+    "series_id": "61b432d7708dd0f4ac9a5a7845d1210a",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/aa333ad5108463f4dafc32388b89653f/Images/Primary?tag=97e42d341dfa6fd26ffae74d4bbe5305"
+    },
+    "id": "aa333ad5108463f4dafc32388b89653f",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2021-09-10",
+    "series_id": "d7d66f2761c7f27fd7b43f2c87fe3e82",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/50c20e009892b7ed4d486118e01558b9/Images/Primary?tag=98d7627d2e9b07f00093f619f02c3a0e"
+    },
+    "id": "50c20e009892b7ed4d486118e01558b9",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2021-09-10",
+    "series_id": "0dd4015eb75a87f3fb9ee9ec125eb5df",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/c6ee41718a9579f15b7e310eb6dc9e84/Images/Primary?tag=6fea2f6c2f5b5d67fe63515187448b70"
+    },
+    "id": "c6ee41718a9579f15b7e310eb6dc9e84",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2021-09-17",
+    "series_id": "adc7fa1291e513d158eb5a5f3d096fc5",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/f28c0a87ff9f69be779a6b3a66b82a17/Images/Primary?tag=999169f7184799cf50a6c28bb718e065"
+    },
+    "id": "f28c0a87ff9f69be779a6b3a66b82a17",
+    "name": "Season 41",
+    "number": 41,
+    "premiered": "2021-09-21",
+    "series_id": "d3df2a7b25f148e6c5fa10516addd268",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/a31107c8f5ac1d8d8c13cf94b6d77d0e/Images/Primary?tag=28890bc55a9e4450761ad736a2d7403d"
+    },
+    "id": "a31107c8f5ac1d8d8c13cf94b6d77d0e",
+    "name": "Season 12",
+    "number": 12,
+    "premiered": "2021-09-23",
+    "series_id": "72656c8474727fe023b901cae791ae5c",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/e56e573adaa5a334297435abb745eb54/Images/Primary?tag=f3fe1849e5929317859ec92e3a1f0921"
+    },
+    "id": "e56e573adaa5a334297435abb745eb54",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2021-09-23",
+    "series_id": "01a1c6e7437e586c79e2e087495fd6f8",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/62e231d196f11fa7896882c355db3000/Images/Primary?tag=7f15769614f7c71fbc57bc04757c72a2"
+    },
+    "id": "62e231d196f11fa7896882c355db3000",
+    "name": "Season 20",
+    "number": 20,
+    "premiered": "2021-09-26",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/c250603e036a750af5f6d9211d95fd27/Images/Primary?tag=60b1d06c277138e8d0d094a01e588faf"
+    },
+    "id": "c250603e036a750af5f6d9211d95fd27",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2021-09-30",
+    "series_id": "3d9d3c993c005bf4f1f8f694402202ea",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/10ef6040b921bd0f6a9494de681b0b0b/Images/Primary?tag=d522f50c3624217b232993772ec85756"
+    },
+    "id": "10ef6040b921bd0f6a9494de681b0b0b",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2021-10-03",
+    "series_id": "ed6853c0e18a1b6038ce4495fc60eae1",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/8d2bbe76676818c24f3732062bf9fb9d/Images/Primary?tag=77dcc0c631ccbe10c6eabee743f4bc25"
+    },
+    "id": "8d2bbe76676818c24f3732062bf9fb9d",
+    "name": "Season 13",
+    "number": 13,
+    "premiered": "2021-10-08",
+    "series_id": "4369223f7a9bcb0dd0375257f6db85df",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/9799e2fb4bc38547ee6efff683b6165f/Images/Primary?tag=50e31241f3a05a1908eacdbaf996610e"
+    },
+    "id": "9799e2fb4bc38547ee6efff683b6165f",
+    "name": "Season 7",
+    "number": 7,
+    "premiered": "2021-10-17",
+    "series_id": "58d59b1e5a50f452a39bb55f5943d062",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/8659122adf83f6541af3cf31ee8087bd/Images/Primary?tag=91cd015a86001c1445fac9f6ae4454a8"
+    },
+    "id": "8659122adf83f6541af3cf31ee8087bd",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2021-10-17",
+    "series_id": "01a03c62e40072b1824257674049c789",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/bf16676c148027648c11d14463efff8a/Images/Primary?tag=8567641eb3ae47ce8f75d04cf6c0e041"
+    },
+    "id": "bf16676c148027648c11d14463efff8a",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2021-10-21",
+    "series_id": "4dcbb706023f10875310920101de65be",
+    "year": 2021
+  },
+  {
+    "id": "65d9753dd396c5718925cda8e554dc40",
+    "name": "Season 23",
+    "number": 23,
+    "premiered": "2021-11-01",
+    "series_id": "4c4aa17e0724812c32697d0c05faef18",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/b7d282a012a013ac267140d8616a428a/Images/Primary?tag=d7848233b3e94b4471dd765d05c6be16"
+    },
+    "id": "b7d282a012a013ac267140d8616a428a",
+    "name": "Season 8",
+    "number": 8,
+    "premiered": "2021-11-07",
+    "series_id": "4bdb838e91c7811c87778f8f197d8cf9",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/99eb003628bf6ac3df471e0ec4de555f/Images/Primary?tag=735b6867ba3a7296a87e31ad233f5ce3"
+    },
+    "id": "99eb003628bf6ac3df471e0ec4de555f",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2021-11-07",
+    "series_id": "284069757e54c1c2393ee311c9e264c8",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/e66d8c7e15f4ea08e4f251f95e3e1a02/Images/Primary?tag=b62694613065e1c854f40b6aa4a83fef"
+    },
+    "id": "e66d8c7e15f4ea08e4f251f95e3e1a02",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2021-11-07",
+    "series_id": "d1a4d8a0346cd149489a9be0804d8629",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/7caebc8cadc9f19724fe40f304a60aac/Images/Primary?tag=7c91afd4575b39837c01904446d1ef5a"
+    },
+    "id": "7caebc8cadc9f19724fe40f304a60aac",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2021-11-12",
+    "series_id": "ca6b189c772967b060b58817e75081be",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/67c5112e2b98319ecd11fff4f2c38ac8/Images/Primary?tag=d24afeae0028f3eb3230ac7df48523a7"
+    },
+    "id": "67c5112e2b98319ecd11fff4f2c38ac8",
+    "name": "Season 16",
+    "number": 16,
+    "premiered": "2021-11-21",
+    "series_id": "858dd45ac332c7b943a251e32cd88cb7",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/bc37dff09450eca109d9d664d46fa664/Images/Primary?tag=d7c9ce3128093af3c86a1c7159792076"
+    },
+    "id": "bc37dff09450eca109d9d664d46fa664",
+    "name": "Season 15",
+    "number": 15,
+    "premiered": "2021-12-01",
+    "series_id": "e4f705248b3ecc18ff049c08dfb166a6",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/801e1775de9a0a7fb09b2f8097241e54/Images/Primary?tag=8034ba2de53a527eb2a9c9726420f324"
+    },
+    "id": "801e1775de9a0a7fb09b2f8097241e54",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2021-12-09",
+    "series_id": "1a2535d2c3770c79d157ef6fb1a9e3f0",
+    "year": 2021
+  },
+  {
+    "id": "42fc0945d7739644aa57f0f729adcac1",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2021-12-12",
+    "series_id": "6c6c389d1b8ecea3d4dd93f4fd723f6d",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/2bfdc22f31bbb35b92ee0205de9a8b98/Images/Primary?tag=b28d5f6534b551e910759cdf2c9622e1"
+    },
+    "id": "2bfdc22f31bbb35b92ee0205de9a8b98",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2021-12-16",
+    "series_id": "b496437b476c088aef1f0a89de268728",
+    "year": 2021
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/6d8d46c8f61ec1ce4cf14ad1d58f97f0/Images/Primary?tag=dc4483b111fd75c6b18939b684db746b"
+    },
+    "id": "6d8d46c8f61ec1ce4cf14ad1d58f97f0",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2022-01-02",
+    "series_id": "f47ff19bfbc289db9743e4d93c7aac0b",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/6c9603e0f8dd60230ccc5e1245755799/Images/Primary?tag=c86c991aad4aeeed77e04e1f2ef8f06e"
+    },
+    "id": "6c9603e0f8dd60230ccc5e1245755799",
+    "name": "Season 14",
+    "number": 14,
+    "premiered": "2022-01-05",
+    "series_id": "4e70530a0606ef365ed768d956255a3c",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/2d399e832852a3afdddbd43432854bad/Images/Primary?tag=df0687c81232776bc6e9bd8ea3e17e3a"
+    },
+    "id": "2d399e832852a3afdddbd43432854bad",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2022-01-09",
+    "series_id": "b8bcfd0bf7b25bfadc4e02ca8a19eae1",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/08e3a51407b53b563756f383509a5f8b/Images/Primary?tag=e1bc3865c679cdb8d6646d3b968e73eb"
+    },
+    "id": "08e3a51407b53b563756f383509a5f8b",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2022-01-10",
+    "series_id": "db0cceef6b236d3250493c78e85ec72a",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/d47cd8e0f2cecf2289a1f24d8c44b040/Images/Primary?tag=abe3f94e31e873e5df00f7bfeac6ec83"
+    },
+    "id": "d47cd8e0f2cecf2289a1f24d8c44b040",
+    "name": "Season 16",
+    "number": 16,
+    "premiered": "2022-01-12",
+    "series_id": "7ad27ac27b02e882361147e6895e1974",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/22acaca28f130407b88da88be845d8dc/Images/Primary?tag=f72c9c44b0b1dc989d0ef7606fe44bf0"
+    },
+    "id": "22acaca28f130407b88da88be845d8dc",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2022-01-16",
+    "series_id": "0da6c0f5534e98321e0b6ca41bfd0c56",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/6fa4adca4781b23eab0ccb47deb404ee/Images/Primary?tag=1313f55d63ead71f03e830ff00433bda"
+    },
+    "id": "6fa4adca4781b23eab0ccb47deb404ee",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2022-01-21",
+    "series_id": "5355ccf29d03c52e7c84312c28c9f723",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/3df9cd3d9d7506e8de33c8ea7380a924/Images/Primary?tag=ef46f8e6cdc77d8a8269e11624208476"
+    },
+    "id": "3df9cd3d9d7506e8de33c8ea7380a924",
+    "name": "Season 20",
+    "number": 20,
+    "premiered": "2022-01-21",
+    "series_id": "3b4c51a607e3f759db0dbd8b4804dc87",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/7c856776272475f7f572bf3d77b5bf49/Images/Primary?tag=95c42e9ebc4d7acd6d231f51e3a0f76f"
+    },
+    "id": "7c856776272475f7f572bf3d77b5bf49",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2022-01-23",
+    "series_id": "63a335744d176ded4f10279a05db65e3",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/353c753ba3c7594e50834bac404643d5/Images/Primary?tag=d63fec292977799c4328c3b7b2eff143"
+    },
+    "id": "353c753ba3c7594e50834bac404643d5",
+    "name": "Season 9",
+    "number": 9,
+    "premiered": "2022-01-31",
+    "series_id": "5c4785aca0884070cb0d9cb2225e6d8f",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/aad7b46bd93e572fb20ea9b037cc07db/Images/Primary?tag=0356e30dab4f5e6ce906cb7041b91536"
+    },
+    "id": "aad7b46bd93e572fb20ea9b037cc07db",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2022-02-03",
+    "series_id": "2ef3a58a9b04c12f261c7f4850f7fb37",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/2db1858f6663730e05157f453e080248/Images/Primary?tag=b799c2c9e7bba67b0bd1c5f776e48503"
+    },
+    "id": "2db1858f6663730e05157f453e080248",
+    "name": "Season 7",
+    "number": 7,
+    "premiered": "2022-02-16",
+    "series_id": "d52233434251e57bad486a7677bb997e",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/245bab040706b188cf594a4fe19969e0/Images/Primary?tag=f42d545f8913c5fa3de6962c2fa4a654"
+    },
+    "id": "245bab040706b188cf594a4fe19969e0",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2022-02-17",
+    "series_id": "ebdf159f2fc4fc6bf68827abbeeb4372",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/d0dcd9828f193a8bbbd7db74f180da84/Images/Primary?tag=3cda1073b5624790bde46777eb3aaa38"
+    },
+    "id": "d0dcd9828f193a8bbbd7db74f180da84",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2022-02-18",
+    "series_id": "6364ba59430f1b52503870efd84bbf78",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/14c273e7456730bd5149c6c9f7cc4e9f/Images/Primary?tag=791e09e15b73cd164e895c5002a5c494"
+    },
+    "id": "14c273e7456730bd5149c6c9f7cc4e9f",
+    "name": "Season 9",
+    "number": 9,
+    "premiered": "2022-02-20",
+    "series_id": "8a9e366f00be0b4e9b94ef0da94a7a7e",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/93d6c6290fc5877a1b71435f603add53/Images/Primary?tag=522118f73c320f01a350c08b11b2dd84"
+    },
+    "id": "93d6c6290fc5877a1b71435f603add53",
+    "name": "Season 14",
+    "number": 14,
+    "premiered": "2022-02-27",
+    "series_id": "5f21f61e15912417b9101e0bc1fc0095",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/7192765c0d76afe13071b54ec6cd9970/Images/Primary?tag=6df2b9586a89b3db143ff9cb9f18e48e"
+    },
+    "id": "7192765c0d76afe13071b54ec6cd9970",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2022-02-27",
+    "series_id": "32ea9cabda6c843ee137294db6382515",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/a762f63df6377d4ff05906326f5691a9/Images/Primary?tag=1f99e5cea5941aac8142d8fc4ccb0695"
+    },
+    "id": "a762f63df6377d4ff05906326f5691a9",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2022-02-27",
+    "series_id": "82ed3a770502f49eba93ac33cb40a8c1",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/684027e8d1980696fb6bc716656ef5b3/Images/Primary?tag=2e4df5bd953128c15ead3b1ac4233b99"
+    },
+    "id": "684027e8d1980696fb6bc716656ef5b3",
+    "name": "Season 25",
+    "number": 25,
+    "premiered": "2022-03-02",
+    "series_id": "34ad77e9ef3a5f20037306b60b34a1fd",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/0e89d396035d4a0fa4c1ce20dc46fd4e/Images/Primary?tag=ee4b3734031014b90d3a019935a67ae1"
+    },
+    "id": "0e89d396035d4a0fa4c1ce20dc46fd4e",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2022-03-03",
+    "series_id": "ab5afdf3e521849b6ec7f60d1e4f41d8",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/977d16c72ca7ed84623eb08a2dc055f1/Images/Primary?tag=49364a26e4d8cdb5a0181100a05930e2"
+    },
+    "id": "977d16c72ca7ed84623eb08a2dc055f1",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2022-03-03",
+    "series_id": "e0aa8528c36bad970e3822982bd5bd1e",
+    "year": 2022
+  },
+  {
+    "id": "333dd62f7109ec282e29acafb7019dd8",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2022-03-04",
+    "series_id": "bb539c4ef0d13fdef7aa82216008438b",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/2ac88a13122dd509dd2e04f7f97f76bf/Images/Primary?tag=ccd12ba383cf551de2fd460bf907038f"
+    },
+    "id": "2ac88a13122dd509dd2e04f7f97f76bf",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2022-03-05",
+    "series_id": "9253e7097dcbaeb75436ebc8e41b48fd",
+    "year": 2022
+  },
+  {
+    "id": "107ce0de06f660d21a22a0ae67d0da55",
+    "name": "Season 14",
+    "number": 14,
+    "premiered": "2022-03-08",
+    "series_id": "5eac15cfca7a15814d0b51af928663d5",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/3cfa0f3b16fe1e48e61194f7b96f42b8/Images/Primary?tag=bc019b900e7842ece623cb83ead2bae2"
+    },
+    "id": "3cfa0f3b16fe1e48e61194f7b96f42b8",
+    "name": "Season 42",
+    "number": 42,
+    "premiered": "2022-03-09",
+    "series_id": "d3df2a7b25f148e6c5fa10516addd268",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/e3f802e0b0e036e3ff23da90a7e8a036/Images/Primary?tag=1ef70642200be03dc032be5ca208f4e7"
+    },
+    "id": "e3f802e0b0e036e3ff23da90a7e8a036",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2022-03-10",
+    "series_id": "a842adbb554b369002b36af5ca544007",
+    "year": 2022
+  },
+  {
+    "id": "f52b4793675144f3bf7a1baacf060ed5",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2022-03-21",
+    "series_id": "48a189300503c4fb865437904e09b252",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/f90d21d8871bb6ebafdd9ac729fc08a7/Images/Primary?tag=f59468b45cbb832b17f5eef2a3d9d9c8"
+    },
+    "id": "f90d21d8871bb6ebafdd9ac729fc08a7",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2022-03-24",
+    "series_id": "03c265597eb7fb67e85c6533d9899255",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/d7f3051bb3641eb1c4fe2c51423d59ba/Images/Primary?tag=28035f857a232287b7128fcd7fe1d8b9"
+    },
+    "id": "d7f3051bb3641eb1c4fe2c51423d59ba",
+    "name": "Season 13",
+    "number": 13,
+    "premiered": "2022-04-14",
+    "series_id": "72656c8474727fe023b901cae791ae5c",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/b8129abf3deed3d8db6ae19e88232e27/Images/Primary?tag=11b488267d5a253025a11a90c0867d92"
+    },
+    "id": "b8129abf3deed3d8db6ae19e88232e27",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2022-04-14",
+    "series_id": "38b2aba90167df1cf3faf7f32c6c7ac8",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/fdd839c81a9676a679408af685ed15a3/Images/Primary?tag=00dd092c1f79a6f000198578bdadf0af"
+    },
+    "id": "fdd839c81a9676a679408af685ed15a3",
+    "name": "Season 9",
+    "number": 9,
+    "premiered": "2022-04-17",
+    "series_id": "8c619b308257a835e3d8dccd3e24d949",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/8b1267e8a52ce843b110857259ffb620/Images/Primary?tag=acb5ffb1c00a557980aa39f439a4b098"
+    },
+    "id": "8b1267e8a52ce843b110857259ffb620",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2022-04-18",
+    "series_id": "954248d58b213248671d6c39301c6967",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/83405d7e0ef5bbc2bb6f4605b1e6190a/Images/Primary?tag=f018b17bf5bc1c050ec659adc42470c0"
+    },
+    "id": "83405d7e0ef5bbc2bb6f4605b1e6190a",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2022-04-18",
+    "series_id": "2c8986b0cb56549197eeb901a4e50bb5",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/cb888f7275500790c40cb78d9c389b2a/Images/Primary?tag=7cd318994ef9513b5a1be56a0c7b7dc7"
+    },
+    "id": "cb888f7275500790c40cb78d9c389b2a",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2022-04-19",
+    "series_id": "91060c6afe3762741f911151c38593f5",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/a1f746910e739167260c30483f23b9cd/Images/Primary?tag=2de4e74d7adc4fd3159d1795ce0c62de"
+    },
+    "id": "a1f746910e739167260c30483f23b9cd",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2022-04-20",
+    "series_id": "8df815d2c7019a7ea18139b49739d027",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/1046c3b0086cdca0f350e4c5fc0e7b44/Images/Primary?tag=01806fe980f8701ec2b9dcf0d4b0f21c"
+    },
+    "id": "1046c3b0086cdca0f350e4c5fc0e7b44",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2022-04-21",
+    "series_id": "d78e5ddead5926fba1643090b4d3a1a5",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/4045e616d1562d11aad928109c23221d/Images/Primary?tag=c74a3dc83c52e0a03df5d27771f00af6"
+    },
+    "id": "4045e616d1562d11aad928109c23221d",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2022-04-24",
+    "series_id": "e68d27d9bc381fdfb3fe4bd21edae155",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/8f2ed7a4574a4f1db8877fbe9159fc39/Images/Primary?tag=eefba8a622986c1be88bc38832ab3a1a"
+    },
+    "id": "8f2ed7a4574a4f1db8877fbe9159fc39",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2022-04-25",
+    "series_id": "fca953ec9395b88c14ef4fe590d4c38f",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/1e0ec26a8c32ca60e3f621621dd04756/Images/Primary?tag=d4dbfb5e180ecd08e411bf1b21e97493"
+    },
+    "id": "1e0ec26a8c32ca60e3f621621dd04756",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2022-04-28",
+    "series_id": "4d54ef0140e45517a9b5ab5fe998fa05",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/82baf4883bd8ec58c9d72bd1acdfbd4a/Images/Primary?tag=5cfe2ea1c4927812b770753178903161"
+    },
+    "id": "82baf4883bd8ec58c9d72bd1acdfbd4a",
+    "name": "Season 8",
+    "number": 8,
+    "premiered": "2022-05-01",
+    "series_id": "0cb908791b022b0ad1ebcb90f9644fb2",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/cb137918bdeae26a7a920c9363463fe4/Images/Primary?tag=2ed8f1b53177f4594e90bc9c78c0b86f"
+    },
+    "id": "cb137918bdeae26a7a920c9363463fe4",
+    "name": "Season 30",
+    "number": 30,
+    "premiered": "2022-05-03",
+    "series_id": "37b33f6339bcceaebedc3493a217fc5d",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/6ddfe8ca7dd86123e9b89b30a84a783e/Images/Primary?tag=46bbd7ed2d4847b53c87cd6c1d44e6f5"
+    },
+    "id": "6ddfe8ca7dd86123e9b89b30a84a783e",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2022-05-05",
+    "series_id": "c194abb61971f543e81235e8bf119dd5",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/79178b72d2ee487cb52df63d07006c50/Images/Primary?tag=a88c6f5aa6fdaaf782dd3974824b9d20"
+    },
+    "id": "79178b72d2ee487cb52df63d07006c50",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2022-05-09",
+    "series_id": "9e2c1794d4d235cbd22dfbc80a4da036",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/2ecafb09624ee45b034a7cb129db82f0/Images/Primary?tag=76af037977ee3fa3c57017c4861ab26c"
+    },
+    "id": "2ecafb09624ee45b034a7cb129db82f0",
+    "name": "Season 9",
+    "number": 9,
+    "premiered": "2022-05-26",
+    "series_id": "ece3fa74548d015a7d28a389f7dbdded",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/72da5cb32d6b4fba512639406099f092/Images/Primary?tag=262487b481651292c0fcdea2113e5ddc"
+    },
+    "id": "72da5cb32d6b4fba512639406099f092",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2022-05-26",
+    "series_id": "3d9699a5bfaa4fb2d27ee876a7a1245d",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/3ed0043c36cd28419185f32c4f023b1f/Images/Primary?tag=b7d809daaf28ac0a8beb04d286059fb3"
+    },
+    "id": "3ed0043c36cd28419185f32c4f023b1f",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2022-06-02",
+    "series_id": "488798d3701fd01dd92e17ccd52a4183",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/4d0239356da562aa0351d61bffce3aa6/Images/Primary?tag=d9b63671a2dda97f71d0e01046031455"
+    },
+    "id": "4d0239356da562aa0351d61bffce3aa6",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2022-06-02",
+    "series_id": "8a6852deaca1feec69068f59a1fd1ba7",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/bfdd2dd27d3f37502b5d37447ec4a657/Images/Primary?tag=00573c355f45cb0d87461f5ec1e82e7c"
+    },
+    "id": "bfdd2dd27d3f37502b5d37447ec4a657",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2022-06-03",
+    "series_id": "b01d6807ca3c0fea6f5c48d21977942b",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/90ab3b79380a5b431b1d45d35d1ad135/Images/Primary?tag=11b7cbb2f393440c744cbfbbd4ab5b47"
+    },
+    "id": "90ab3b79380a5b431b1d45d35d1ad135",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2022-06-06",
+    "series_id": "2a62ef534e965bda8f1591602c0b3286",
+    "year": 2022
+  },
+  {
+    "id": "ad60b8124dbff043ce0cb1f4c746713a",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2022-06-06",
+    "series_id": "48a189300503c4fb865437904e09b252",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/543129a47840d813f47c231dc0abc89a/Images/Primary?tag=de32376e295959cc6463b683dd2207ae"
+    },
+    "id": "543129a47840d813f47c231dc0abc89a",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2022-06-09",
+    "series_id": "2ec41a691860c4e48d7e48bfb7031ccc",
+    "year": 2022
+  },
+  {
+    "id": "34db5d42ec1727d03ed369fde3c0a030",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2022-06-10",
+    "series_id": "911949b111e65e575fc15800c93e2ca3",
+    "year": 2022
+  },
+  {
+    "id": "0edd7ed90b7e2d2e5e9f2b9782e1c3ea",
+    "name": "Season 24",
+    "number": 24,
+    "premiered": "2022-06-13",
+    "series_id": "4c4aa17e0724812c32697d0c05faef18",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/dc5e4f7edf84f0c123e221de20e8b5b6/Images/Primary?tag=ae4f97a3f04c6ae12e24a2ee533a5975"
+    },
+    "id": "dc5e4f7edf84f0c123e221de20e8b5b6",
+    "name": "Season 6",
+    "number": 6,
+    "premiered": "2022-06-19",
+    "series_id": "342c8049df4fd4367bb218f3969505f7",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/cabc117b5c214092d3f82ef9a5cb3d98/Images/Primary?tag=85c6f0fba75820e7dfd8a90485076687"
+    },
+    "id": "cabc117b5c214092d3f82ef9a5cb3d98",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2022-06-26",
+    "series_id": "0c5cda91becb0471bccd43ebc0dc66e2",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/d59a6fb11ceb2fc6f995e71f94c26880/Images/Primary?tag=4b90c09c1ad87513b8f70d47abc51682"
+    },
+    "id": "d59a6fb11ceb2fc6f995e71f94c26880",
+    "name": "Season 15",
+    "number": 15,
+    "premiered": "2022-07-06",
+    "series_id": "4e70530a0606ef365ed768d956255a3c",
+    "year": 2022
+  },
+  {
+    "id": "113303940794931b5b5951772ee47d7f",
+    "name": "Season 21",
+    "number": 21,
+    "premiered": "2022-07-10",
+    "series_id": "7cd7a87a06d3fc327d56ff378b1f6f6b",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/18762c6bfa144133df022d14b00f1b6d/Images/Primary?tag=d238505d6c9db1b7c219b39424c32973"
+    },
+    "id": "18762c6bfa144133df022d14b00f1b6d",
+    "name": "Season 8",
+    "number": 8,
+    "premiered": "2022-07-13",
+    "series_id": "d52233434251e57bad486a7677bb997e",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/2721658d65928c7ee9ea10bdad1bca67/Images/Primary?tag=97b7bab0f39ad084deaab6b8d557e463"
+    },
+    "id": "2721658d65928c7ee9ea10bdad1bca67",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2022-07-15",
+    "series_id": "f54b4f8837c7b3ae8c6b3054a6571d84",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/06db89f848edede402b4b9d4f2895bbf/Images/Primary?tag=79639ee96e8f460272c42ca9f4897b65"
+    },
+    "id": "06db89f848edede402b4b9d4f2895bbf",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2022-07-24",
+    "series_id": "28c4867a916c81f8d77e5ac145ef498a",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/9e63ac0613b1a7f8d8e648e215be814f/Images/Primary?tag=0d7d51621a2d5a10006ccbcd83a52edf"
+    },
+    "id": "9e63ac0613b1a7f8d8e648e215be814f",
+    "name": "Season 9",
+    "number": 9,
+    "premiered": "2022-07-31",
+    "series_id": "0cb908791b022b0ad1ebcb90f9644fb2",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/33ab0049e56c47362a3fe287a5dee91f/Images/Primary?tag=eba59b418e2a58ab637b934e6ffef112"
+    },
+    "id": "33ab0049e56c47362a3fe287a5dee91f",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2022-08-01",
+    "series_id": "a86156ae5398a95ece9b0d5d52bf86cb",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/cef7d966d96888a666c54ccc36babd04/Images/Primary?tag=1afd42caa7009cd44417ddb4cdf4b805"
+    },
+    "id": "cef7d966d96888a666c54ccc36babd04",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2022-08-03",
+    "series_id": "7c9720059bd674190fb6f6e3ad881bd0",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/21f042b792f0973c49c3418676cd7983/Images/Primary?tag=61e23c2f6ca8e4f89a5d86a8250a3952"
+    },
+    "id": "21f042b792f0973c49c3418676cd7983",
+    "name": "Season 7",
+    "number": 7,
+    "premiered": "2022-08-04",
+    "series_id": "ab5afdf3e521849b6ec7f60d1e4f41d8",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/ead5a315754afe3dfadcc729b924270d/Images/Primary?tag=110c74fe1a2b36b3a2f38a5282e2066a"
+    },
+    "id": "ead5a315754afe3dfadcc729b924270d",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2022-08-05",
+    "series_id": "9d4e7374b1361b23d433b5a1ec5858a4",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/70e628a644b10f1533b424253847a70f/Images/Primary?tag=89fed1aec0a5ca4839f7f6116f742e72"
+    },
+    "id": "70e628a644b10f1533b424253847a70f",
+    "name": "Season 17",
+    "number": 17,
+    "premiered": "2022-08-09",
+    "series_id": "dcf0018aee6e69c7262450b1f60b38cf",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/30025355b91122e793b9df72eac1561a/Images/Primary?tag=57b5fd71cac50ef4ec1c6e4092b84a2f"
+    },
+    "id": "30025355b91122e793b9df72eac1561a",
+    "name": "Season 7",
+    "number": 7,
+    "premiered": "2022-08-18",
+    "series_id": "7f4a1df8e0b7929a679799cb554c7fb4",
+    "year": 2022
+  },
+  {
+    "id": "4b0741476097a13cfbe12e580b1f0139",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2022-08-19",
+    "series_id": "82f37e06ced3baa7c6ed98fa7c77e249",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/f4ae247012bbd5ec5f463929129c4723/Images/Primary?tag=154213ffd38f1e94e329843ab6434ddd"
+    },
+    "id": "f4ae247012bbd5ec5f463929129c4723",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2022-08-21",
+    "series_id": "f4a7dd5198b8cb3ed64f0eac0a7ce382",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/2083c3ebd9615dc6ace5d2ea908dd295/Images/Primary?tag=6c97461da4e12058cd68975228b3c1c1"
+    },
+    "id": "2083c3ebd9615dc6ace5d2ea908dd295",
+    "name": "Season 13",
+    "number": 13,
+    "premiered": "2022-08-24",
+    "series_id": "86224c80cc710c4a300370333218f9b1",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/1bb431b4d646c7659a563d3702844e85/Images/Primary?tag=f1d72c3a0ecdcabdd1a953fb018e85ba"
+    },
+    "id": "1bb431b4d646c7659a563d3702844e85",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2022-08-24",
+    "series_id": "92bbe8980beb3ac5c3b421d22a72c28c",
+    "year": 2022
+  },
+  {
+    "id": "8f71d1747c2e932913a257b3e388bb2f",
+    "name": "Season 7",
+    "number": 7,
+    "premiered": "2022-08-28",
+    "series_id": "4ffd4f9344a2ae9d8b6321abffa3d6c6",
+    "year": 2022
+  },
+  {
+    "id": "51cd37020e0c450c1f23fb91a5dfae3f",
+    "name": "Season 7",
+    "number": 7,
+    "premiered": "2022-08-29",
+    "series_id": "cecb950eda9fc5fd7e2f425fd35c237f",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/98d2b79af3d8c0a81a21b4a3b48c4377/Images/Primary?tag=eb54d5419e3f518dabc7717b61d0834a"
+    },
+    "id": "98d2b79af3d8c0a81a21b4a3b48c4377",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2022-08-30",
+    "series_id": "4bcb1287187bef93a75969d5ca75c74f",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/1aa93e1d273bba4dfccab6ec6e921dd4/Images/Primary?tag=869bfd5de0a57528d20a2c9b362c3f88"
+    },
+    "id": "1aa93e1d273bba4dfccab6ec6e921dd4",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2022-09-01",
+    "series_id": "e6f912c1821415dfb19f1515a8bda5c8",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/8a9819d4c1d56aba26a1df620415a192/Images/Primary?tag=604f5c4006e954cdab781d34f7043771"
+    },
+    "id": "8a9819d4c1d56aba26a1df620415a192",
+    "name": "Season 18",
+    "number": 18,
+    "premiered": "2022-09-06",
+    "series_id": "dcf0018aee6e69c7262450b1f60b38cf",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/444ec5489701070beec439f0acc3f6c1/Images/Primary?tag=fe0fde63ad0f978cbd37c999269eb2db"
+    },
+    "id": "444ec5489701070beec439f0acc3f6c1",
+    "name": "Season 17",
+    "number": 17,
+    "premiered": "2022-09-11",
+    "series_id": "858dd45ac332c7b943a251e32cd88cb7",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/96d40547b1af0ef22d7b2cd35bd43d9c/Images/Primary?tag=95733653caf000d46b31095ae2dc47ec"
+    },
+    "id": "96d40547b1af0ef22d7b2cd35bd43d9c",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2022-09-12",
+    "series_id": "ca6b189c772967b060b58817e75081be",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/bde41412a8e9b7fb22c1782d506d8b94/Images/Primary?tag=52ef886a44216931e5964ba5a3bfb832"
+    },
+    "id": "bde41412a8e9b7fb22c1782d506d8b94",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2022-09-14",
+    "series_id": "85c09b6069750ca057e89cca1b39a2f0",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/3f2afa5c64d4b7b56789a692b4614d2a/Images/Primary?tag=4d94e180c046ea6090367109294d1d02"
+    },
+    "id": "3f2afa5c64d4b7b56789a692b4614d2a",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2022-09-15",
+    "series_id": "03c265597eb7fb67e85c6533d9899255",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/c05fb65d24cea29e282d80a715d18f03/Images/Primary?tag=c2e74948a98d179ba224ffea5705c4df"
+    },
+    "id": "c05fb65d24cea29e282d80a715d18f03",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2022-09-15",
+    "series_id": "bf0d22d9a0730970cd2f358173d9b2fa",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/ae29d342bd744c76335b36147ea13616/Images/Primary?tag=f8b96925ef6644a02b9c5689bb7d06da"
+    },
+    "id": "ae29d342bd744c76335b36147ea13616",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2022-09-21",
+    "series_id": "5d49289a86f59621f57a0063564c9158",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/178898f6cef73db4c0beb34e88a1f2ae/Images/Primary?tag=c25b5d26f83f7cb0942f3171d39efe75"
+    },
+    "id": "178898f6cef73db4c0beb34e88a1f2ae",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2022-09-21",
+    "series_id": "ab3f9a4da3415af7b2c23563721ca5c6",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/c3ad55702b189ca71f3005a466e60117/Images/Primary?tag=a1d74f068f1e4e30b0ad8320cbcbc98f"
+    },
+    "id": "c3ad55702b189ca71f3005a466e60117",
+    "name": "Season 14",
+    "number": 14,
+    "premiered": "2022-09-23",
+    "series_id": "4369223f7a9bcb0dd0375257f6db85df",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/01c723f65ffc8ad38629184d4f1a73c1/Images/Primary?tag=0c0bb11a7ed5780f484cf8462e5514d4"
+    },
+    "id": "01c723f65ffc8ad38629184d4f1a73c1",
+    "name": "Season 21",
+    "number": 21,
+    "premiered": "2022-09-25",
+    "series_id": "db7943439812dbba723002591455b731",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/508ba2459a08940c0e61e5357b84b754/Images/Primary?tag=79eb15338aca48860ab605888c8600ec"
+    },
+    "id": "508ba2459a08940c0e61e5357b84b754",
+    "name": "Season 14",
+    "number": 14,
+    "premiered": "2022-09-29",
+    "series_id": "72656c8474727fe023b901cae791ae5c",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/1e2a9096838b133ec2a6ef5fdefcc47a/Images/Primary?tag=9e93a316e732c10da40bcaf5d467c0f1"
+    },
+    "id": "1e2a9096838b133ec2a6ef5fdefcc47a",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2022-10-06",
+    "series_id": "3d9d3c993c005bf4f1f8f694402202ea",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/4d06b59f768df7f670f4d715556ebd93/Images/Primary?tag=6590f83dcfca11b0c5771f6ae24c8a46"
+    },
+    "id": "4d06b59f768df7f670f4d715556ebd93",
+    "name": "Season 11",
+    "number": 11,
+    "premiered": "2022-10-19",
+    "series_id": "021820a023c28a7e273a9ea935ffcdd9",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/49d8bc42726d7d1a85bd0ed65cf67bde/Images/Primary?tag=26522121ebdd83dff2e2c4b64d958ea6"
+    },
+    "id": "49d8bc42726d7d1a85bd0ed65cf67bde",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2022-10-19",
+    "series_id": "2c8428ae5ff238c7b48b650c004ecf06",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/4691fbd42498a33bfec1b680a69fe628/Images/Primary?tag=7efae4c05db3989e7987a4e182f121f5"
+    },
+    "id": "4691fbd42498a33bfec1b680a69fe628",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2022-10-20",
+    "series_id": "e2998bf2757eee0a864b6d2bae800ef3",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/defbe0525c73f63ca275406e18de7e88/Images/Primary?tag=b35237c417b6f5cf6378170b8e33ee4e"
+    },
+    "id": "defbe0525c73f63ca275406e18de7e88",
+    "name": "Season 2",
+    "number": 2,
+    "premiered": "2022-10-30",
+    "series_id": "f38a43fa672ea8724e321a304ee783b3",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/645970bfad44e476944ff1c9477cbbaa/Images/Primary?tag=c3c8f8903d93d6df7707e5be69b3bb3f"
+    },
+    "id": "645970bfad44e476944ff1c9477cbbaa",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2022-11-09",
+    "series_id": "cd5502b53618b0e6007428f771edac08",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/c8493fbb476e2d8dcd2d1b1d7e329c7a/Images/Primary?tag=085f9d13c7ae064d9ef40e7ac877cf38"
+    },
+    "id": "c8493fbb476e2d8dcd2d1b1d7e329c7a",
+    "name": "Season 5",
+    "number": 5,
+    "premiered": "2022-11-13",
+    "series_id": "284069757e54c1c2393ee311c9e264c8",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/59c44cc6b1a73c281aadd3c47fd09986/Images/Primary?tag=ee8d9c0b905794882f62727204ef0ccf"
+    },
+    "id": "59c44cc6b1a73c281aadd3c47fd09986",
+    "name": "Season 43",
+    "number": 43,
+    "premiered": "2022-11-23",
+    "series_id": "d3df2a7b25f148e6c5fa10516addd268",
+    "year": 2022
+  },
+  {
+    "id": "62a4625e75ca9167076b7abe67a5c70e",
+    "name": "Season 9",
+    "number": 9,
+    "premiered": "2022-12-04",
+    "series_id": "4bdb838e91c7811c87778f8f197d8cf9",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/3ee3fa8700abf7a21856d5c1f1d1fac5/Images/Primary?tag=0d3a9953a45b1eabc706f117d110386b"
+    },
+    "id": "3ee3fa8700abf7a21856d5c1f1d1fac5",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2022-12-18",
+    "series_id": "3f51128db234413c0be5dbdda6735186",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/d7aa7f3b0014b5b83c97717e811602f3/Images/Primary?tag=de2a9a9bb8888c35feda78e9b90d4372"
+    },
+    "id": "d7aa7f3b0014b5b83c97717e811602f3",
+    "name": "Season 3",
+    "number": 3,
+    "premiered": "2022-12-20",
+    "series_id": "7d0f205a82d0d7a7266d754f51d89436",
+    "year": 2022
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/0ffcde9d1a2e0990648310e104de30d0/Images/Primary?tag=f2bf0b744ce85763ae0646bd8d3fab40"
+    },
+    "id": "0ffcde9d1a2e0990648310e104de30d0",
+    "name": "Season 16",
+    "number": 16,
+    "premiered": "2023-01-04",
+    "series_id": "4e70530a0606ef365ed768d956255a3c",
+    "year": 2023
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/5e5356529802de77b831afa105015e64/Images/Primary?tag=dc5af7e2834578dd0b5f73aff4dc8188"
+    },
+    "id": "5e5356529802de77b831afa105015e64",
+    "name": "Season 1",
+    "number": 1,
+    "premiered": "2023-01-04",
+    "series_id": "14b540acfc76ff7cc23d8b9b4a290750",
+    "year": 2023
+  },
+  {
+    "id": "44e78566a9df760af18c2eb0400e8e6b",
+    "name": "Season 8",
+    "number": 8,
+    "premiered": "2023-01-05",
+    "series_id": "ab5afdf3e521849b6ec7f60d1e4f41d8",
+    "year": 2023
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/82da592c419a303b01a52969f1cd67d1/Images/Primary?tag=763883560ba9c1ce1a931d257bf6040e"
+    },
+    "id": "82da592c419a303b01a52969f1cd67d1",
+    "name": "Season 21",
+    "number": 21,
+    "premiered": "2023-01-05",
+    "series_id": "f10db7173dea7ee2d5d8106ba406ab63",
+    "year": 2023
+  },
+  {
+    "artwork": {
+      "type": "poster",
+      "url": "http://server/Items/b909605f3e781bd01e74d494e82d7de3/Images/Primary?tag=13be186e279612a3c1eb53072087e3ab"
+    },
+    "id": "b909605f3e781bd01e74d494e82d7de3",
+    "name": "Season 4",
+    "number": 4,
+    "premiered": "2023-01-12",
+    "series_id": "5355ccf29d03c52e7c84312c28c9f723",
+    "year": 2023
+  }
+]

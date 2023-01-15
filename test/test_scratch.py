@@ -12,7 +12,7 @@ import requests
 
 from lib.api.jellyfin import Server, authenticate
 from lib.scraper.movies import MoviesScraper
-from lib.scraper.queries import get_episodes, get_artwork, get_seasons
+from lib.scraper.queries import get_episodes, get_artwork, get_seasons, find_series_by_title
 from lib.scraper.tvshows import TvShowsScraper
 from lib.util.log import LOG_FORMAT
 
@@ -129,3 +129,11 @@ class TestScratch(unittest.TestCase):
             user = server.authenticate_by_password(USER, PASS)
             seasons = get_seasons(server, user, '43df71c52fff642be7e32c048322de8c')
             pprint(seasons)
+
+    #@unittest.skip
+    def test_find_series_by_title(self):
+        with requests.Session() as session:
+            server = get_server(session, debug_level=0)
+            user = server.authenticate_by_password(USER, PASS)
+            series = find_series_by_title(server, user, '90 Day Fiancé - The Other Way', 2019)
+            pprint(series)

@@ -1,4 +1,4 @@
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Union
 
 from lib.api.jellyfin import User, Server
 
@@ -8,7 +8,7 @@ _SONARR_REPLACEMENTS = [
 ]
 
 
-def find_by_title(server: Server, user: User, item_type: str, title: str, year: Optional[str]) -> Dict[str, Any]:
+def find_by_title(server: Server, user: User, item_type: str, title: str, year: Optional[Union[str, int]]) -> Dict[str, Any]:
     params = {'searchTerm': title, 'Limit': 24, 'Recursive': 'true', 'enableTotalRecordCount': 'true',
               'IncludePeople': 'false', 'IncludeMedia': 'false', 'IncludeGenres': 'false',
               'IncludeStudios': 'false', 'IncludeArtists': 'false', 'IncludeItemTypes': item_type,
@@ -17,24 +17,24 @@ def find_by_title(server: Server, user: User, item_type: str, title: str, year: 
         params['years'] = str(year)
     jf_items = server.get_items(user=user, params=params)
 
-    if not jf_items:
+    if not jf_items['TotalRecordCount']:
         # Jellyfin doesn't do fuzzy search so handle the various replacements that Sonarr does here
         new_title = title
         for orig, repl in _SONARR_REPLACEMENTS:
             new_title = new_title.replace(repl, orig)
             params['searchTerm'] = new_title
             jf_items = server.get_items(user=user, params=params)
-            if jf_items:
+            if jf_items['TotalRecordCount']:
                 break
 
     return jf_items
 
 
-def find_movie_by_title(server: Server, user: User, title: str, year: Optional[str]) -> Dict[str, Any]:
+def find_movie_by_title(server: Server, user: User, title: str, year: Optional[Union[str, int]]) -> Dict[str, Any]:
     return find_by_title(server, user, 'Movie', title, year)
 
 
-def find_series_by_title(server: Server, user: User, title: str, year: Optional[str]) -> Dict[str, Any]:
+def find_series_by_title(server: Server, user: User, title: str, year: Optional[Union[str, int]]) -> Dict[str, Any]:
     return find_by_title(server, user, 'Series', title, year)
 
 

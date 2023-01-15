@@ -35,7 +35,13 @@ def get_server(session: requests.Session, settings: Settings, addon: xbmcaddon.A
                   log_raw_resp=settings.debug_level > 2)
 
 
+# Global so it gets reused between invocations of the interpreters
 _session: Optional[requests.Session] = None
+_log: Optional[logging.Logger] = None
+
+
+def _log_config(level):
+    logging.basicConfig(format=LOG_FORMAT, level=level, handlers=[KodiHandler()], force=True)
 
 
 def main(router_class: Type[Union[MoviesRouter, TvShowsRouter]],
@@ -43,6 +49,7 @@ def main(router_class: Type[Union[MoviesRouter, TvShowsRouter]],
          builder_class: Type[Union[MoviesBuilder, TvShowsBuilder]]):
     # xbmc.log('============================ start', xbmc.LOGINFO)
     global _session
+    global _log
     handle = int(sys.argv[1])
     log = None
 
@@ -51,20 +58,24 @@ def main(router_class: Type[Union[MoviesRouter, TvShowsRouter]],
         settings = Settings(addon)
 
         level = logging.DEBUG if settings.debug_level > 0 else logging.INFO
-        logging.basicConfig(format=LOG_FORMAT, level=level, handlers=[KodiHandler()])
+        if _log is None:
+            _log_config(level)
+            _log = logging.getLogger(__name__)
+        else:
+            if level != _log.getEffectiveLevel():
+                _log_config(level)
 
-        log = logging.getLogger(__name__)
-        log.debug('============================ start debug_level=%s', settings.debug_level)
+        _log.debug('============================ start debug_level=%s', settings.debug_level)
 
         if level == logging.DEBUG:
             for ii, arg in enumerate(sys.argv):
-                log.debug('argv[%d]=%s', ii, arg)
+                _log.debug('argv[%d]=%s', ii, arg)
 
         if _session is None:
             _session = requests.Session()
-            log.debug('creating new session')
+            _log.debug('creating new session')
         else:
-            log.debug('reusing session')
+            _log.debug('reusing session')
 
         server = get_server(_session, settings, addon)
         params = get_params()
@@ -74,11 +85,11 @@ def main(router_class: Type[Union[MoviesRouter, TvShowsRouter]],
 
         router.execute(scraper, builder, params)
 
-        log.debug('============================ finish')
+        _log.debug('============================ finish')
     except Exception:
         try:
             if log:
-                log.exception('main failed')
+                _log.exception('main failed')
             else:
                 xbmc.log(f'main failed: {traceback.format_exc()}', xbmc.LOGERROR)
         except Exception:

@@ -1,7 +1,7 @@
 import logging
 import os
 from pprint import pformat
-from typing import Optional
+from typing import Optional, Dict
 
 import xbmcaddon
 import xbmcgui
@@ -14,23 +14,26 @@ from lib.scraper.queries import find_by_title, get_artwork
 from lib.util import util
 from lib.util.settings import Settings
 
+# Global so it gets reused between invocations of the interpreters
+_user_cache: Optional[Dict[str, User]] = None
+
 
 class Router:
-    _user_cache = None
-
     def __init__(self, settings: Settings, handle: int, addon: xbmcaddon.Addon, server: Server,
                  debug_level: Optional[int] = 0):
+        global _user_cache
         self._server = server
         self._settings = settings
         self._handle = handle
         self._addon = addon
         self._debug_level = debug_level
-        if self._user_cache is None:
-            self._user_cache = {}
+        if _user_cache is None:
+            _user_cache = {}
         self._log = logging.getLogger(__name__)
 
     def execute(self, scraper: Scraper, builder: Builder, params: dict):
         self._log.debug('execute: params=%s server=%s', params, self._server)
+        global _user_cache
 
         try:
             action = params.get('action')
@@ -40,7 +43,7 @@ class Router:
 
             func = getattr(self, action)
             if func:
-                user = authenticate(self._server, self._user_cache, self._settings.get('username'),
+                user = authenticate(self._server, _user_cache, self._settings.get('username'),
                                     self._settings.get('password'))
                 self._log.debug('execute: start executing %s()', func.__name__)
                 func(user, scraper, builder, params)

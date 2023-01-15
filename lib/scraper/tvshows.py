@@ -64,7 +64,7 @@ class TvShowsScraper(base.Scraper):
                 season['artwork'] = {'type': 'poster', 'url': url}
 
             if self._debug_level > 1:
-                base.print_debug_info('SCRAPE SEASON', jf_season)
+                base.print_debug_info('SCRAPE SEASON', season)
 
             return season
         except Exception:

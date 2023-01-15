@@ -70,7 +70,7 @@ class Router:
 
     def getartwork(self, user: User, scraper: Scraper, builder: Builder, params: dict):
         try:
-            in_params = util.get_params_from_url('getartwork', params, ('id',))
+            in_params = util.get_args_from_params('getartwork', params, ('id',))
             _log.debug('getartwork: in_params=%s', in_params)
             jellyfin_id = in_params['id']
             jf_artwork = get_artwork(self._server, user, jellyfin_id)

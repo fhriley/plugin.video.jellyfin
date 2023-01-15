@@ -16,7 +16,7 @@ _log = logging.getLogger(__name__)
 class MoviesRouter(Router):
     def getdetails(self, user: User, scraper: MoviesScraper, builder: MoviesBuilder, params: dict):
         try:
-            in_params = util.get_params_from_url('getdetails', params, ('id',))
+            in_params = util.get_args_from_params('getdetails', params, ('id',))
             _log.debug('getdetails: in_params=%s', in_params)
             jf_movie = get_item(self._server, user, in_params['id'])
             movie = scraper.scrape_movie(jf_movie)

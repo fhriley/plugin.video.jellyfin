@@ -16,15 +16,18 @@ def get_plugin_url(addon: xbmcaddon.Addon, *args, **kwargs):
     return f'plugin://{addon.getAddonInfo("id")}/{path}{param_str}'
 
 
-def get_params_from_url(msg: str, params: dict, keys: Optional[Iterable[str]]) -> dict:
-    url = params.get('url') or params.get('id')
-    if not url:
-        raise Exception(f'{msg}: no url/id provided')
+def get_args_from_params(msg: str, params: dict, keys: Optional[Iterable[str]]) -> dict:
+    url = params.get('url')
+    if  url:
+        parsed = urlparse(url)
+        qs = parse_qs(parsed.query)
+    else:
+        url = params.get('id')
+        if url is None:
+            raise Exception(f'{msg}: no url/id provided')
+        qs = {'id': [url]}
 
-    parsed = urlparse(url)
-    qs = parse_qs(parsed.query)
-
-    _log.debug('get_params_from_url: qs=%s', qs)
+    _log.debug('get_args_from_params: qs=%s', qs)
 
     ret = {'url': url}
 

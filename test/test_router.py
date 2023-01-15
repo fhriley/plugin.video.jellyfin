@@ -105,7 +105,7 @@ class TestRouter(unittest.TestCase):
         artwork_jf = load_data('artwork_jf.json')
         artwork_scraper = load_data('artwork_scraper.json')
         mock_authenticate.return_value = self.mock_user
-        params = {'action': 'getartwork', 'url': f'/foo?id={artwork_jf["Id"]}'}
+        params = {'action': 'getartwork', 'id': f'{artwork_jf["Id"]}'}
         mock_get_artwork.return_value = artwork_jf
         self.scraper.scrape_artwork.return_value = artwork_scraper
 

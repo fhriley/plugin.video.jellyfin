@@ -17,7 +17,7 @@ _log = logging.getLogger(__name__)
 class TvShowsRouter(Router):
     def getdetails(self, user: User, scraper: TvShowsScraper, builder: TvShowsBuilder, params: dict):
         try:
-            in_params = util.get_params_from_url('getdetails', params, ('id',))
+            in_params = util.get_args_from_params('getdetails', params, ('id',))
             _log.debug('getdetails: in_params=%s', in_params)
             jf_show = get_item(self._server, user, in_params['id'])
             jf_seasons = get_seasons(self._server, user, in_params['id']).get('Items') or []
@@ -29,7 +29,7 @@ class TvShowsRouter(Router):
 
     def getepisodelist(self, user: User, scraper: TvShowsScraper, builder: TvShowsBuilder, params: dict):
         try:
-            in_params = util.get_params_from_url('getepisodelist', params, ('id',))
+            in_params = util.get_args_from_params('getepisodelist', params, ('id',))
             _log.debug('getepisodelist: in_params=%s', in_params)
             jf_episodes = get_episodes_min(self._server, user, in_params['id']).get('Items') or []
             episodes = scraper.scrape_episodes(jf_episodes)
@@ -40,7 +40,7 @@ class TvShowsRouter(Router):
 
     def getepisodedetails(self, user: User, scraper: TvShowsScraper, builder: TvShowsBuilder, params: dict):
         try:
-            in_params = util.get_params_from_url('getepisodedetails', params, ('id',))
+            in_params = util.get_args_from_params('getepisodedetails', params, ('id',))
             _log.debug('getepisodedetails: in_params=%s', in_params)
             jf_episode = get_item(self._server, user, in_params['id'])
             episode = scraper.scrape_episode(jf_episode)

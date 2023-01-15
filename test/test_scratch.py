@@ -12,7 +12,7 @@ import requests
 
 from lib.api.jellyfin import Server, authenticate
 from lib.scraper.movies import MoviesScraper
-from lib.scraper.queries import get_episodes, get_artwork
+from lib.scraper.queries import get_episodes, get_artwork, get_seasons
 from lib.scraper.tvshows import TvShowsScraper
 from lib.util.log import LOG_FORMAT
 
@@ -120,14 +120,12 @@ class TestScratch(unittest.TestCase):
             server = get_server(session, debug_level=0)
             user = server.authenticate_by_password(USER, PASS)
             artwork = get_artwork(server, user, '6ce12311f8993cf1a212881db0677f2a')
-            # with open('data/artwork_jf.json', 'w') as out:
-            #     import json
-            #     json.dump(artwork, out, indent=4, sort_keys=True)
+            pprint(artwork)
 
-    #@unittest.skip
-    def test_authenticate(self):
+    @unittest.skip
+    def test_get_seasons(self):
         with requests.Session() as session:
-            cache = {}
             server = get_server(session, debug_level=0)
-            user = authenticate(server, cache, USER, PASS)
-            pprint(user)
+            user = server.authenticate_by_password(USER, PASS)
+            seasons = get_seasons(server, user, '43df71c52fff642be7e32c048322de8c')
+            pprint(seasons)

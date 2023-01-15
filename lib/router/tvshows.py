@@ -1,4 +1,5 @@
 import logging
+from pprint import pformat
 
 import xbmcgui
 import xbmcplugin
@@ -19,7 +20,7 @@ class TvShowsRouter(Router):
             in_params = util.get_params_from_url('getdetails', params, ('id',))
             _log.debug('getdetails: in_params=%s', in_params)
             jf_show = get_item(self._server, user, in_params['id'])
-            jf_seasons = get_seasons(self._server, user, in_params['id'])
+            jf_seasons = get_seasons(self._server, user, in_params['id']).get('Items') or []
             show = scraper.scrape_show(jf_show, jf_seasons)
             builder.build_show(show)
         except Exception:

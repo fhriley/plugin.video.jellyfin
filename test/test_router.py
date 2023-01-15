@@ -142,6 +142,7 @@ class TestRouter(unittest.TestCase):
         in_scraper_data = load_data('tvshows_scraper.json')
         show = in_jf_data['Items'][0]
         seasons = load_seasons_jf_by_series()[show['Id']]
+        seasons = {'Items': seasons, 'TotalRecordCount': len(seasons), 'StartIndex': 0}
         mock_authenticate.return_value = self.mock_user
         params = {'action': 'getdetails', 'url': f'/foo?id={show["Id"]}'}
         mock_get_item.return_value = show
@@ -153,7 +154,7 @@ class TestRouter(unittest.TestCase):
 
         mock_get_item.assert_called_once_with(self.server, self.mock_user, show["Id"])
         mock_get_seasons.assert_called_once_with(self.server, self.mock_user, show["Id"])
-        self.tvshows_scraper.scrape_show.assert_called_once_with(show, seasons)
+        self.tvshows_scraper.scrape_show.assert_called_once_with(show, seasons['Items'])
         self.tvshows_builder.build_show.assert_called_once_with(in_scraper_data[0])
 
     @patch('lib.router.tvshows.get_episodes_min')

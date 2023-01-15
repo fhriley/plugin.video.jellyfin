@@ -6,11 +6,7 @@
         <import addon="script.module.requests" version="2.22.0"/>
         <import addon="script.module.simplejson" version="3.17.0"/>
     </requires>
-    <extension point="xbmc.python.pluginsource" library="plugin_source.py">
-        <provides>video</provides>
-        <medialibraryscanpath content="movies">library/movies</medialibraryscanpath>
-        <medialibraryscanpath content="tvshows">library/tvshows</medialibraryscanpath>
-    </extension>
+    <extension point="xbmc.metadata.scraper.tvshows" language="en" library="tvshow_scraper.py"/>
     <extension point="xbmc.addon.metadata">
         <summary lang="en_GB">Fetch TV show and Movie metadata from a Jellyfin server</summary>
         <description lang="en_GB">Fetch TV show and Movie metadata from a Jellyfin server</description>

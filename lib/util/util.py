@@ -16,7 +16,7 @@ def get_plugin_url(addon: xbmcaddon.Addon, *args, **kwargs):
 
 def get_args_from_params(log: logging.Logger, msg: str, params: dict, keys: Optional[Iterable[str]]) -> dict:
     url = params.get('url')
-    if  url:
+    if url:
         parsed = urlparse(url)
         qs = parse_qs(parsed.query)
     else:

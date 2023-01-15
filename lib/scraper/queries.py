@@ -8,7 +8,8 @@ _SONARR_REPLACEMENTS = [
 ]
 
 
-def find_by_title(server: Server, user: User, item_type: str, title: str, year: Optional[Union[str, int]]) -> Dict[str, Any]:
+def find_by_title(server: Server, user: User, item_type: str, title: str, year: Optional[Union[str, int]]) -> Dict[
+    str, Any]:
     params = {'searchTerm': title, 'Limit': 24, 'Recursive': 'true', 'enableTotalRecordCount': 'true',
               'IncludePeople': 'false', 'IncludeMedia': 'false', 'IncludeGenres': 'false',
               'IncludeStudios': 'false', 'IncludeArtists': 'false', 'IncludeItemTypes': item_type,

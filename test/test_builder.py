@@ -198,7 +198,8 @@ class TestBuilder(unittest.TestCase):
             input = [{'id': '43df71c52fff642be7e32c048322de8c', 'name': 'Breaking Bad (2008)'}]
             builder.build_find_directory(input)
             mock_xbmcgui.ListItem.assert_called_once_with(input[0]['name'])
-            expected_items = [(f'plugin://addon/find?id={input[0]["id"]}&name={quote_plus(input[0]["name"])}', mock_list_item, True)]
+            expected_items = [
+                (f'plugin://addon/find?id={input[0]["id"]}&name={quote_plus(input[0]["name"])}', mock_list_item, True)]
             mock_xbmcplugin.addDirectoryItems.assert_called_once_with(handle=handle, items=expected_items)
             mock_xbmcplugin.endOfDirectory.assert_called_once_with(handle=handle, succeeded=True)
 

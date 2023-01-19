@@ -7,11 +7,12 @@
         <import addon="script.module.simplejson" version="3.17.0"/>
     </requires>
     <extension point="xbmc.metadata.scraper.tvshows" language="en" library="tvshows_scraper.py"/>
+    <extension point="xbmc.service" library="service.py" start="login"/>
     <extension point="xbmc.addon.metadata">
         <summary lang="en_GB">Fetch TV show and Movie metadata from a Jellyfin server</summary>
         <description lang="en_GB">Fetch TV show and Movie metadata from a Jellyfin server</description>
         <platform>all</platform>
         <license>GPL-3.0-or-later</license>
-        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
     </extension>
 </addon>

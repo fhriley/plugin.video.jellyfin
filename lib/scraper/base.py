@@ -6,6 +6,7 @@ from typing import Optional, Dict, List, Tuple, Any
 from urllib.parse import urlparse, parse_qs
 
 from lib.api.jellyfin import Server, User
+from lib.util.util import ticks_to_seconds
 
 
 class ProxyDatetime(datetime.datetime):
@@ -34,10 +35,6 @@ episode_artwork = {
     'Thumb': ['landscape', 'tvshow.landscape'],
     'Primary': ['thumb']
 }
-
-
-def ticks_to_seconds(ticks: int) -> float:
-    return ticks * 100e-9
 
 
 def get_artwork_from_item(server: Server, item: dict, artwork_map: Dict[str, List[str]] = None) -> Dict[str, str]:
@@ -370,13 +367,7 @@ class Scraper:
 
         user_data = jf_item.get('UserData')
         if user_data:
-            play_count = user_data.get('PlayCount')
-            if play_count is not None:
-                info['playcount'] = play_count
-            else:
-                play_count = 0
-            if play_count == 0 and user_data.get('Played', 0) > 0:
-                info['playcount'] = 1
+            info['playcount'] = 1 if user_data.get('Played', False) else 0
             last_played = get_datetime(user_data, 'LastPlayedDate')
             if last_played:
                 info['lastplayed'] = last_played

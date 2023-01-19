@@ -60,13 +60,14 @@ def profile(func, num_times=1):
 
 
 class TestScratch(unittest.TestCase):
-    @unittest.skip
+    #@unittest.skip
     def test_get_item(self):
         with requests.Session() as session:
             server = get_server(session, debug_level=0)
             user = server.authenticate_by_password(USER, PASS)
-            params = {'fields': 'Path', 'enableUserData': 'true'}
-            item = server.get_item(user, '6ce12311f8993cf1a212881db0677f2a', params=params)
+            #params = {'fields': 'Path', 'enableUserData': 'true'}
+            params = None
+            item = server.get_item(user, 'f685903ca281da3b87c639c554d5b11c', params=params)
             pprint(item)
 
     @unittest.skip
@@ -137,3 +138,11 @@ class TestScratch(unittest.TestCase):
             user = server.authenticate_by_password(USER, PASS)
             series = find_series_by_title(server, user, '90 Day Fiancé - The Other Way', 2019)
             pprint(series)
+
+    #@unittest.skip
+    def test_get_sessions(self):
+        with requests.Session() as session:
+            server = get_server(session, debug_level=0)
+            user = server.authenticate_by_password(USER, PASS)
+            sessions = server.get_sessions(user)
+            pprint(sessions)

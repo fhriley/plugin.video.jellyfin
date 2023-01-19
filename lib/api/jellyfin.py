@@ -1,8 +1,12 @@
 import logging
 from typing import Optional, Dict, List, Any
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urlsplit, urlunsplit, urljoin
 
 import requests
+
+
+def seconds_to_ticks(seconds: float) -> int:
+    return int(round(max(seconds, 0) * 1e7))
 
 
 class User:
@@ -35,14 +39,20 @@ class Server:
                  verify_cert: bool = True, timeout: float = 3, log_raw_resp: bool = False):
         self._server = server
         self._verify_cert = verify_cert
+        self._device_id = device_id
         self._authorization = (
             f'MediaBrowser Client="{client_name}", Device="{device_name}", DeviceId="{device_id}", Version="{version}"')
         self._requests_api = requests_api
         self._timeout = timeout
         self._log_raw_resp = log_raw_resp
         self._log = logging.getLogger(__name__)
+        parsed = urlsplit(self._server)
+        scheme = 'ws'
+        if parsed.scheme == 'https':
+            scheme = 'wss'
+        self._ws_server = urlunsplit((scheme, parsed.netloc, parsed.path, parsed.query, parsed.fragment))
 
-    def _get_headers(self, user: Optional[User] = None, headers: Optional[Dict[str, str]] = None) -> Dict[str, str]:
+    def get_headers(self, user: Optional[User] = None, headers: Optional[Dict[str, str]] = None) -> Dict[str, str]:
         headers = headers or {}
         headers['x-emby-authorization'] = self._authorization
         if user:
@@ -53,27 +63,30 @@ class Server:
     def server(self) -> str:
         return self._server
 
+    def ws_url(self, user: User) -> str:
+        return urljoin(self._ws_server, f'/socket?api_key={user.token}&device_id={self._device_id}')
+
     @property
     def authorization(self) -> str:
         return self._authorization
 
-    def post(self, path: str, *args, user: Optional[User] = None, **kwargs) -> requests.Response:
-        headers = self._get_headers(user, kwargs.get('headers'))
+    def _method(self, requests_method, path: str, *args, user: Optional[User] = None, **kwargs) -> requests.Response:
+        headers = self.get_headers(user, kwargs.get('headers'))
         timeout = kwargs.pop('timeout', self._timeout)
-        response = self._requests_api.post(f'{self.server}{path}', *args, headers=headers, verify=self._verify_cert,
-                                           timeout=timeout, **kwargs)
+        response = requests_method(f'{self.server}{path}', *args, headers=headers, verify=self._verify_cert,
+                                   timeout=timeout, **kwargs)
         if self._log_raw_resp:
             self._log.debug(repr(response.text))
         return response
 
+    def post(self, path: str, *args, user: Optional[User] = None, **kwargs) -> requests.Response:
+        return self._method(self._requests_api.post, path, *args, user=user, **kwargs)
+
     def get(self, path: str, *args, user: Optional[User] = None, **kwargs) -> requests.Response:
-        headers = self._get_headers(user, kwargs.get('headers'))
-        timeout = kwargs.pop('timeout', self._timeout)
-        response = self._requests_api.get(f'{self.server}{path}', *args, headers=headers, verify=self._verify_cert,
-                                          timeout=timeout, **kwargs)
-        if self._log_raw_resp:
-            self._log.debug(repr(response.text))
-        return response
+        return self._method(self._requests_api.get, path, *args, user=user, **kwargs)
+
+    def delete(self, path: str, *args, user: Optional[User] = None, **kwargs) -> requests.Response:
+        return self._method(self._requests_api.delete, path, *args, user=user, **kwargs)
 
     def authenticate_by_password(self, user: str, password: str) -> User:
         with self.post('/Users/AuthenticateByName', json={'Username': user, 'Pw': password}) as response:
@@ -184,6 +197,59 @@ class Server:
 
     def image_url(self, item_id: str, image_type='Primary', **kwargs) -> str:
         return create_image_url(self, item_id, image_type, **kwargs)
+
+    def get_sessions(self, user: User):
+        params = {'ControllableByUserId': user.uuid}
+        with self.get(f'/Sessions', user=user, params=params) as resp:
+            resp.raise_for_status()
+            return resp.json()
+
+    def _playstate_data(self, item_id: str, position_s: Optional[float] = None):
+        data = {
+            'QueueableMediaTypes': 'Video',
+            'CanSeek': True,
+            'ItemId': item_id,
+            'PlayMethod': 'DirectPlay',
+        }
+        if position_s is not None:
+            data['PositionTicks'] = seconds_to_ticks(position_s)
+        return data
+
+    def send_playback_started(self, user: User, item_id: str, position_s: Optional[float] = None):
+        data = self._playstate_data(item_id, position_s)
+        with self.post('/Sessions/Playing', user=user, json=data) as response:
+            response.raise_for_status()
+
+    def send_playback_stopped(self, user: User, item_id: str, position_s: Optional[float] = None):
+        data = self._playstate_data(item_id, position_s)
+        with self.post('/Sessions/Playing/Stopped', user=user, json=data) as response:
+            response.raise_for_status()
+
+    def _send_playback_progress(self, user: User, data: dict):
+        with self.post('/Sessions/Playing/Progress', user=user, json=data) as response:
+            response.raise_for_status()
+
+    def send_playback_time(self, user: User, item_id: str, position_s: float):
+        data = self._playstate_data(item_id, position_s)
+        self._send_playback_progress(user, data)
+
+    def send_playback_paused(self, user: User, item_id: str, position_s: float):
+        data = self._playstate_data(item_id, position_s)
+        data['IsPaused'] = True
+        self._send_playback_progress(user, data)
+
+    def send_playback_unpaused(self, user: User, item_id: str, position_s: float):
+        data = self._playstate_data(item_id, position_s)
+        data['IsPaused'] = False
+        self._send_playback_progress(user, data)
+
+    def mark_watched(self, user: User, item_id: str):
+        with self.post(f'/Users/{user.uuid}/PlayedItems/{item_id}', user=user) as response:
+            response.raise_for_status()
+
+    def mark_unwatched(self, user: User, item_id: str):
+        with self.delete(f'/Users/{user.uuid}/PlayedItems/{item_id}', user=user) as response:
+            response.raise_for_status()
 
     def __str__(self) -> str:
         return f'Server[server={self.server}, authorization={self.authorization}]'

@@ -16,6 +16,7 @@ from lib.scraper.movies import MoviesScraper
 from lib.scraper.tvshows import TvShowsScraper
 from lib.util.log import KodiHandler, LOG_FORMAT
 from lib.util.settings import Settings
+from lib.util.util import get_server
 
 _session: Optional[requests.Session] = None
 _user_cache: Optional[Dict[str, User]] = None
@@ -32,15 +33,6 @@ def get_params() -> dict:
     if param_string:
         return dict(parse_qsl(param_string))
     return {}
-
-
-def get_server(session: requests.Session, settings: Settings, addon: xbmcaddon.Addon) -> Server:
-    server_url = unquote_plus(settings.get('serverurl'))
-    device_name = xbmc.getInfoLabel('System.FriendlyName')
-    version = addon.getAddonInfo('version')
-    verify_cert = settings.get_bool('sslverify')
-    return Server(session, server_url, settings.client_name, device_name, settings.device_id, version, verify_cert,
-                  log_raw_resp=settings.debug_level > 2)
 
 
 # def play_item(log: logging.Logger, handle: int, item: Dict[str, Any]):

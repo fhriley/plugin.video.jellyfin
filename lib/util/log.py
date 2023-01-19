@@ -13,7 +13,7 @@ _log_levels = {
     logging.CRITICAL: xbmc.LOGFATAL,
 }
 
-LOG_FORMAT = '%(levelname)s|%(name)s|%(filename)s:%(lineno)d|%(message)s'
+LOG_FORMAT = '%(levelname)s|%(name)s|%(filename)s:%(lineno)d|t:%(threadName)s|%(message)s'
 
 
 class KodiHandler(logging.Handler):

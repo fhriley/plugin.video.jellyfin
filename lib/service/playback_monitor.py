@@ -13,13 +13,9 @@ from lib.util.util import get_jf_id_from_list_item
 class PlayingState:
     def __init__(self, start_s: float, list_item: xbmcgui.ListItem):
         self._start_s = start_s
+        self._jf_id = get_jf_id_from_list_item(list_item) or None
         tag: xbmc.InfoTagVideo = list_item.getVideoInfoTag()
         self._kodi_id = tag.getDbId()
-        jf_id = get_jf_id_from_list_item(list_item)
-        if jf_id:
-            self._jf_id = jf_id
-        else:
-            self._jf_id = None
         self._playcount = tag.getPlayCount()
 
     @property

@@ -86,7 +86,7 @@ def main(args: List[str]):
                             server.send_playback_time(user, player.playing_state.jf_id, time_s)
                     except Exception:
                         log.exception('playback state update failed')
-                    monitor.waitForAbort(1)
+                    monitor.waitForAbort(3)
     except Exception:
         log.exception('main failed')
     finally:

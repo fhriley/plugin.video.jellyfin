@@ -59,6 +59,11 @@ class TvShowsScraper(base.Scraper):
             if primary_tag:
                 url = self._server.image_url(jf_season['Id'], 'Primary', params={'tag': primary_tag})
                 season['artwork'] = {'type': 'poster', 'url': url}
+            else:
+                url = base.get_ancestor_image(self._server, jf_season, 'ParentThumbImageTag', 'ParentThumbItemId',
+                                              'Thumb')
+                if url:
+                    season['artwork'] = {'type': 'poster', 'url': url}
 
             if self._debug_level > 1:
                 base.print_debug_info(self._log, 'SCRAPE SEASON', season)

@@ -1,6 +1,7 @@
 from typing import Dict, Any
 
 from lib.api.jellyfin import Server, User
+from lib.util.exceptions import NotFound
 
 
 def get_item(server: Server, user: User, item_id: str) -> Dict[str, Any]:
@@ -10,5 +11,5 @@ def get_item(server: Server, user: User, item_id: str) -> Dict[str, Any]:
               'enableUserData': 'false', 'enableImages': 'false', 'ids': item_id}
     jf_items = server.get_items(user, params=params).get('Items')
     if not jf_items:
-        raise Exception(f'item with id {item_id} not found')
+        raise NotFound('%s not found', item_id)
     return jf_items[0]

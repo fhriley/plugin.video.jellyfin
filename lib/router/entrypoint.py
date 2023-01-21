@@ -1,6 +1,7 @@
 import logging
 import sys
 import traceback
+from threading import current_thread
 from typing import Type, Union, Optional
 from urllib.parse import parse_qsl, unquote_plus
 
@@ -40,6 +41,9 @@ def main(router_class: Type[Union[MoviesRouter, TvShowsRouter]],
          scraper_class: Type[Union[MoviesScraper, TvShowsScraper]],
          builder_class: Type[Union[MoviesBuilder, TvShowsBuilder]]):
     # xbmc.log('============================ start', xbmc.LOGINFO)
+    thread = current_thread()
+    thread.name = 'Scraper'
+
     global _session
     global _log
     handle = int(sys.argv[1])

@@ -1,4 +1,5 @@
 import cProfile
+import datetime
 import io
 import logging
 import pstats
@@ -15,6 +16,7 @@ from lib.scraper.movies import MoviesScraper
 from lib.scraper.queries import get_episodes, get_artwork, get_seasons, find_series_by_title
 from lib.scraper.tvshows import TvShowsScraper
 from lib.util.log import LOG_FORMAT
+from test.common import get_user
 
 SERVER = 'https://jellyfin.riley-home.net'
 USER = 'frank'
@@ -60,12 +62,22 @@ def profile(func, num_times=1):
 
 
 class TestScratch(unittest.TestCase):
-    #@unittest.skip
+    @unittest.skip
+    def test_is_authorized(self):
+        with requests.Session() as session:
+            server = get_server(session, debug_level=0)
+            user = get_user()
+            start = time.process_time_ns()
+            server.is_authenticated(user)
+            end = time.process_time_ns()
+            print((end - start) * 1e-9)
+
+    @unittest.skip
     def test_get_item(self):
         with requests.Session() as session:
             server = get_server(session, debug_level=0)
             user = server.authenticate_by_password(USER, PASS)
-            #params = {'fields': 'Path', 'enableUserData': 'true'}
+            # params = {'fields': 'Path', 'enableUserData': 'true'}
             params = None
             item = server.get_item(user, 'f685903ca281da3b87c639c554d5b11c', params=params)
             pprint(item)
@@ -139,10 +151,27 @@ class TestScratch(unittest.TestCase):
             series = find_series_by_title(server, user, '90 Day Fiancé - The Other Way', 2019)
             pprint(series)
 
-    #@unittest.skip
+    @unittest.skip
     def test_get_sessions(self):
         with requests.Session() as session:
             server = get_server(session, debug_level=0)
             user = server.authenticate_by_password(USER, PASS)
             sessions = server.get_sessions(user)
             pprint(sessions)
+
+    # @unittest.skip
+    def test_sync(self):
+        with requests.Session() as session:
+            server = get_server(session, debug_level=0)
+            user = server.authenticate_by_password(USER, PASS)
+            dt = server.get_server_time() - datetime.timedelta(days=3)
+            response = server.get_sync_queue(user, dt)
+            pprint(response)
+
+    # @unittest.skip
+    def test_get_server_time(self):
+        with requests.Session() as session:
+            server = get_server(session, debug_level=0)
+            user = server.authenticate_by_password(USER, PASS)
+            dt = server.get_server_time()
+            print(dt)

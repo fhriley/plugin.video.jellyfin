@@ -1,3 +1,4 @@
+import datetime
 import logging
 from typing import Optional, Dict, List, Any
 from urllib.parse import urlencode, urlsplit, urlunsplit, urljoin
@@ -84,6 +85,9 @@ class Server:
 
     def get(self, path: str, *args, user: Optional[User] = None, **kwargs) -> requests.Response:
         return self._method(self._requests_api.get, path, *args, user=user, **kwargs)
+
+    def head(self, path: str, *args, user: Optional[User] = None, **kwargs) -> requests.Response:
+        return self._method(self._requests_api.head, path, *args, user=user, **kwargs)
 
     def delete(self, path: str, *args, user: Optional[User] = None, **kwargs) -> requests.Response:
         return self._method(self._requests_api.delete, path, *args, user=user, **kwargs)
@@ -250,6 +254,21 @@ class Server:
     def mark_unwatched(self, user: User, item_id: str):
         with self.delete(f'/Users/{user.uuid}/PlayedItems/{item_id}', user=user) as response:
             response.raise_for_status()
+
+    def get_sync_queue(self, user: User, last_updated: Optional[datetime.datetime] = None, *args, **kwargs) -> Dict[str, Any]:
+        params = kwargs.pop('params', None) or {}
+        params['filters'] = 'Movies,TvShows'
+        if last_updated:
+            params['lastUpdateDt'] = last_updated.strftime('%Y-%m-%dT%H:%M:%SZ')
+        with self.get(f'/Jellyfin.Plugin.KodiSyncQueue/{user.uuid}/GetItems', *args, user=user, params=params, **kwargs) as resp:
+            resp.raise_for_status()
+            return resp.json()
+
+    def get_server_time(self) -> datetime.datetime:
+        with self.get('/Jellyfin.Plugin.KodiSyncQueue/GetServerDateTime') as resp:
+            resp.raise_for_status()
+            dt = resp.json()['ServerDateTime']
+        return datetime.datetime.strptime(dt, '%Y-%m-%dT%H:%M:%SZ')
 
     def __str__(self) -> str:
         return f'Server[server={self.server}, authorization={self.authorization}]'

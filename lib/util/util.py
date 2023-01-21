@@ -1,12 +1,11 @@
 import logging
+import os
 from typing import Iterable, Optional
 from urllib.parse import urlparse, parse_qs, urlencode, quote_plus, unquote_plus
-import os
 
 import requests
 import xbmc
 import xbmcaddon
-import xbmcgui
 
 from lib.api.jellyfin import Server
 from lib.util.settings import Settings
@@ -60,8 +59,3 @@ def get_args_from_params(log: logging.Logger, msg: str, params: dict, keys: Opti
             ret[key] = vals[0]
 
     return ret
-
-
-def get_jf_id_from_list_item(list_item: xbmcgui.ListItem) -> str:
-    tag: xbmc.InfoTagVideo = list_item.getVideoInfoTag()
-    return tag.getUniqueID('jellyfin')

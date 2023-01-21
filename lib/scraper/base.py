@@ -37,6 +37,17 @@ episode_artwork = {
 }
 
 
+def get_ancestor_image(server: Server, item: Dict[str, Any], tag_key: str, item_id_key: str, image_type: str) -> \
+Optional[str]:
+    parent_tag = item.get(tag_key)
+    parent_id = item.get(item_id_key)
+    if parent_tag and parent_id:
+        if isinstance(parent_tag, list):
+            parent_tag = parent_tag[0]
+        return server.image_url(parent_id, image_type, params={'tag': parent_tag})
+    return None
+
+
 def get_artwork_from_item(server: Server, item: dict, artwork_map: Dict[str, List[str]] = None) -> Dict[str, str]:
     if artwork_map is None:
         artwork_map = _artwork
@@ -46,6 +57,27 @@ def get_artwork_from_item(server: Server, item: dict, artwork_map: Dict[str, Lis
         kodi_keys = artwork_map.get(image_type) or []
         for key in kodi_keys:
             artwork[key] = server.image_url(item['Id'], image_type, params={'tag': tag})
+            break
+
+    if 'Backdrop' not in tags:
+        backdrop_tags = item.get('BackdropImageTags')
+        if backdrop_tags:
+            kodi_keys = artwork_map.get('Backdrop') or []
+            for key in kodi_keys:
+                artwork[key] = server.image_url(item['Id'], 'Backdrop', params={'tag': backdrop_tags[0]})
+
+    for image_type, tag_key, item_id_key in (
+            ('Backdrop', 'ParentBackdropImageTags', 'ParentBackdropItemId'),
+            ('Logo', 'ParentLogoImageTag', 'ParentLogoItemId'), ('Thumb', 'ParentThumbImageTag', 'ParentThumbItemId'),
+            ('Art', 'ParentArtImageTag', 'ParentArtItemId')
+    ):
+        if image_type not in tags:
+            url = get_ancestor_image(server, item, tag_key, item_id_key, image_type)
+            if url:
+                kodi_keys = artwork_map.get(image_type) or []
+                for key in kodi_keys:
+                    artwork[key] = url
+
     return artwork
 
 

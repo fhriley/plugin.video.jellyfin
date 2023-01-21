@@ -6,14 +6,15 @@ import xbmc
 import xbmcgui
 
 from lib.api.jellyfin import Server, User
-from lib.service.json_rpc import get_kodi_episode_details
-from lib.util.util import get_jf_id_from_list_item
+from lib.service.json_rpc import get_kodi_episode_details, get_kodi_movie_details
 
 
 class PlayingState:
     def __init__(self, start_s: float, list_item: xbmcgui.ListItem):
         self._start_s = start_s
-        self._jf_id = get_jf_id_from_list_item(list_item) or None
+        tag: xbmc.InfoTagVideo = list_item.getVideoInfoTag()
+        self._jf_id = tag.getUniqueID('jellyfin') or None
+        self._media_type = tag.getMediaType()
         tag: xbmc.InfoTagVideo = list_item.getVideoInfoTag()
         self._kodi_id = tag.getDbId()
         self._playcount = tag.getPlayCount()
@@ -29,6 +30,10 @@ class PlayingState:
     @property
     def jf_id(self) -> Optional[str]:
         return self._jf_id
+
+    @property
+    def media_type(self):
+        return self._media_type
 
     @property
     def playcount(self) -> int:
@@ -81,7 +86,10 @@ class PlaybackMonitor(xbmc.Player):
         self._log.debug('onPlayBackStopped()')
         try:
             if self._playing_state and self._playing_state.jf_id:
-                details = get_kodi_episode_details(self._log, self._playing_state.kodi_id, 'playcount', 'resume')
+                if self._playing_state.media_type == 'episode':
+                    details = get_kodi_episode_details(self._log, self._playing_state.kodi_id, 'playcount', 'resume')
+                else:
+                    details = get_kodi_movie_details(self._log, self._playing_state.kodi_id, 'playcount', 'resume')
                 playcount = details.get('playcount')
                 position = (details.get('resume') or {}).get('position', None)
                 self._server.send_playback_stopped(self._user, self._playing_state.jf_id, position)

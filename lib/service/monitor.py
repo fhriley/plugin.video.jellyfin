@@ -12,23 +12,24 @@ from lib.service.json_rpc import get_jf_episode_id
 
 
 class Monitor(xbmc.Monitor):
-    def __init__(self, server: Server, user: User):
+    def __init__(self, server: Server, user: User, on_quit: Callable):
         super().__init__()
         self._log = logging.getLogger(__name__)
         self._server = server
         self._user = user
+        self._on_quit = on_quit
         self._handlers = {
-            ('xbmc', 'VideoLibrary.OnUpdate'): self._videolibrary_onupdate
+            ('xbmc', 'VideoLibrary.OnUpdate'): self._videolibrary_onupdate,
         }
 
     def onNotification(self, sender: str, method: str, data: str):
         self._log.debug('onNotification: sender=%s, method=%s', sender, method)
+        if self._log.isEnabledFor(logging.DEBUG) and data:
+            self._log.debug('%s%s', os.linesep, pformat(json.loads(data)))
         try:
             handler: Callable = self._handlers.get((sender, method))
             if handler:
                 message = json.loads(data)
-                if self._log.isEnabledFor(logging.DEBUG):
-                    self._log.debug('%s%s', os.linesep, pformat(message))
                 handler(message)
         except Exception:
             self._log.exception('onNotification failed')

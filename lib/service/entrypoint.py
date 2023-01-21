@@ -1,22 +1,20 @@
+import asyncio
 import logging
 import os
-from concurrent.futures import ThreadPoolExecutor
 from threading import Thread
 from typing import List
 
 import requests
 import xbmc
 import xbmcaddon
-import xbmcgui
 
-import websocket
 from lib.api.jellyfin import authenticate
 from lib.service.monitor import Monitor
 from lib.service.playback_monitor import PlaybackMonitor
-from lib.service.websocket_client import on_ws_message, on_ws_error, ws_app_loop
+from lib.service.websocket_client import ws_event_loop, ws_task
 from lib.util.log import LOG_FORMAT, KodiHandler
 from lib.util.settings import Settings
-from lib.util.util import get_jf_id_from_list_item, get_server
+from lib.util.util import get_server
 
 
 class AbortWatcher:
@@ -43,7 +41,12 @@ def main(args: List[str]):
         handlers = None
     logging.basicConfig(format=LOG_FORMAT, level=logging.DEBUG, handlers=handlers, force=True)
     log = logging.getLogger(__name__)
-    wsapp = None
+    ws_future = None
+    ws_event_loop_thread = None
+
+    def on_quit(future):
+        if future and not future.done():
+            future.cancel()
 
     try:
         user_cache = {}
@@ -60,35 +63,34 @@ def main(args: List[str]):
         # System.OnSleep
         # System.OnWake
 
-        with ThreadPoolExecutor(max_workers=5) as executor:
-            with requests.Session() as session:
-                server = get_server(session, settings, addon)
-                user = authenticate(server, user_cache, settings.get('username') or os.getenv('USERNAME'),
-                                    settings.get('password') or os.getenv('PASSWORD'))
+        with requests.Session() as session:
+            server = get_server(session, settings, addon)
+            user = authenticate(server, user_cache, settings.get('username') or os.getenv('USERNAME'),
+                                settings.get('password') or os.getenv('PASSWORD'))
 
-                monitor = Monitor(server, user)
-                player = PlaybackMonitor(server, user)
+            player = PlaybackMonitor(server, user)
+            loop = asyncio.new_event_loop()
+            ws_future = loop.create_task(ws_task(player, server, user), name='ws_task')
+            monitor = Monitor(server, user, lambda: on_quit(ws_future))
+            ws_event_loop_thread = Thread(target=ws_event_loop, args=(loop, ws_future),
+                                          name='ws_event_loop')
+            ws_event_loop_thread.start()
 
-                ws_log = logging.getLogger('websocket')
-                url = server.ws_url(user)
-                wsapp = websocket.WebSocketApp(url, header=server.get_headers(user),
-                                               on_message=lambda wsapp, message: on_ws_message(ws_log, executor, player,
-                                                                                               server, user, message),
-                                               on_error=lambda wsapp, message: on_ws_error(ws_log, message))
-                ws_thread = Thread(target=ws_app_loop, args=(ws_log, wsapp), daemon=True)
-                ws_thread.start()
-
-                while not monitor.abortRequested():
-                    try:
-                        if player.isPlaying() and player.playing_state and player.playing_state.jf_id:
-                            time_s = player.getTime()
-                            log.debug('%s: %.2f', player.playing_state.jf_id, time_s)
-                            server.send_playback_time(user, player.playing_state.jf_id, time_s)
-                    except Exception:
-                        log.exception('playback state update failed')
-                    monitor.waitForAbort(3)
+            while not monitor.abortRequested():
+                try:
+                    if player.isPlaying() and player.playing_state and player.playing_state.jf_id:
+                        time_s = player.getTime()
+                        log.debug('%s: %.2f', player.playing_state.jf_id, time_s)
+                        server.send_playback_time(user, player.playing_state.jf_id, time_s)
+                except Exception:
+                    log.exception('playback state update failed')
+                monitor.waitForAbort(3)
+    except KeyboardInterrupt:
+        pass
     except Exception:
         log.exception('main failed')
     finally:
-        if wsapp:
-            wsapp.close()
+        on_quit(ws_future)
+        if ws_event_loop_thread:
+            ws_event_loop_thread.join()
+        log.debug('exiting')

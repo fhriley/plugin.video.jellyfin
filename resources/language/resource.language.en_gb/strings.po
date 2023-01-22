@@ -1028,3 +1028,7 @@ msgstr "Trace"
 msgctxt "#33306"
 msgid "Trace2"
 msgstr "Trace2"
+
+msgctxt "#33307"
+msgid "Seconds between playback updates"
+msgstr "Seconds between playback updates"

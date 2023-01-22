@@ -39,6 +39,13 @@
                     <default>true</default>
                     <control type="toggle"/>
                 </setting>
+                <setting id="playback_update_secs" type="integer" label="33307" help="">
+                    <level>0</level>
+                    <default>3</default>
+                    <control type="edit" format="integer">
+                        <heading>33307</heading>
+                    </control>
+                </setting>
                 <setting id="debug" type="integer" label="33301" help="">
                     <level>0</level>
                     <default>0</default>

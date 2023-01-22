@@ -3,10 +3,8 @@ import logging
 import os
 from concurrent.futures import ThreadPoolExecutor
 from threading import Thread, current_thread
-from typing import List
 
 import requests
-import xbmc
 import xbmcaddon
 
 from lib.api.jellyfin import authenticate
@@ -18,30 +16,15 @@ from lib.util.settings import Settings
 from lib.util.util import get_server
 
 
-class AbortWatcher:
-    def __init__(self, monitor: xbmc.Monitor):
-        self._monitor = monitor
-        self._abort_requested = False
-        self._thread = Thread(target=self._abort_watcher, name='abort_watcher')
+def main():
+    current_thread().name = 'Service'
 
-    @property
-    def abort_requested(self):
-        return self._abort_requested
-
-    def _abort_watcher(self):
-        while not self._monitor.abortRequested():
-            self._monitor.waitForAbort(1)
-        self._abort_requested = True
-
-
-def main(args: List[str]):
-    thread = current_thread()
-    thread.name = 'Service'
     handlers = [KodiHandler()]
     if os.environ.get('NOT_IN_KODI'):
         handlers = None
     logging.basicConfig(format=LOG_FORMAT, level=logging.DEBUG, handlers=handlers, force=True)
     log = logging.getLogger(__name__)
+
     ws_future = None
     ws_event_loop_thread = None
 
@@ -54,15 +37,7 @@ def main(args: List[str]):
         addon = xbmcaddon.Addon()
         settings = Settings(addon)
 
-        # VideoLibrary.OnUpdate
-        # VideoLibrary.OnRemove
-        # VideoLibrary.OnScanStarted
-        # VideoLibrary.OnScanFinished
-        # VideoLibrary.OnCleanStarted
-        # VideoLibrary.OnCleanFinished
-        # VideoLibrary.OnRefresh
-        # System.OnSleep
-        # System.OnWake
+        playback_update_secs = settings.get_int('playback_update_secs')
 
         with requests.Session() as session:
             with ThreadPoolExecutor(max_workers=5) as executor:
@@ -87,7 +62,7 @@ def main(args: List[str]):
                             server.send_playback_time(user, player.playing_state.jf_id, time_s)
                     except Exception:
                         log.exception('playback state update failed')
-                    monitor.waitForAbort(3)
+                    monitor.waitForAbort(playback_update_secs)
     except KeyboardInterrupt:
         pass
     except Exception:

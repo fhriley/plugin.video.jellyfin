@@ -40,8 +40,7 @@ def main(router_class: Type[Union[MoviesRouter, TvShowsRouter]],
          scraper_class: Type[Union[MoviesScraper, TvShowsScraper]],
          builder_class: Type[Union[MoviesBuilder, TvShowsBuilder]]):
     # xbmc.log('============================ start', xbmc.LOGINFO)
-    thread = current_thread()
-    thread.name = 'Scraper'
+    current_thread().name = 'Scraper'
 
     global _session
     global _log

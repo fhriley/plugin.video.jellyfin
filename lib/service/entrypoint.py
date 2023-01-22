@@ -1,6 +1,7 @@
 import asyncio
 import logging
 import os
+from concurrent.futures import ThreadPoolExecutor
 from pprint import pformat
 from threading import Thread, current_thread
 from typing import List
@@ -65,27 +66,29 @@ def main(args: List[str]):
         # System.OnWake
 
         with requests.Session() as session:
-            server = get_server(session, settings, addon)
-            user = authenticate(server, user_cache, settings.get('username') or os.getenv('USERNAME'),
-                                settings.get('password') or os.getenv('PASSWORD'))
+            with ThreadPoolExecutor(max_workers=5) as executor:
+                server = get_server(session, settings, addon)
+                user = authenticate(server, user_cache, settings.get('username') or os.getenv('USERNAME'),
+                                    settings.get('password') or os.getenv('PASSWORD'))
 
-            player = PlaybackMonitor(server, user)
-            loop = asyncio.new_event_loop()
-            ws_future = loop.create_task(ws_task(player, settings, server, user), name='ws_task')
-            monitor = Monitor(settings, server, user, lambda: on_quit(ws_future))
-            ws_event_loop_thread = Thread(target=ws_event_loop, args=(loop, ws_future),
-                                          name='ws_event_loop')
-            ws_event_loop_thread.start()
+                player = PlaybackMonitor(server, user)
+                loop = asyncio.new_event_loop()
+                loop.set_default_executor(executor)
+                ws_future = loop.create_task(ws_task(executor, player, settings, server, user), name='ws_task')
+                monitor = Monitor(settings, server, user, lambda: on_quit(ws_future))
+                ws_event_loop_thread = Thread(target=ws_event_loop, args=(loop, ws_future),
+                                              name='ws_event_loop')
+                ws_event_loop_thread.start()
 
-            while not monitor.abortRequested():
-                try:
-                    if player.isPlaying() and player.playing_state and player.playing_state.jf_id:
-                        time_s = player.getTime()
-                        log.debug('%s: %.2f', player.playing_state.jf_id, time_s)
-                        server.send_playback_time(user, player.playing_state.jf_id, time_s)
-                except Exception:
-                    log.exception('playback state update failed')
-                monitor.waitForAbort(3)
+                while not monitor.abortRequested():
+                    try:
+                        if player.isPlaying() and player.playing_state and player.playing_state.jf_id:
+                            time_s = player.getTime()
+                            log.debug('%s: %.2f', player.playing_state.jf_id, time_s)
+                            server.send_playback_time(user, player.playing_state.jf_id, time_s)
+                    except Exception:
+                        log.exception('playback state update failed')
+                    monitor.waitForAbort(3)
     except KeyboardInterrupt:
         pass
     except Exception:

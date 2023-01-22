@@ -6,6 +6,7 @@
         <import addon="script.module.requests" version="2.22.0"/>
         <import addon="script.module.simplejson" version="3.17.0"/>
     </requires>
+    <extension point="xbmc.metadata.scraper.movies" language="en" library="movies_scraper.py"/>
     <extension point="xbmc.metadata.scraper.tvshows" language="en" library="tvshows_scraper.py"/>
     <extension point="xbmc.service" library="service.py" start="login"/>
     <extension point="xbmc.addon.metadata">

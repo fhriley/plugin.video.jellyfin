@@ -1,9 +1,10 @@
 import datetime
-import logging
 from typing import Optional, Dict, List, Any
 from urllib.parse import urlencode, urlsplit, urlunsplit, urljoin
 
 import requests
+
+from lib.util.log import LogHolder
 
 
 def seconds_to_ticks(seconds: float) -> int:
@@ -46,15 +47,12 @@ class Server:
         self._requests_api = requests_api
         self._timeout = timeout
         self._log_raw_resp = log_raw_resp
-        self._log = logging.getLogger(__name__)
+        self._log_holder = LogHolder.getLogger(__name__)
         parsed = urlsplit(self._server)
         scheme = 'ws'
         if parsed.scheme == 'https':
             scheme = 'wss'
         self._ws_server = urlunsplit((scheme, parsed.netloc, parsed.path, parsed.query, parsed.fragment))
-
-    def update_logger(self):
-        self._log = logging.getLogger(__name__)
 
     def get_headers(self, user: Optional[User] = None, headers: Optional[Dict[str, str]] = None) -> Dict[str, str]:
         headers = headers or {}
@@ -80,7 +78,7 @@ class Server:
         response = requests_method(f'{self.server}{path}', *args, headers=headers, verify=self._verify_cert,
                                    timeout=timeout, **kwargs)
         if self._log_raw_resp:
-            self._log.debug(repr(response.text))
+            self._log_holder.log.debug(repr(response.text))
         return response
 
     def post(self, path: str, *args, user: Optional[User] = None, **kwargs) -> requests.Response:
@@ -258,8 +256,8 @@ class Server:
         with self.delete(f'/Users/{user.uuid}/PlayedItems/{item_id}', user=user) as response:
             response.raise_for_status()
 
-    def get_sync_queue(self, user: User, last_updated: Optional[datetime.datetime] = None, *args, **kwargs) -> Dict[
-        str, Any]:
+    def get_sync_queue(
+            self, user: User, last_updated: Optional[datetime.datetime] = None, *args, **kwargs) -> Dict[str, Any]:
         params = kwargs.pop('params', None) or {}
         params['filters'] = 'Movies,TvShows'
         if last_updated:

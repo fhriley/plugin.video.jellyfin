@@ -15,6 +15,7 @@ from lib.service.json_rpc import refresh_kodi_episode, remove_kodi_episode, get_
     remove_kodi_movie, remove_kodi_tvshow, refresh_kodi_movie, refresh_kodi_tvshow, \
     scan_kodi_tvshows, scan_kodi_movies, get_kodi_episode_id, get_kodi_tvshow_id, get_kodi_movie_id
 from lib.service.queries import NotFound, get_item
+from lib.util.log import LogHolder
 from lib.util.settings import Settings
 
 
@@ -212,8 +213,8 @@ async def on_ws_message(log: logging.Logger, executor: ThreadPoolExecutor, playe
 
 async def ws_task(executor: ThreadPoolExecutor, player: PlaybackMonitor, settings: Settings, server: Server,
                   user: User):
-    log = logging.getLogger('ws_task')
-    log.debug('ws_task started')
+    log_holder = LogHolder.getLogger('ws_task')
+    log_holder.log.debug('ws_task started')
 
     logging.getLogger('websockets.client').setLevel(logging.INFO)
 
@@ -221,46 +222,43 @@ async def ws_task(executor: ThreadPoolExecutor, player: PlaybackMonitor, setting
         url = server.ws_url(user)
         while True:
             try:
-                log.setLevel(settings.service_log_level)
-                log.debug('connecting to %s', url)
+                log_holder.log.debug('connecting to %s', url)
                 async with websockets.connect(url, compression=None, open_timeout=3, ping_interval=5,
                                               ping_timeout=3, close_timeout=3) as ws:
-                    sync_library(log, executor, settings, player, server, user)
+                    sync_library(log_holder.log, executor, settings, player, server, user)
 
                     while True:
                         try:
                             message_time = server.get_server_time()
                             message = await ws.recv()
                         except (OSError, websockets.WebSocketException):
-                            log.error('websockets recv error')
+                            log_holder.log.error('websockets recv error')
                             break
                         try:
-                            log.setLevel(settings.service_log_level)
-                            await on_ws_message(log, executor, player, settings, server, user, message, message_time)
+                            await on_ws_message(log_holder.log, executor, player, settings, server, user, message,
+                                                message_time)
                         except Exception:
-                            log.exception('ws_task failure')
+                            log_holder.log.exception('ws_task failure')
                             break
             except (OSError, websockets.WebSocketException):
-                log.error('websockets.connect failure', url)
+                log_holder.log.error('websockets.connect failure', url)
             except Exception:
-                log.exception('connection loop failure')
+                log_holder.log.exception('connection loop failure')
             await asyncio.sleep(1)
     except Exception:
-        log.exception('ws_task failure')
+        log_holder.log.exception('ws_task failure')
     finally:
-        log.debug('ws_task exiting')
+        log_holder.log.debug('ws_task exiting')
 
 
-def ws_event_loop(loop, settings, ws_future):
-    log = logging.getLogger('ws_event_loop')
+def ws_event_loop(loop, ws_future):
+    log_holder = LogHolder.getLogger('ws_event_loop')
     try:
         asyncio.set_event_loop(loop)
         loop.run_until_complete(ws_future)
     except Exception:
-        log.exception('failed')
+        log_holder.log.exception('failed')
     except asyncio.exceptions.CancelledError:
-        log.setLevel(settings.service_log_level)
-        log.debug('cancelled')
+        log_holder.log.debug('cancelled')
     finally:
-        log.setLevel(settings.service_log_level)
-        log.debug('exiting')
+        log_holder.log.debug('exiting')

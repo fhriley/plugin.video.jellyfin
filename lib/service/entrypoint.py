@@ -13,7 +13,7 @@ from lib.api.jellyfin import authenticate
 from lib.service.monitor import Monitor
 from lib.service.playback_monitor import PlaybackMonitor
 from lib.service.websocket_client import ws_event_loop, ws_task
-from lib.util.log import LOG_FORMAT, KodiHandler
+from lib.util.log import LOG_FORMAT, KodiHandler, LogHolder
 from lib.util.settings import Settings
 from lib.util.util import get_server
 
@@ -27,7 +27,7 @@ def main():
 
     ws_future = None
     ws_event_loop_thread = None
-    log = None
+    log_holder = None
 
     def on_quit(future):
         if future and not future.done():
@@ -40,7 +40,7 @@ def main():
 
         level = settings.service_log_level
         _log_config(level)
-        log = logging.getLogger(__name__)
+        log_holder = LogHolder.getLogger(__name__)
 
         playback_update_secs = settings.get_int('playback_update_secs')
 
@@ -55,8 +55,7 @@ def main():
                 loop.set_default_executor(executor)
                 ws_future = loop.create_task(ws_task(executor, player, settings, server, user), name='ws_task')
                 monitor = Monitor(settings, server, user, lambda: on_quit(ws_future))
-                ws_event_loop_thread = Thread(target=ws_event_loop, args=(loop, settings, ws_future),
-                                              name='ws_event_loop')
+                ws_event_loop_thread = Thread(target=ws_event_loop, args=(loop, ws_future), name='ws_event_loop')
                 ws_event_loop_thread.start()
 
                 while not monitor.abortRequested():
@@ -64,26 +63,22 @@ def main():
                     if new_level != level:
                         level = new_level
                         _log_config(level)
-                        log = logging.getLogger(__name__)
-                        server.update_logger()
-                        player.update_logger()
-                        monitor.update_logger()
-                        settings.update_logger()
+                        LogHolder.update_all()
 
                     try:
                         if player.isPlaying() and player.playing_state and player.playing_state.jf_id:
                             time_s = player.getTime()
-                            log.debug('%s: %.2f', player.playing_state.jf_id, time_s)
+                            log_holder.log.debug('%s: %.2f', player.playing_state.jf_id, time_s)
                             server.send_playback_time(user, player.playing_state.jf_id, time_s)
                     except Exception:
-                        log.exception('playback state update failed')
+                        log_holder.log.exception('playback state update failed')
                     monitor.waitForAbort(playback_update_secs)
     except KeyboardInterrupt:
         pass
     except Exception:
         try:
-            if log:
-                log.exception('main failed')
+            if log_holder:
+                log_holder.log.exception('main failed')
             else:
                 xbmc.log(f'main failed: {traceback.format_exc()}', xbmc.LOGERROR)
         except Exception:
@@ -92,7 +87,7 @@ def main():
         on_quit(ws_future)
         if ws_event_loop_thread:
             ws_event_loop_thread.join()
-        if log:
-            log.debug('exiting')
+        if log_holder:
+            log_holder.log.debug('exiting')
         else:
             xbmc.log(f'exiting', xbmc.LOGINFO)

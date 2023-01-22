@@ -221,6 +221,7 @@ async def ws_task(executor: ThreadPoolExecutor, player: PlaybackMonitor, setting
         url = server.ws_url(user)
         while True:
             try:
+                log.setLevel(settings.service_log_level)
                 log.debug('connecting to %s', url)
                 async with websockets.connect(url, compression=None, open_timeout=3, ping_interval=5,
                                               ping_timeout=3, close_timeout=3) as ws:
@@ -234,6 +235,7 @@ async def ws_task(executor: ThreadPoolExecutor, player: PlaybackMonitor, setting
                             log.error('websockets recv error')
                             break
                         try:
+                            log.setLevel(settings.service_log_level)
                             await on_ws_message(log, executor, player, settings, server, user, message, message_time)
                         except Exception:
                             log.exception('ws_task failure')
@@ -249,7 +251,7 @@ async def ws_task(executor: ThreadPoolExecutor, player: PlaybackMonitor, setting
         log.debug('ws_task exiting')
 
 
-def ws_event_loop(loop, ws_future):
+def ws_event_loop(loop, settings, ws_future):
     log = logging.getLogger('ws_event_loop')
     try:
         asyncio.set_event_loop(loop)
@@ -257,6 +259,8 @@ def ws_event_loop(loop, ws_future):
     except Exception:
         log.exception('failed')
     except asyncio.exceptions.CancelledError:
+        log.setLevel(settings.service_log_level)
         log.debug('cancelled')
     finally:
+        log.setLevel(settings.service_log_level)
         log.debug('exiting')

@@ -25,6 +25,9 @@ class Monitor(xbmc.Monitor):
             ('xbmc', 'VideoLibrary.OnScanStarted'): self._videolibrary_on_scan_started,
         }
 
+    def update_logger(self):
+        self._log = logging.getLogger(__name__)
+
     def onNotification(self, sender: str, method: str, data: str):
         self._log.debug('onNotification: sender=%s, method=%s', sender, method)
         if self._log.isEnabledFor(logging.DEBUG) and data:

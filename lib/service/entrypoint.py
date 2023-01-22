@@ -1,10 +1,12 @@
 import asyncio
 import logging
 import os
+import traceback
 from concurrent.futures import ThreadPoolExecutor
 from threading import Thread, current_thread
 
 import requests
+import xbmc
 import xbmcaddon
 
 from lib.api.jellyfin import authenticate
@@ -16,17 +18,16 @@ from lib.util.settings import Settings
 from lib.util.util import get_server
 
 
+def _log_config(level):
+    logging.basicConfig(format=LOG_FORMAT, level=level, handlers=[KodiHandler()], force=True)
+
+
 def main():
     current_thread().name = 'Service'
 
-    handlers = [KodiHandler()]
-    if os.environ.get('NOT_IN_KODI'):
-        handlers = None
-    logging.basicConfig(format=LOG_FORMAT, level=logging.DEBUG, handlers=handlers, force=True)
-    log = logging.getLogger(__name__)
-
     ws_future = None
     ws_event_loop_thread = None
+    log = None
 
     def on_quit(future):
         if future and not future.done():
@@ -37,11 +38,15 @@ def main():
         addon = xbmcaddon.Addon()
         settings = Settings(addon)
 
+        level = settings.service_log_level
+        _log_config(level)
+        log = logging.getLogger(__name__)
+
         playback_update_secs = settings.get_int('playback_update_secs')
 
         with requests.Session() as session:
             with ThreadPoolExecutor(max_workers=5) as executor:
-                server = get_server(session, settings, addon)
+                server = get_server(session, settings, addon, settings.service_debug_level)
                 user = authenticate(server, user_cache, settings.get('username') or os.getenv('USERNAME'),
                                     settings.get('password') or os.getenv('PASSWORD'))
 
@@ -50,11 +55,21 @@ def main():
                 loop.set_default_executor(executor)
                 ws_future = loop.create_task(ws_task(executor, player, settings, server, user), name='ws_task')
                 monitor = Monitor(settings, server, user, lambda: on_quit(ws_future))
-                ws_event_loop_thread = Thread(target=ws_event_loop, args=(loop, ws_future),
+                ws_event_loop_thread = Thread(target=ws_event_loop, args=(loop, settings, ws_future),
                                               name='ws_event_loop')
                 ws_event_loop_thread.start()
 
                 while not monitor.abortRequested():
+                    new_level = settings.service_log_level
+                    if new_level != level:
+                        level = new_level
+                        _log_config(level)
+                        log = logging.getLogger(__name__)
+                        server.update_logger()
+                        player.update_logger()
+                        monitor.update_logger()
+                        settings.update_logger()
+
                     try:
                         if player.isPlaying() and player.playing_state and player.playing_state.jf_id:
                             time_s = player.getTime()
@@ -66,9 +81,18 @@ def main():
     except KeyboardInterrupt:
         pass
     except Exception:
-        log.exception('main failed')
+        try:
+            if log:
+                log.exception('main failed')
+            else:
+                xbmc.log(f'main failed: {traceback.format_exc()}', xbmc.LOGERROR)
+        except Exception:
+            pass
     finally:
         on_quit(ws_future)
         if ws_event_loop_thread:
             ws_event_loop_thread.join()
-        log.debug('exiting')
+        if log:
+            log.debug('exiting')
+        else:
+            xbmc.log(f'exiting', xbmc.LOGINFO)

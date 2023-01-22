@@ -1010,8 +1010,8 @@ msgid "Password"
 msgstr "Password"
 
 msgctxt "#33301"
-msgid "Debug"
-msgstr "Debug"
+msgid "Scraper Debug"
+msgstr "Scraper Debug"
 
 msgctxt "#33303"
 msgid "Off"
@@ -1032,3 +1032,7 @@ msgstr "Trace2"
 msgctxt "#33307"
 msgid "Seconds between playback updates"
 msgstr "Seconds between playback updates"
+
+msgctxt "#33308"
+msgid "Service Debug"
+msgstr "Service Debug"

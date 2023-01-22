@@ -90,11 +90,11 @@ def main(*args):
         addon = xbmcaddon.Addon()
         settings = Settings(addon)
 
-        level = logging.DEBUG if settings.debug_level > 0 else logging.INFO
+        level = logging.DEBUG if settings.scraper_debug_level > 0 else logging.INFO
         logging.basicConfig(format=LOG_FORMAT, level=level, handlers=[KodiHandler()])
 
         log = logging.getLogger(__name__)
-        log.debug('============================ start debug_level=%s', settings.debug_level)
+        log.debug('============================ start debug_level=%s', settings.scraper_debug_level)
 
         if level == logging.DEBUG:
             for ii, arg in enumerate(args):
@@ -109,7 +109,7 @@ def main(*args):
         if _user_cache is None:
             _user_cache = {}
 
-        server = get_server(_session, settings, addon)
+        server = get_server(_session, settings, addon, settings.scraper_debug_level)
         user = authenticate(server, _user_cache, settings.get('username'), settings.get('password'))
 
         parsed = urlparse(command)

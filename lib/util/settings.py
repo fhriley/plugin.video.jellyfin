@@ -25,9 +25,12 @@ class Settings:
         if not self.device_id:
             self._addon.setSetting('device_id', uuid.uuid4().hex)
         try:
-            self._debug_level = self.get_int('debug')
+            self._scraper_debug_level = self.get_int('scraper_debug')
         except Exception:
-            self._debug_level = 0
+            self._scraper_debug_level = 0
+
+    def update_logger(self):
+        self._log = logging.getLogger(__name__)
 
     def get(self, key: str, convert: Callable[[str], Union[str, bool, int]] = str) -> Union[str, bool, int]:
         return convert(self._addon.getSetting(key))
@@ -57,8 +60,16 @@ class Settings:
         return self._addon.getSetting('device_id')
 
     @property
-    def debug_level(self):
-        return self._debug_level
+    def scraper_debug_level(self):
+        return self._scraper_debug_level
+
+    @property
+    def service_debug_level(self):
+        return self.get_int('service_debug')
+
+    @property
+    def service_log_level(self):
+        return logging.DEBUG if self.service_debug_level > 0 else logging.INFO
 
     @property
     def last_sync_time(self) -> Optional[datetime.datetime]:

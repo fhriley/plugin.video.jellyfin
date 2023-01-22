@@ -53,6 +53,9 @@ class Server:
             scheme = 'wss'
         self._ws_server = urlunsplit((scheme, parsed.netloc, parsed.path, parsed.query, parsed.fragment))
 
+    def update_logger(self):
+        self._log = logging.getLogger(__name__)
+
     def get_headers(self, user: Optional[User] = None, headers: Optional[Dict[str, str]] = None) -> Dict[str, str]:
         headers = headers or {}
         headers['x-emby-authorization'] = self._authorization

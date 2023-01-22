@@ -51,7 +51,7 @@ def main(router_class: Type[Union[MoviesRouter, TvShowsRouter]],
         addon = xbmcaddon.Addon()
         settings = Settings(addon)
 
-        level = logging.DEBUG if settings.debug_level > 0 else logging.INFO
+        level = logging.DEBUG if settings.scraper_debug_level > 0 else logging.INFO
         if _log is None:
             _log_config(level)
             _log = logging.getLogger(__name__)
@@ -59,7 +59,7 @@ def main(router_class: Type[Union[MoviesRouter, TvShowsRouter]],
             if level != _log.getEffectiveLevel():
                 _log_config(level)
 
-        _log.debug('============================ start debug_level=%s', settings.debug_level)
+        _log.debug('============================ start debug_level=%s', settings.scraper_debug_level)
 
         if level == logging.DEBUG:
             for ii, arg in enumerate(sys.argv):
@@ -71,10 +71,10 @@ def main(router_class: Type[Union[MoviesRouter, TvShowsRouter]],
         else:
             _log.debug('reusing session')
 
-        server = get_server(_session, settings, addon)
+        server = get_server(_session, settings, addon, settings.scraper_debug_level)
         params = get_params()
-        router = router_class(settings, handle, addon, server, debug_level=settings.debug_level)
-        scraper = scraper_class(server, settings.debug_level)
+        router = router_class(settings, handle, addon, server, debug_level=settings.scraper_debug_level)
+        scraper = scraper_class(server, settings.scraper_debug_level)
         builder = builder_class(settings, handle, addon)
 
         router.execute(scraper, builder, params)

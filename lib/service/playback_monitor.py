@@ -49,6 +49,9 @@ class PlaybackMonitor(xbmc.Player):
         self._playing_state: Optional[PlayingState] = None
         self._latest_time = 0
 
+    def update_logger(self):
+        self._log = logging.getLogger(__name__)
+
     @property
     def playing_state(self) -> Optional[PlayingState]:
         return self._playing_state

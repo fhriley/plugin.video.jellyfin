@@ -15,13 +15,14 @@ def ticks_to_seconds(ticks: int) -> float:
     return max(ticks, 0) * 1e-7
 
 
-def get_server(session: requests.Session, settings: Settings, addon: xbmcaddon.Addon) -> Server:
+def get_server(session: requests.Session, settings: Settings, addon: xbmcaddon.Addon,
+               debug_level: Optional[int] = 0) -> Server:
     server_url = unquote_plus(settings.get('serverurl')) or os.environ.get('SERVERURL') or ''
     device_name = xbmc.getInfoLabel('System.FriendlyName') or os.environ.get('DEVICENAME') or ''
     version = addon.getAddonInfo('version') or '0.0.1'
     verify_cert = settings.get_bool('sslverify')
     return Server(session, server_url, settings.client_name, device_name, settings.device_id, version, verify_cert,
-                  log_raw_resp=settings.debug_level > 2)
+                  log_raw_resp=debug_level > 2)
 
 
 def get_plugin_url(addon: xbmcaddon.Addon, *args, **kwargs):

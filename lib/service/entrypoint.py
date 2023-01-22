@@ -2,7 +2,6 @@ import asyncio
 import logging
 import os
 from concurrent.futures import ThreadPoolExecutor
-from pprint import pformat
 from threading import Thread, current_thread
 from typing import List
 
@@ -10,10 +9,10 @@ import requests
 import xbmc
 import xbmcaddon
 
-from lib.api.jellyfin import authenticate, Server, User
+from lib.api.jellyfin import authenticate
 from lib.service.monitor import Monitor
 from lib.service.playback_monitor import PlaybackMonitor
-from lib.service.websocket_client import ws_event_loop, ws_task, library_changed, sync_library
+from lib.service.websocket_client import ws_event_loop, ws_task
 from lib.util.log import LOG_FORMAT, KodiHandler
 from lib.util.settings import Settings
 from lib.util.util import get_server

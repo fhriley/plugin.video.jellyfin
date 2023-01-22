@@ -38,7 +38,7 @@ episode_artwork = {
 
 
 def get_ancestor_image(server: Server, item: Dict[str, Any], tag_key: str, item_id_key: str, image_type: str) -> \
-Optional[str]:
+        Optional[str]:
     parent_tag = item.get(tag_key)
     parent_id = item.get(item_id_key)
     if parent_tag and parent_id:

@@ -8,7 +8,7 @@ import simplejson as json
 import xbmc
 
 from lib.api.jellyfin import Server, User
-from lib.service.json_rpc import get_jf_episode_id, get_jf_movie_id, get_jf_tvshow_id, get_kodi_episode_details, \
+from lib.service.json_rpc import get_jf_episode_id, get_jf_movie_id, get_kodi_episode_details, \
     get_kodi_movie_details
 from lib.util.settings import Settings
 

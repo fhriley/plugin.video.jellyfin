@@ -1,146 +1,146 @@
 [
-    {
-        "id": "86224c80cc710c4a300370333218f9b1",
-        "info": {
-            "aired": "2009-09-17",
-            "artwork": {
-                "banner": "http://server/Items/86224c80cc710c4a300370333218f9b1/Images/Banner?tag=07ea868a7b7a48f1d8ebc64f04d04a46",
-                "clearart": "http://server/Items/86224c80cc710c4a300370333218f9b1/Images/Art?tag=260b241f90c04e08eba4346952faa2bd",
-                "clearlogo": "http://server/Items/86224c80cc710c4a300370333218f9b1/Images/Logo?tag=1b4faa295b410876b00b8ab0bce26000",
-                "fanart": "http://server/Items/86224c80cc710c4a300370333218f9b1/Images/Backdrop?tag=4b700c78c711891da05dbc752c6cc278",
-                "landscape": "http://server/Items/86224c80cc710c4a300370333218f9b1/Images/Thumb?tag=68e6c1425129e6abe3df7372f330cc1a",
-                "poster": "http://server/Items/86224c80cc710c4a300370333218f9b1/Images/Primary?tag=7047605d09f090e948925ad75de7ee76"
-            },
-            "cast": [
-                {
-                    "name": "H. Jon Benjamin",
-                    "role": "Sterling Archer (voice)",
-                    "thumb": "http://server/Items/66da1843f537575aa547ed56ab116b8d/Images/Primary?tag=bd6a0ccbbc459a03f2e221b353a89090"
-                },
-                {
-                    "name": "Judy Greer",
-                    "role": "Cheryl Tunt (voice)",
-                    "thumb": "http://server/Items/ae5959fcdbd956b89d73474f7fad1f76/Images/Primary?tag=ebd6b483fded20b26fbb05cb119d3e2c"
-                },
-                {
-                    "name": "Amber Nash",
-                    "role": "Pam Poovey (voice)",
-                    "thumb": "http://server/Items/c01d1fd458ff525f8c9d8928de00c4f5/Images/Primary?tag=1571b80bc73aeabd8431d6c0c1c41fe5"
-                },
-                {
-                    "name": "Chris Parnell",
-                    "role": "Cyril Figgis (voice)",
-                    "thumb": "http://server/Items/e8853547f3dd317a3fd1e3962b3e48fd/Images/Primary?tag=0b5566db74c7e839b097eef4dbaf7ecb"
-                },
-                {
-                    "name": "Aisha Tyler",
-                    "role": "Lana Kane (voice)",
-                    "thumb": "http://server/Items/429cc3e6c9b0c564b017d6c15fe4a54f/Images/Primary?tag=680f99bba4c57242701a1101cc66a7e0"
-                },
-                {
-                    "name": "Lucky Yates",
-                    "role": "Dr. Krieger (voice)",
-                    "thumb": "http://server/Items/959f9c9a566b03778ff75789dcbbdfd6/Images/Primary?tag=593a9340a856985d0ec75c0b1e76e071"
-                }
-            ],
-            "dateadded": "2019-05-30 03:15:23",
-            "duration": 1320,
-            "genre": [
-                "Comedy",
-                "Action & Adventure",
-                "Animation"
-            ],
-            "mediatype": "tvshow",
-            "mpaa": "TV-MA",
-            "originaltitle": "Archer",
-            "path": "nfs://nas/zfs/media/tv/Archer (2009)",
-            "playcount": 0,
-            "plot": "Sterling Archer is the world's most daunting spy. He works for ISIS, a spy agency run by his mother. In between dealing with his boss and his co-workers - one of whom is his ex-girlfriend - Archer manages to annoy or seduce everyone that crosses his path. His antics are only excusable because at the end of the day, he still somehow always manages to thwart whatever crises was threatening mankind.",
-            "plotoutline": "Sterling Archer is the world's most daunting spy. He works for ISIS, a spy agency run by his mother. In between dealing with his boss and his co-workers - one of whom is his ex-girlfriend - Archer manages to annoy or seduce everyone that crosses his path. His antics are only excusable because at the end of the day, he still somehow always manages to thwart whatever crises was threatening mankind.",
-            "premiered": "2009-09-17",
-            "rating": 7.916,
-            "seasons": [
-                {
-                    "artwork": {
-                        "type": "poster",
-                        "url": "http://server/Items/20f8ad638e1e33c15ca3b550ac91a3c3/Images/Primary?tag=0292f9d6ca57a91470cb2b2f921b3961"
-                    },
-                    "id": "20f8ad638e1e33c15ca3b550ac91a3c3",
-                    "name": "Season 6",
-                    "number": 6,
-                    "premiered": "2015-01-08",
-                    "series_id": "86224c80cc710c4a300370333218f9b1",
-                    "year": 2015
-                },
-                {
-                    "artwork": {
-                        "type": "poster",
-                        "url": "http://server/Items/60bb6f91ec71d9bf033b6657b9b418e1/Images/Primary?tag=b9d60720400065828bd8f605ca21b3d0"
-                    },
-                    "id": "60bb6f91ec71d9bf033b6657b9b418e1",
-                    "name": "Season 8",
-                    "number": 8,
-                    "premiered": "2017-04-05",
-                    "series_id": "86224c80cc710c4a300370333218f9b1",
-                    "year": 2017
-                },
-                {
-                    "artwork": {
-                        "type": "poster",
-                        "url": "http://server/Items/489d30ce81e576dbd9895c5160ecaf8c/Images/Primary?tag=0d84f8a16b133378b05872a1549c693e"
-                    },
-                    "id": "489d30ce81e576dbd9895c5160ecaf8c",
-                    "name": "Season 11",
-                    "number": 11,
-                    "premiered": "2020-09-16",
-                    "series_id": "86224c80cc710c4a300370333218f9b1",
-                    "year": 2020
-                },
-                {
-                    "artwork": {
-                        "type": "poster",
-                        "url": "http://server/Items/616d2250e5b88041f5b1b5af1ad32578/Images/Primary?tag=3b78dbfa6b590422827b8623748b0f3c"
-                    },
-                    "id": "616d2250e5b88041f5b1b5af1ad32578",
-                    "name": "Season 12",
-                    "number": 12,
-                    "premiered": "2021-08-25",
-                    "series_id": "86224c80cc710c4a300370333218f9b1",
-                    "year": 2021
-                },
-                {
-                    "artwork": {
-                        "type": "poster",
-                        "url": "http://server/Items/2083c3ebd9615dc6ace5d2ea908dd295/Images/Primary?tag=6c97461da4e12058cd68975228b3c1c1"
-                    },
-                    "id": "2083c3ebd9615dc6ace5d2ea908dd295",
-                    "name": "Season 13",
-                    "number": 13,
-                    "premiered": "2022-08-24",
-                    "series_id": "86224c80cc710c4a300370333218f9b1",
-                    "year": 2022
-                }
-            ],
-            "status": "Continuing",
-            "studio": [
-                "FX",
-                "FXX"
-            ],
-            "tag": [
-                "cia",
-                "spy",
-                "drugs",
-                "adult animation"
-            ],
-            "title": "Archer",
-            "trailer": "plugin://plugin.video.youtube/play/?video_id=EB-mWJ7f0_I",
-            "tvshowtitle": "Archer",
-            "unique_ids": {
-                "imdb": "tt1486217",
-                "tmdb": "10283"
-            },
-            "year": 2009
+  {
+    "id": "86224c80cc710c4a300370333218f9b1",
+    "info": {
+      "aired": "2009-09-17",
+      "artwork": {
+        "banner": "http://server/Items/86224c80cc710c4a300370333218f9b1/Images/Banner?tag=07ea868a7b7a48f1d8ebc64f04d04a46",
+        "clearart": "http://server/Items/86224c80cc710c4a300370333218f9b1/Images/Art?tag=260b241f90c04e08eba4346952faa2bd",
+        "clearlogo": "http://server/Items/86224c80cc710c4a300370333218f9b1/Images/Logo?tag=1b4faa295b410876b00b8ab0bce26000",
+        "fanart": "http://server/Items/86224c80cc710c4a300370333218f9b1/Images/Backdrop?tag=4b700c78c711891da05dbc752c6cc278",
+        "landscape": "http://server/Items/86224c80cc710c4a300370333218f9b1/Images/Thumb?tag=68e6c1425129e6abe3df7372f330cc1a",
+        "poster": "http://server/Items/86224c80cc710c4a300370333218f9b1/Images/Primary?tag=7047605d09f090e948925ad75de7ee76"
+      },
+      "cast": [
+        {
+          "name": "H. Jon Benjamin",
+          "role": "Sterling Archer (voice)",
+          "thumb": "http://server/Items/66da1843f537575aa547ed56ab116b8d/Images/Primary?tag=bd6a0ccbbc459a03f2e221b353a89090"
         },
-        "name": "Archer (2009)"
-    }
+        {
+          "name": "Judy Greer",
+          "role": "Cheryl Tunt (voice)",
+          "thumb": "http://server/Items/ae5959fcdbd956b89d73474f7fad1f76/Images/Primary?tag=ebd6b483fded20b26fbb05cb119d3e2c"
+        },
+        {
+          "name": "Amber Nash",
+          "role": "Pam Poovey (voice)",
+          "thumb": "http://server/Items/c01d1fd458ff525f8c9d8928de00c4f5/Images/Primary?tag=1571b80bc73aeabd8431d6c0c1c41fe5"
+        },
+        {
+          "name": "Chris Parnell",
+          "role": "Cyril Figgis (voice)",
+          "thumb": "http://server/Items/e8853547f3dd317a3fd1e3962b3e48fd/Images/Primary?tag=0b5566db74c7e839b097eef4dbaf7ecb"
+        },
+        {
+          "name": "Aisha Tyler",
+          "role": "Lana Kane (voice)",
+          "thumb": "http://server/Items/429cc3e6c9b0c564b017d6c15fe4a54f/Images/Primary?tag=680f99bba4c57242701a1101cc66a7e0"
+        },
+        {
+          "name": "Lucky Yates",
+          "role": "Dr. Krieger (voice)",
+          "thumb": "http://server/Items/959f9c9a566b03778ff75789dcbbdfd6/Images/Primary?tag=593a9340a856985d0ec75c0b1e76e071"
+        }
+      ],
+      "dateadded": "2019-05-30 03:15:23",
+      "duration": 1320,
+      "genre": [
+        "Comedy",
+        "Action & Adventure",
+        "Animation"
+      ],
+      "mediatype": "tvshow",
+      "mpaa": "TV-MA",
+      "originaltitle": "Archer",
+      "path": "nfs://nas/zfs/media/tv/Archer (2009)",
+      "playcount": 0,
+      "plot": "Sterling Archer is the world's most daunting spy. He works for ISIS, a spy agency run by his mother. In between dealing with his boss and his co-workers - one of whom is his ex-girlfriend - Archer manages to annoy or seduce everyone that crosses his path. His antics are only excusable because at the end of the day, he still somehow always manages to thwart whatever crises was threatening mankind.",
+      "plotoutline": "Sterling Archer is the world's most daunting spy. He works for ISIS, a spy agency run by his mother. In between dealing with his boss and his co-workers - one of whom is his ex-girlfriend - Archer manages to annoy or seduce everyone that crosses his path. His antics are only excusable because at the end of the day, he still somehow always manages to thwart whatever crises was threatening mankind.",
+      "premiered": "2009-09-17",
+      "rating": 7.916,
+      "seasons": [
+        {
+          "artwork": {
+            "type": "poster",
+            "url": "http://server/Items/20f8ad638e1e33c15ca3b550ac91a3c3/Images/Primary?tag=0292f9d6ca57a91470cb2b2f921b3961"
+          },
+          "id": "20f8ad638e1e33c15ca3b550ac91a3c3",
+          "name": "Season 6",
+          "number": 6,
+          "premiered": "2015-01-08",
+          "series_id": "86224c80cc710c4a300370333218f9b1",
+          "year": 2015
+        },
+        {
+          "artwork": {
+            "type": "poster",
+            "url": "http://server/Items/60bb6f91ec71d9bf033b6657b9b418e1/Images/Primary?tag=b9d60720400065828bd8f605ca21b3d0"
+          },
+          "id": "60bb6f91ec71d9bf033b6657b9b418e1",
+          "name": "Season 8",
+          "number": 8,
+          "premiered": "2017-04-05",
+          "series_id": "86224c80cc710c4a300370333218f9b1",
+          "year": 2017
+        },
+        {
+          "artwork": {
+            "type": "poster",
+            "url": "http://server/Items/489d30ce81e576dbd9895c5160ecaf8c/Images/Primary?tag=0d84f8a16b133378b05872a1549c693e"
+          },
+          "id": "489d30ce81e576dbd9895c5160ecaf8c",
+          "name": "Season 11",
+          "number": 11,
+          "premiered": "2020-09-16",
+          "series_id": "86224c80cc710c4a300370333218f9b1",
+          "year": 2020
+        },
+        {
+          "artwork": {
+            "type": "poster",
+            "url": "http://server/Items/616d2250e5b88041f5b1b5af1ad32578/Images/Primary?tag=3b78dbfa6b590422827b8623748b0f3c"
+          },
+          "id": "616d2250e5b88041f5b1b5af1ad32578",
+          "name": "Season 12",
+          "number": 12,
+          "premiered": "2021-08-25",
+          "series_id": "86224c80cc710c4a300370333218f9b1",
+          "year": 2021
+        },
+        {
+          "artwork": {
+            "type": "poster",
+            "url": "http://server/Items/2083c3ebd9615dc6ace5d2ea908dd295/Images/Primary?tag=6c97461da4e12058cd68975228b3c1c1"
+          },
+          "id": "2083c3ebd9615dc6ace5d2ea908dd295",
+          "name": "Season 13",
+          "number": 13,
+          "premiered": "2022-08-24",
+          "series_id": "86224c80cc710c4a300370333218f9b1",
+          "year": 2022
+        }
+      ],
+      "status": "Continuing",
+      "studio": [
+        "FX",
+        "FXX"
+      ],
+      "tag": [
+        "cia",
+        "spy",
+        "drugs",
+        "adult animation"
+      ],
+      "title": "Archer",
+      "trailer": "plugin://plugin.video.youtube/play/?video_id=EB-mWJ7f0_I",
+      "tvshowtitle": "Archer",
+      "unique_ids": {
+        "imdb": "tt1486217",
+        "tmdb": "10283"
+      },
+      "year": 2009
+    },
+    "name": "Archer (2009)"
+  }
 ]

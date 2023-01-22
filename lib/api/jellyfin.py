@@ -255,12 +255,14 @@ class Server:
         with self.delete(f'/Users/{user.uuid}/PlayedItems/{item_id}', user=user) as response:
             response.raise_for_status()
 
-    def get_sync_queue(self, user: User, last_updated: Optional[datetime.datetime] = None, *args, **kwargs) -> Dict[str, Any]:
+    def get_sync_queue(self, user: User, last_updated: Optional[datetime.datetime] = None, *args, **kwargs) -> Dict[
+        str, Any]:
         params = kwargs.pop('params', None) or {}
         params['filters'] = 'Movies,TvShows'
         if last_updated:
             params['lastUpdateDt'] = last_updated.strftime('%Y-%m-%dT%H:%M:%SZ')
-        with self.get(f'/Jellyfin.Plugin.KodiSyncQueue/{user.uuid}/GetItems', *args, user=user, params=params, **kwargs) as resp:
+        with self.get(f'/Jellyfin.Plugin.KodiSyncQueue/{user.uuid}/GetItems', *args, user=user, params=params,
+                      **kwargs) as resp:
             resp.raise_for_status()
             return resp.json()
 

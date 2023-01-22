@@ -3,13 +3,12 @@ import sys
 import traceback
 from threading import current_thread
 from typing import Type, Union, Optional
-from urllib.parse import parse_qsl, unquote_plus
+from urllib.parse import parse_qsl
 
 import requests
 import xbmc
 import xbmcaddon
 
-from lib.api.jellyfin import Server
 from lib.builder.movies import MoviesBuilder
 from lib.builder.tvshows import TvShowsBuilder
 from lib.router.movies import MoviesRouter

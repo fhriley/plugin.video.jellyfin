@@ -8,16 +8,19 @@ import xbmc
 from lib.util.exceptions import NotFound
 
 
-def json_rpc(log: logging.Logger, lib_id: str, method: str, **params) -> Dict[str, Any]:
-    command = {'id': lib_id, 'jsonrpc': '2.0', 'method': method, 'params': params}
+def json_rpc(log: logging.Logger, method: str, id: Optional[str] = None, **params) -> Optional[Dict[str, Any]]:
+    command = {'jsonrpc': '2.0', 'method': method, 'params': params}
+    if id:
+        command['id'] = id
     if log.isEnabledFor(logging.DEBUG):
         log.debug('%s', pformat(command))
     resp = xbmc.executeJSONRPC(json.dumps(command))
-    return json.loads(resp)
+    if resp:
+        return json.loads(resp)
 
 
 def _get_kodi_id(log: logging.Logger, jf_id: str, lib_id: str, method: str, result_key: str, id_key: str) -> int:
-    resp = json_rpc(log, lib_id, method, filter={
+    resp = json_rpc(log, method, id=lib_id, filter={
         'field': 'uniqueid_value',
         'operator': 'is',
         'value': jf_id,
@@ -61,7 +64,7 @@ def _get_kodi_details(log: logging.Logger, kodi_id: int, lib_id: str, method: st
     }
     if properties:
         kwargs['properties'] = properties
-    resp = json_rpc(log, lib_id, method, **kwargs)
+    resp = json_rpc(log, method, id=lib_id, **kwargs)
     log.debug('%s', resp)
     return (resp.get('result') or {}).get(result_key)
 
@@ -94,47 +97,34 @@ def get_jf_movie_id(log: logging.Logger, kodi_id: int) -> Optional[str]:
 
 
 def refresh_kodi_episode(log: logging.Logger, kodi_id: int):
-    json_rpc(log, 'libTvShows', 'VideoLibrary.RefreshEpisode', episodeid=kodi_id, ignorenfo=True)
+    json_rpc(log, 'VideoLibrary.RefreshEpisode', id='libTvShows', episodeid=kodi_id, ignorenfo=True)
 
 
 def refresh_kodi_tvshow(log: logging.Logger, kodi_id: int):
-    json_rpc(log, 'libTvShows', 'VideoLibrary.RefreshTvShow', tvshowid=kodi_id, ignorenfo=True, refreshepisodes=False)
+    json_rpc(log, 'VideoLibrary.RefreshTvShow', id='libTvShows', tvshowid=kodi_id, ignorenfo=True,
+             refreshepisodes=False)
 
 
 def refresh_kodi_movie(log: logging.Logger, kodi_id: int):
-    json_rpc(log, 'libMovies', 'VideoLibrary.RefreshMovie', movieid=kodi_id, ignorenfo=True)
+    json_rpc(log, 'VideoLibrary.RefreshMovie', id='libMovies', movieid=kodi_id, ignorenfo=True)
 
 
 def remove_kodi_episode(log: logging.Logger, kodi_id: int):
-    json_rpc(log, 'libTvShows', 'VideoLibrary.RemoveEpisode', episodeid=kodi_id)
+    json_rpc(log, 'VideoLibrary.RemoveEpisode', id='libTvShows', episodeid=kodi_id)
 
 
 def remove_kodi_tvshow(log: logging.Logger, kodi_id: int):
-    json_rpc(log, 'libMovies', 'VideoLibrary.RemoveTVShow', tvshowid=kodi_id)
+    json_rpc(log, 'VideoLibrary.RemoveTVShow', id='libMovies', tvshowid=kodi_id)
 
 
 def remove_kodi_movie(log: logging.Logger, kodi_id: int):
-    json_rpc(log, 'libMovies', 'VideoLibrary.RemoveMovie', movieid=kodi_id)
+    json_rpc(log, 'VideoLibrary.RemoveMovie', id='libMovies', movieid=kodi_id)
 
 
-def scan_kodi_tvshows(log: logging.Logger, directory: Optional[str] = None):
+def scan_kodi(log: logging.Logger, directory: Optional[str] = None):
     kwargs = {
         'showdialogs': False,
     }
     if directory:
         kwargs['directory'] = directory
-    json_rpc(log, 'libTvShows', 'VideoLibrary.Scan', **kwargs)
-
-
-def scan_kodi_movies(log: logging.Logger, directory: Optional[str] = None):
-    kwargs = {
-        'showdialogs': False,
-    }
-    if directory:
-        kwargs['directory'] = directory
-    json_rpc(log, 'libMovies', 'VideoLibrary.Scan', **kwargs)
-
-
-def scan_kodi(log: logging.Logger):
-    scan_kodi_tvshows(log)
-    scan_kodi_movies(log)
+    json_rpc(log, 'VideoLibrary.Scan', **kwargs)

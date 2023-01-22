@@ -1,5 +1,6 @@
 import logging
 import os
+import xml.etree.ElementTree as ET
 from pprint import pformat
 from typing import Optional, Dict
 
@@ -16,6 +17,31 @@ from lib.util.settings import Settings
 
 # Global so it gets reused between invocations of the interpreters
 _user_cache: Optional[Dict[str, User]] = None
+
+
+def parse_nfo(log: logging.Logger, xml: str):
+    root = ET.fromstring(xml)
+    if root.tag not in ('movie', 'tvshow', 'episodedetails'):
+        raise Exception('invalid nfo')
+
+    vals = {child.tag: child.text for child in root}
+    vals['type'] = root.tag
+    log.debug('%s', vals)
+
+    title = vals.get('title')
+    if not title:
+        raise Exception('no "title" in nfo')
+
+    year = vals.get('year')
+    if not year:
+        raise Exception('no "year" in nfo')
+
+    try:
+        vals['year'] = int(year)
+    except ValueError:
+        raise Exception('invalid "year" in nfo')
+
+    return vals
 
 
 class Router:
@@ -41,6 +67,7 @@ class Router:
                 self._log.debug('no action provided')
                 return
 
+            action = action.lower()
             func = getattr(self, action)
             if func:
                 user = authenticate(self._server, _user_cache, self._settings.get('username'),
@@ -83,4 +110,18 @@ class Router:
             raise
 
     def nfourl(self, user: User, scraper: Scraper, builder: Builder, params: dict):
-        xbmcplugin.endOfDirectory(handle=self._handle, succeeded=False)
+        try:
+            self._log.debug('nfourl: in_params=%s', params)
+            nfo = params.get('nfo')
+            if not nfo:
+                raise Exception('invalid nfo')
+            vals = parse_nfo(self._log, nfo)
+            jf_items = find_by_title(self._server, user, scraper.jf_item_type, vals['title'], vals['year']).get(
+                'Items') or []
+            items = scraper.scrape_find(jf_items)
+            if self._log.isEnabledFor(logging.DEBUG):
+                self._log.debug('find result:%s%s', os.linesep, pformat(items))
+            builder.build_find_directory(items)
+        except Exception:
+            xbmcplugin.endOfDirectory(handle=self._handle, succeeded=False)
+            raise

@@ -76,7 +76,8 @@ class Monitor(xbmc.Monitor):
             self._server.mark_unwatched(self._user, jf_id)
 
     def _videolibrary_on_scan_started(self, _: Dict[str, Any]):
-        self._settings.last_sync_time = self._server.get_server_time()
+        if self._settings.last_sync_time is None:
+            self._settings.last_sync_time = self._server.get_server_time()
 
     def abortRequested(self):
         if os.environ.get('NOT_IN_KODI'):

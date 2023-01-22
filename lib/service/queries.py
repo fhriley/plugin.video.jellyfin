@@ -5,7 +5,7 @@ from lib.util.exceptions import NotFound
 
 
 def get_item(server: Server, user: User, item_id: str) -> Dict[str, Any]:
-    params = {'enableTotalRecordCount': 'true',
+    params = {'fields': 'Path', 'enableTotalRecordCount': 'true',
               'IncludePeople': 'false', 'IncludeMedia': 'false', 'IncludeGenres': 'false',
               'IncludeStudios': 'false', 'IncludeArtists': 'false',
               'enableUserData': 'false', 'enableImages': 'false', 'ids': item_id}

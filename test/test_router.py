@@ -46,7 +46,7 @@ class TestRouter(unittest.TestCase):
         self.handle = 1
         self.temp_dir = tempfile.TemporaryDirectory()
         self.mock_requests = MagicMock(requests.Session)
-        self.settings = get_mock_settings(self.temp_dir)
+        self.settings = get_mock_settings(self.temp_dir.name)
         self.addon = get_mock_addon()
         self.server = get_server(self.mock_requests)
         self.scraper = MagicMock(Scraper)

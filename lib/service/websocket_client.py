@@ -3,17 +3,19 @@ import concurrent.futures
 import datetime
 import logging
 from concurrent.futures import ThreadPoolExecutor
+from pathlib import PurePath
 from pprint import pformat
 from typing import Dict, Any, Optional, Tuple, Iterable
+from urllib.parse import urlparse
 
 import simplejson as json
 
 import websockets
 from lib.api.jellyfin import Server, User
-from lib.service.entrypoint import PlaybackMonitor
-from lib.service.json_rpc import refresh_kodi_episode, remove_kodi_episode, get_kodi_id, \
-    remove_kodi_movie, remove_kodi_tvshow, refresh_kodi_movie, refresh_kodi_tvshow, \
-    scan_kodi_tvshows, scan_kodi_movies, get_kodi_episode_id, get_kodi_tvshow_id, get_kodi_movie_id
+from lib.service.json_rpc import (refresh_kodi_episode, remove_kodi_episode, get_kodi_id,
+                                  remove_kodi_movie, remove_kodi_tvshow, refresh_kodi_movie, refresh_kodi_tvshow,
+                                  get_kodi_episode_id, get_kodi_tvshow_id, get_kodi_movie_id, scan_kodi)
+from lib.service.playback_monitor import PlaybackMonitor
 from lib.service.queries import NotFound, get_item
 from lib.util.log import LogHolder
 from lib.util.settings import Settings
@@ -35,12 +37,6 @@ _changed_handlers = {
     'Season': ('SeriesId', get_kodi_tvshow_id, refresh_kodi_tvshow),
     'Series': ('Id', get_kodi_tvshow_id, refresh_kodi_tvshow),
     'Movie': ('Id', get_kodi_movie_id, refresh_kodi_movie),
-}
-
-_added_handlers = {
-    'Episode': scan_kodi_tvshows,
-    'Series': scan_kodi_tvshows,
-    'Movie': scan_kodi_movies,
 }
 
 
@@ -104,12 +100,13 @@ def _call_changed_handlers(log: logging.Logger, executor: ThreadPoolExecutor, pl
             raise exc
 
 
-def _added_handler(log: logging.Logger, server: Server, user: User, item_id: str) -> Tuple[str, Optional[str]]:
+def _added_handler(
+        log: logging.Logger, server: Server, user: User, item_id: str) -> Tuple[str, Optional[Dict[str, Any]]]:
     try:
         jf_item = get_item(server, user, item_id)
         if log.isEnabledFor(logging.DEBUG):
             log.debug('%s', pformat(jf_item))
-        return item_id, jf_item.get('Type')
+        return item_id, jf_item
     except NotFound:
         log.warning('%s not found', item_id)
         return item_id, None
@@ -146,6 +143,14 @@ def user_data_changed(log: logging.Logger, executor: ThreadPoolExecutor, player:
     settings.last_sync_time = message_time
 
 
+def parent(path: str) -> str:
+    if '://' in path:
+        parsed = urlparse(path)
+        return f'{parsed.scheme}://{parsed.netloc}{PurePath(parsed.path).parent}'
+    else:
+        return str(PurePath(path).parent)
+
+
 def library_changed(log: logging.Logger, executor: ThreadPoolExecutor, player: PlaybackMonitor, settings: Settings,
                     server: Server, user: User, message_time: datetime.datetime, data):
     log.debug("library_changed handler")
@@ -162,31 +167,44 @@ def library_changed(log: logging.Logger, executor: ThreadPoolExecutor, player: P
     removed.difference_update(updated)
     removed.difference_update(added)
 
-    _call_changed_handlers(log, executor, player, server, user, updated)
     futures = [executor.submit(_removed_handler, log, item_id) for item_id in removed]
+    for fut in concurrent.futures.as_completed(futures):
+        fut.result()
 
-    try:
-        added_futures = [executor.submit(_added_handler, log, server, user, item_id) for item_id in added]
-        added_types = set()
+    _call_changed_handlers(log, executor, player, server, user, updated)
 
-        for fut in concurrent.futures.as_completed(added_futures):
-            item_id, typ = fut.result()
-            if typ:
-                added_types.add(typ)
-            else:
-                log.warning('%s not found', item_id)
+    added_futures = [executor.submit(_added_handler, log, server, user, item_id) for item_id in added]
 
-        if 'Series' in added_types or 'Episode' in added_types:
-            scan_kodi_tvshows(log)
-        if 'Movie' in added_types:
-            scan_kodi_movies(log)
-    finally:
-        concurrent.futures.wait(futures)
+    sets = {
+        'Episode': set(),
+        'Season': set(),
+        'Series': set(),
+        'Movie': set(),
+    }
+    for fut in concurrent.futures.as_completed(added_futures):
+        item_id, jf_item = fut.result()
+        if jf_item:
+            item_type = jf_item['Type']
+            path = jf_item.get('Path')
+            if path:
+                path_set = sets.get(item_type)
+                if path_set is not None:
+                    path_set.add(path)
+        else:
+            log.warning('%s not found', item_id)
 
-    for fut in futures:
-        exc = fut.exception()
-        if exc:
-            raise exc
+    sets['Season'].update([parent(episode) for episode in sets['Episode']])
+
+    series_set = sets['Series']
+    seasons_set = set()
+    for season in sets['Season']:
+        if parent(season) not in series_set:
+            seasons_set.add(season)
+
+    for path_set in (series_set, seasons_set, sets['Movie']):
+        for path in path_set:
+            log.debug('scanning %s', path)
+            scan_kodi(log, path)
 
     settings.last_sync_time = message_time
 

@@ -12,7 +12,7 @@ import xbmcaddon
 from lib.api.jellyfin import authenticate, Server, User
 from lib.service.monitor import Monitor
 from lib.service.playback_monitor import PlaybackMonitor
-from lib.service.websocket_client import ws_event_loop, ws_task, library_changed
+from lib.service.websocket_client import ws_event_loop, ws_task, library_changed, sync_library
 from lib.util.log import LOG_FORMAT, KodiHandler
 from lib.util.settings import Settings
 from lib.util.util import get_server
@@ -32,18 +32,6 @@ class AbortWatcher:
         while not self._monitor.abortRequested():
             self._monitor.waitForAbort(1)
         self._abort_requested = True
-
-
-def sync_library(log: logging.Logger, settings: Settings, player: PlaybackMonitor, server: Server, user: User):
-    try:
-        if settings.last_sync_time:
-            current_time = server.get_server_time()
-            data = server.get_sync_queue(user, settings.last_sync_time)
-            if log.isEnabledFor(logging.DEBUG):
-                log.debug('%s', pformat(data))
-            library_changed(log, player, settings, server, user, current_time, data)
-    except Exception:
-        log.exception('sync_library failed')
 
 
 def main(args: List[str]):
@@ -88,8 +76,6 @@ def main(args: List[str]):
             ws_event_loop_thread = Thread(target=ws_event_loop, args=(loop, ws_future),
                                           name='ws_event_loop')
             ws_event_loop_thread.start()
-
-            sync_library(log, settings, player, server, user)
 
             while not monitor.abortRequested():
                 try:

@@ -17,13 +17,30 @@ from lib.service.json_rpc import get_kodi_episode_id, refresh_kodi_episode, remo
 from lib.service.queries import NotFound, get_item
 from lib.util.settings import Settings
 
-def get_kodi_season_id(log: logging.Logger, jf_item: Dict[str, Any], jf_id: str) -> int:
+
+def sync_library(log: logging.Logger, settings: Settings, player: PlaybackMonitor, server: Server, user: User):
+    if settings.last_sync_time:
+        log.debug('last_sync_time=%s', settings.last_sync_time)
+        current_time = server.get_server_time()
+        data = server.get_sync_queue(user, settings.last_sync_time)
+        if log.isEnabledFor(logging.DEBUG):
+            log.debug('%s', pformat(data))
+        library_changed(log, player, settings, server, user, current_time, data)
+
+
+def get_kodi_season_id(log: logging.Logger, jf_item: Dict[str, Any], _: str) -> int:
     series_id = jf_item['SeriesId']
     return get_kodi_tvshow_id(log, series_id)
 
-_get_kodi_episode_id = lambda log, jf_item, jf_id: get_kodi_episode_id(log, jf_id)
-_get_kodi_tvshow_id = lambda log, jf_item, jf_id: get_kodi_tvshow_id(log, jf_id)
-_get_kodi_movie_id = lambda log, jf_item, jf_id: get_kodi_movie_id(log, jf_id)
+
+def _get_kodi_episode_id(log, _, jf_id): return get_kodi_episode_id(log, jf_id)
+
+
+def _get_kodi_tvshow_id(log, _, jf_id): return get_kodi_tvshow_id(log, jf_id)
+
+
+def _get_kodi_movie_id(log, _, jf_id): return get_kodi_movie_id(log, jf_id)
+
 
 _changed_handlers = {
     'Episode': (_get_kodi_episode_id, refresh_kodi_episode),
@@ -212,20 +229,18 @@ _handlers = {
 
 async def on_ws_message(log: logging.Logger, player: PlaybackMonitor, settings: Settings, server: Server,
                         user: User, message_str: str, message_time: datetime.datetime):
-    try:
-        message = json.loads(message_str)
-        from pprint import pformat
+    message = json.loads(message_str)
+    if log.isEnabledFor(logging.DEBUG):
         log.debug('\n%s', pformat(message))
 
-        message_type = message.get('MessageType')
-        handler = _handlers.get(message_type)
-        if handler:
-            data = message.get('Data')
-            if data:
-                asyncio.get_running_loop().run_in_executor(None, handler, log, player, settings, server, user,
-                                                           message_time, data)
-    except Exception:
-        log.exception('ws message failure')
+    message_type = message.get('MessageType')
+    handler = _handlers.get(message_type)
+    if handler:
+        data = message.get('Data')
+        if data:
+            handler(log, player, settings, server, user, message_time, data)
+            # asyncio.get_running_loop().run_in_executor(None, handler, log, player, settings, server, user,
+            #                                            message_time, data)
 
 
 async def ws_task(player, settings: Settings, server: Server, user: User):
@@ -238,20 +253,28 @@ async def ws_task(player, settings: Settings, server: Server, user: User):
         url = server.ws_url(user)
         while True:
             try:
+                log.debug('connecting to %s', url)
                 async with websockets.connect(url, compression=None, open_timeout=3, ping_interval=5,
                                               ping_timeout=3, close_timeout=3) as ws:
+                    sync_library(log, settings, player, server, user)
+
                     while True:
                         try:
                             message = await ws.recv()
+                        except websockets.ConnectionClosedError:
+                            log.error('connection closed')
+                            break
+                        try:
                             message_time = server.get_server_time()
                             await on_ws_message(log, player, settings, server, user, message, message_time)
-                        except websockets.ConnectionClosedError:
-                            break
                         except Exception:
                             log.exception('ws_task failure')
+                            break
             except socket.gaierror:
                 log.debug('websockets.connect("%s") failure', url)
-                await asyncio.sleep(1)
+            except Exception:
+                log.exception('connection loop failure')
+            await asyncio.sleep(1)
     except Exception:
         log.exception('ws_task failure')
     finally:

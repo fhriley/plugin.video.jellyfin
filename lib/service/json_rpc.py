@@ -67,11 +67,13 @@ def _get_kodi_details(log: logging.Logger, kodi_id: int, lib_id: str, method: st
 
 
 def get_kodi_episode_details(log: logging.Logger, kodi_id: int, *properties) -> Optional[Dict[str, Any]]:
-    return _get_kodi_details(log, kodi_id, 'libTvShows', 'episodeid', 'episodedetails', *properties)
+    return _get_kodi_details(log, kodi_id, 'libTvShows', 'VideoLibrary.GetEpisodeDetails', 'episodeid',
+                             'episodedetails', *properties)
 
 
 def get_kodi_movie_details(log: logging.Logger, kodi_id: int, *properties) -> Optional[Dict[str, Any]]:
-    return _get_kodi_details(log, kodi_id, 'libMovies', 'movieid', 'moviedetails', *properties)
+    return _get_kodi_details(log, kodi_id, 'libMovies', 'VideoLibrary.GetMovieDetails', 'movieid', 'moviedetails',
+                             *properties)
 
 
 def _get_jf_id(log: logging.Logger, kodi_id: int, lib_id: str, method: str, id_key: str, result_key: str):

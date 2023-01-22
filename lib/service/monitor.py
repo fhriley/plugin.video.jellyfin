@@ -48,7 +48,6 @@ class Monitor(xbmc.Monitor):
         item = message.get('item') or {}
         kodi_id = item.get('id')
         kodi_type = item.get('type')
-        playcount = message.get('playcount', 0)
         if not kodi_id:
             self._log.warning('no item id in notification')
             return
@@ -61,31 +60,20 @@ class Monitor(xbmc.Monitor):
             return
 
         jf_id = None
-        details = None
         if kodi_type == 'episode':
             jf_id = get_jf_episode_id(self._log, kodi_id)
-            details = get_kodi_episode_details(self._log, kodi_id, 'playcount')
         elif kodi_type == 'movie':
             jf_id = get_jf_movie_id(self._log, kodi_id)
-            details = get_kodi_movie_details(self._log, kodi_id, 'playcount')
         if not jf_id:
             self._log.warning('no jellyfin id in kodi db')
             return
 
         self._log.debug('%s', jf_id)
 
-        current_playcount = None
-        if details:
-            current_playcount = details.get('playcount')
-            self._log.debug('current_playcount=%s new_playcount=%s', current_playcount, playcount)
-
-        if playcount != current_playcount:
-            if playcount > 0:
-                self._server.mark_watched(self._user, jf_id)
-            else:
-                self._server.mark_unwatched(self._user, jf_id)
+        if playcount > 0:
+            self._server.mark_watched(self._user, jf_id)
         else:
-            self._log.debug('playcount unchanged')
+            self._server.mark_unwatched(self._user, jf_id)
 
     def _videolibrary_on_scan_started(self, _: Dict[str, Any]):
         self._settings.last_sync_time = self._server.get_server_time()

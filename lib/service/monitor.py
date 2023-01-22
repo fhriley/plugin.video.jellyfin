@@ -29,7 +29,7 @@ class Monitor(xbmc.Monitor):
     def onNotification(self, sender: str, method: str, data: str):
         self._log.debug('onNotification: sender=%s, method=%s', sender, method)
         if self._log.isEnabledFor(logging.DEBUG) and data:
-            self._log.debug('%s%s', os.linesep, pformat(json.loads(data)))
+            self._log.debug('data=%s%s', os.linesep, pformat(json.loads(data)))
         try:
             handler: Callable = self._handlers.get((sender, method))
             if handler:

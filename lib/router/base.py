@@ -26,7 +26,8 @@ def parse_nfo(log: logging.Logger, xml: str):
 
     vals = {child.tag: child.text for child in root}
     vals['type'] = root.tag
-    log.debug('%s', vals)
+    if log.isEnabledFor(logging.DEBUG):
+        log.debug('%s', pformat(vals))
 
     title = vals.get('title')
     if not title:
